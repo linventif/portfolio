@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Linventif</title>
+    <meta content="Grégoire LaunayBecue a.k.a Linventif, I'm a french student in computer science at the University of Lille in France. I'm a passionate developer, I love to learn new things and I'm always looking for new challenges."
+          name="description">
+    <title>Portfolio - Linventif</title>
+    <link href="img/gregoire_2024.png" rel="icon">
     <style>
         /* Global Color */
         :root {
@@ -46,7 +49,7 @@
             justify-content: space-between;
             align-items: center;
             height: 80px;
-            width: 1200px;
+            width: 1400px;
             margin: 0 auto;
         }
 
@@ -54,30 +57,13 @@
             font-size: 1.75rem;
         }
 
-        header nav ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header nav ul li {
-            list-style: none;
-            margin: 0 10px;
-            font-size: 1.2rem;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: var(--font-color);
-        }
-
         main {
-            width: 1200px;
+            width: 1400px;
             margin: 0 auto;
         }
 
         footer {
-            width: 1200px;
+            width: 1400px;
             margin: 0 auto;
         }
 
@@ -104,26 +90,221 @@
         main {
             padding: 20px 0;
         }
+
+        nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--font-color);
+            list-style: none;
+            font-size: 1.2rem;
+            height: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #linventif_img {
+            width: 400px;
+            height: 400px;
+            border-radius: 16px;
+            margin: 0 auto;
+            display: block;
+            transition: 0.5s ease-in-out;
+        }
+
+        .tools img {
+            height: 48px;
+        }
+
+        .tools_cat {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .tools {
+            margin: 10px;
+        }
+
+        article {
+            margin-top: 200px;
+        }
+
+        #home {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #home p {
+            width: 400px;
+            text-align: justify;
+        }
+
+        #projects_list {
+            display: flex;
+            flex-wrap: wrap;
+            /*justify-content: space-between;*/
+        }
+
+        .project {
+            overflow: hidden;
+            height: 500px;
+            width: 650px;
+            border-radius: 16px;
+            background: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            transition: 0.5s ease-in-out;
+            margin-bottom: 15px;
+        }
+
+        .project:is(:nth-child(odd)) {
+            margin-right: 15px;
+        }
+
+        .project h4 {
+            margin: 0;
+            padding: 15px 0;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        /*
+        made infinite carousel
+        */
+        .project_imgs {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .project_imgs img {
+            height: 100%;
+
+            width: 33.3333%;
+            flex-shrink: 0;
+        }
+
+        .project_imgs img:not(:first-child) {
+            margin-left: 15px;
+        }
+
+        .project p {
+            margin: 0;
+            height: 100%;
+            text-align: justify;
+        }
+
+        .project a {
+            color: var(--blue-color);
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            color: var(--blue-color-active);
+        }
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .technologies img {
+            height: 28px;
+        }
+
+        .technologies a {
+            margin-right: 15px;
+            padding-top: 15px;
+        }
     </style>
 </head>
 <body>
-
+<!--
+idée,
+- pour les formation faire un carousel vertical avec
+- tools box, faire defiler de gauche a droite avec les tools avec un effect de wave et au click focus sur une description
+- carte de contact
+-->
 <header>
-    <h1>Linventif</h1>
+    <h1>I'm <span id="name"></span></h1>
     <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Projets</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#toolbox">ToolsBox</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <hr>
 
 <main>
-    <!--    TODO-->
-    hello
+    <article id="home">
+        <img alt="Grégoire 2024" id="linventif_img" src="img/gregoire_2024.png">
+        <p>Hi, I'm Grégoire LaunayBecue a.k.a Linventif, I'm a french student in computer science at the <a
+                href="https://www.univ-lille.fr/"> University of
+            Lille</a> in France. I'm a passionate developer, I love to learn new things and I'm always looking for new
+            challenges.</p>
+    </article>
+
+    <article id="education">
+        <h3>Education</h3>
+        <div id="education_list"></div>
+    </article>
+
+    <article id="projects">
+        <h3>Projects</h3>
+        <div id="projects_list">
+            <div class="project example">
+                <h4>Example Project</h4>
+
+                <div class="project_imgs">
+                    <img alt="Example Project" src="img/screen.png">
+                    <img alt="Example Project" src="img/screen.png">
+                    <img alt="Example Project" src="img/screen.png">
+                    <img alt="Example Project" src="img/screen.png">
+                    <img alt="Example Project" src="img/screen.png">
+                    <img alt="Example Project" src="img/screen.png">
+                    <img alt="Example Project" src="img/screen.png">
+                </div>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci alias asperiores
+                    aspernatur atque autem blanditiis consequatur cumque cupiditate delectus doloremque doloribus
+                    ducimus ea earum eius eligendi eos error est eum eveniet excepturi exercitationem facilis fugiat
+                    hic id illum impedit in incidunt ipsa ipsum iure iusto labore laboriosam laborum libero magnam
+                </p>
+
+                <div class="technologies">
+                    <a href="#tech_html" title="HTML"><img alt="HTML" src="img/tools/html.png"></a>
+                    <a href="#tech_css" title="CSS"><img alt="CSS" src="img/tools/css.png"></a>
+                    <a href="#tech_js" title="Javascript"><img alt="Javascript" src="img/tools/js.png"></a>
+                    <a href="#tech_ejs" title="EJS"><img alt="EJS" src="img/tools/ejs.png"></a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="toolbox">
+        <h3>ToolsBox +250h</h3>
+        <div id="tools_cat"></div>
+    </article>
+
+    <article id="contact">
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="mailto:contact@linv.dev">Mail</a></li>
+            <li><a href="https://linv.dev/discord">Discord</a></li>
+        </ul>
+    </article>
 </main>
 
 <hr>
@@ -131,5 +312,417 @@
 <footer>
     <p>© 2020 - 2024 created by <a href="https://github.com/linventif">Linventif</a></p>
 </footer>
+
+<script>
+    const name = document.getElementById('name')
+    const names = [
+        'Gregoire LaunayBecue',
+        'Linventif'
+    ]
+
+    // wait dom load
+    document.addEventListener('DOMContentLoaded', () => {
+        const projectImgs = document.querySelector('.project_imgs');
+        let index = 0;
+        let forward = true;
+
+        function moveCarousel() {
+            if (forward) {
+                index++;
+                if (index > projectImgs.children.length - 3) {
+                    forward = false;
+                }
+            } else {
+                index--;
+                if (index < 0) {
+                    forward = true;
+                }
+            }
+            // -(index * 100 / 3)% + 15px(margin) * 2
+            projectImgs.style.transform = `translateX(-${(index * 100 / 3) + 30}%)`;
+        }
+
+        setInterval(moveCarousel, 2000);
+
+
+        let isAdding = true;
+        let i = 0;
+        const namesLength = names.length;
+        let nameInCreation = '';
+
+        function updateName() {
+            // Ajout du curseur à la fin du texte
+            name.innerText = nameInCreation + '|';
+
+            if (isAdding) {
+                if (nameInCreation.length < names[i].length) {
+                    nameInCreation = names[i].slice(0, nameInCreation.length + 1);
+                    setTimeout(updateName, 100);
+                } else {
+                    isAdding = false;
+                    // Suppression temporaire du curseur avant la pause
+                    name.innerText = nameInCreation;
+                    setTimeout(updateName, 3000);
+                }
+            } else {
+                if (nameInCreation.length > 0) {
+                    nameInCreation = nameInCreation.slice(0, -1);
+                    setTimeout(updateName, 100);
+                } else {
+                    isAdding = true;
+                    i++;
+                    i %= namesLength;
+                    updateName();
+                }
+            }
+        }
+
+        updateName();
+    })
+
+
+    const toolsCat = [
+        'IDE',
+        'OS',
+        'Hosting',
+        'Frameworks',
+        'Languages',
+        'Databases',
+        'Versioning',
+        'AI',
+        'Payment',
+        'Deployment',
+        'Others'
+    ]
+
+    const tools = [
+        {
+            name: 'Visual Studio Code',
+            img: 'img/tools/vscode.png',
+            cat: 'IDE',
+        },
+        {
+            name: 'DataGrip',
+            img: 'img/tools/datagrip.png',
+            cat: 'IDE',
+        },
+        {
+            name: 'IntelliJ IDEA',
+            img: 'img/tools/intellij.png',
+            cat: 'IDE',
+        },
+        {
+            name: 'WebStorm',
+            img: 'img/tools/webstorm.png',
+            cat: 'IDE',
+        },
+        {
+            name: 'CLion',
+            img: 'img/tools/clion.png',
+            cat: 'IDE',
+        },
+        {
+            name: 'Windows',
+            img: 'img/tools/windows.png',
+            cat: 'OS',
+        },
+        {
+            name: 'Ubuntu',
+            img: 'img/tools/ubuntu.png',
+            cat: 'OS',
+        },
+        {
+            name: 'Debian',
+            img: 'img/tools/debian.png',
+            cat: 'OS',
+        },
+        {
+            name: 'Ubuntu',
+            img: 'img/tools/ubuntu.png',
+            cat: 'Hosting',
+        },
+        {
+            name: 'Debian',
+            img: 'img/tools/debian.png',
+            cat: 'Hosting',
+        },
+        {
+            name: 'Kali',
+            img: 'img/tools/kali.png',
+            cat: 'OS',
+        },
+        {
+            name: 'NodeJS',
+            img: 'img/tools/nodejs.png',
+            cat: 'Frameworks',
+        },
+        {
+            name: 'DiscordJS',
+            img: 'img/tools/djs.png',
+            cat: 'Frameworks',
+        },
+        {
+            name: 'Express',
+            img: 'img/tools/express.png',
+            cat: 'Frameworks',
+        },
+        {
+            name: 'EJS',
+            img: 'img/tools/ejs.png',
+            cat: 'Frameworks',
+        },
+        {
+            name: 'VueJS',
+            img: 'img/tools/vue.png',
+            cat: 'Frameworks',
+        },
+        {
+            name: 'Java',
+            img: 'img/tools/java.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'HTML',
+            img: 'img/tools/html.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'CSS',
+            img: 'img/tools/css.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'Javascript',
+            img: 'img/tools/js.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'C',
+            img: 'img/tools/c.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'C++',
+            img: 'img/tools/c++.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'Lua',
+            img: 'img/tools/lua.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'GLua',
+            img: 'img/tools/glua.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'Python',
+            img: 'img/tools/python.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'MySQL',
+            img: 'img/tools/mysql.png',
+            cat: 'Databases',
+        },
+        {
+            name: 'MariaDB',
+            img: 'img/tools/mariadb.png',
+            cat: 'Databases',
+        },
+        {
+            name: 'Redis',
+            img: 'img/tools/redis.png',
+            cat: 'Databases',
+        },
+        {
+            name: 'PostgreSQL',
+            img: 'img/tools/postgresql.png',
+            cat: 'Databases',
+        },
+        {
+            name: 'Git',
+            img: 'img/tools/git.png',
+            cat: 'Versioning',
+        },
+        {
+            name: 'GitHub',
+            img: 'img/tools/github.png',
+            cat: 'Versioning',
+        },
+        {
+            name: 'GitLab',
+            img: 'img/tools/gitlab.png',
+            cat: 'Versioning',
+        },
+        {
+            name: 'Midjourney',
+            img: 'img/tools/midjourney.png',
+            cat: 'AI',
+        },
+        {
+            name: 'Copilot',
+            img: 'img/tools/copilot.png',
+            cat: 'AI',
+        },
+        {
+            name: 'Chat GPT',
+            img: 'img/tools/chatgpt.png',
+            cat: 'AI',
+        },
+        {
+            name: 'PayPal',
+            img: 'img/tools/paypal.png',
+            cat: 'Payment',
+        },
+        {
+            name: 'Stripe',
+            img: 'img/tools/stripe.png',
+            cat: 'Payment',
+        },
+        {
+            name: 'Docker',
+            img: 'img/tools/docker.png',
+            cat: 'Deployment',
+        },
+        {
+            name: 'Nginx',
+            img: 'img/tools/nginx.png',
+            cat: 'Others',
+        },
+        {
+            name: 'Discord',
+            img: 'img/tools/discord.png',
+            cat: 'Others',
+        },
+        {
+            name: 'Trello',
+            img: 'img/tools/trello.png',
+            cat: 'Others',
+        },
+        {
+            name: 'Postman',
+            img: 'img/tools/postman.png',
+            cat: 'Others',
+        },
+        {
+            name: 'Kubernetes',
+            img: 'img/tools/kubernetes.png',
+            cat: 'Deployment',
+        },
+        {
+            name: 'Figma',
+            img: 'img/tools/figma.png',
+            cat: 'Others',
+        },
+        {
+            name: 'Cloudflare',
+            img: 'img/tools/cloudflare.png',
+            cat: 'Others',
+        },
+        {
+            name: 'SQL',
+            img: 'img/tools/sql.png',
+            cat: 'Languages',
+        },
+        {
+            name: 'WireShark',
+            img: 'img/tools/wireshark.png',
+            cat: 'Others',
+        },
+    ]
+
+    const toolsCatDiv = document.getElementById('tools_cat')
+
+    toolsCat.forEach(cat => {
+        const catDiv = document.createElement('div')
+        catDiv.classList.add('tools_cat')
+        catDiv.id = `tools_${cat.toLowerCase()}`
+        const catTitle = document.createElement('h4')
+        catTitle.innerText = cat + ' :'
+        catDiv.appendChild(catTitle)
+        toolsCatDiv.appendChild(catDiv)
+    })
+
+    tools.forEach(tool => {
+        const toolDiv = document.createElement('div')
+        toolDiv.classList.add('tools')
+        toolDiv.innerHTML = `<img alt="${tool.name}" src="${tool.img}">`
+        document.getElementById(`tools_${tool.cat.toLowerCase()}`).appendChild(toolDiv)
+    })
+
+    const educations = [
+        {
+            name: 'Université de Lille',
+            formation: 'BUT Informatique',
+            date: '2022 - Current',
+            location: 'Lille, France',
+            img: 'img/education/univ_lille.png',
+            link: 'https://www.univ-lille.fr/'
+        },
+        {
+            name: 'Lycée César Baggio',
+            formation: 'Baccalauréat Technologique STI2D',
+            date: '2019 - 2022',
+            location: 'Lille, France',
+            mention: 'Assez Bien',
+            img: 'img/education/cesar_baggio.png',
+            link: 'https://cesarbaggio.fr'
+        }
+    ]
+
+    const educationList = document.getElementById('education_list')
+
+    educations.forEach(education => {
+        const educationDiv = document.createElement('div')
+        educationDiv.classList.add('education')
+        educationDiv.innerHTML = `
+            <h4>${education.name}</h4>
+            <p>${education.formation}</p>
+            <p>${education.date}</p>
+            <p>${education.location}</p>
+            ${education.mention ? `<p>${education.mention}</p>` : ''}
+        `
+        educationList.appendChild(educationDiv)
+    })
+
+    /*
+    Créateur de Gmod Integration, une plateforme innovante conçue pour créer de
+l'interaction entre les serveurs Garry's Mod et leurs communautés Discord. Ce service
+tout-en-un offre des fonctionnalités avancées comme la synchronisation de chat, les
+statistiques des joueurs et un système trust factor, le tout avec une mise en place rapide
+et facile. Plébiscité par plus de 50 serveurs pour un total de 6,150 utilisateurs, Gmod
+Integration est la solution de choix pour enrichir les interactions communautaires. Nous
+adoptons un modèle économique freemium, proposant des services de base gratuits ainsi
+que des solutions sur-mesure et des abonnements premium.
+     */
+    const projects = [
+        {
+            name: 'Gmod Integration',
+            description: 'Gmod Integration is an innovative platform designed to create interaction between Garry\'s Mod servers and their Discord communities. This all-in-one service offers advanced features such as chat synchronization, player statistics and a trust factor system, all with quick and easy setup. Praised by more than 50 servers for a total of 6,150 users, Gmod Integration is the solution of choice to enrich community interactions. We adopt a freemium business model, offering free basic services as well as tailor-made solutions and premium subscriptions.',
+            link: 'https://gmod-integration.com',
+            img: 'img/projects/gmodintegration.png',
+            technologies: ['HTML', 'CSS', 'JS', 'EJS', 'NodeJS', 'Express', 'MariaDB', 'Redis', 'Nginx', 'Cloudflare', 'PayPal', 'Stripe', 'Git', 'GitHub', 'Kubernetes', 'Ubuntu', 'DJS', 'SQL']
+        }
+    ]
+
+    const projectsList = document.getElementById('projects_list')
+
+    projects.forEach(project => {
+        const projectDiv = document.createElement('div')
+        projectDiv.classList.add('project')
+        projectDiv.innerHTML = `
+            <h4>${project.name}</h4>
+            <p>${project.description}</p>
+            <div class="technologies">
+                ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase()}.png"></a>`).join('')}
+            </div>
+        `
+        projectsList.appendChild(projectDiv)
+    })
+
+</script>
+
 </body>
 </html>
