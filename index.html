@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -42,6 +42,8 @@
             background: var(--background-color);
             font-family: 'Roboto', sans-serif;
             color: var(--font-color);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         header {
@@ -199,7 +201,7 @@
         }
 
         article {
-            margin-top: 200px;
+            margin-top: 140px;
         }
 
         #home {
@@ -208,15 +210,18 @@
             width: 100%;
         }
 
-        #home p {
-            width: 400px;
+        #home_description {
+            width: 600px;
             text-align: justify;
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*justify-content: space-around;*/
         }
 
         #projects_list {
             display: flex;
             flex-wrap: wrap;
-            /*justify-content: space-between;*/
+            justify-content: center;
         }
 
         .project {
@@ -246,6 +251,9 @@
 
         .project_imgs {
             overflow: hidden;
+            height: 260px;
+            width: 100%;
+            margin-bottom: 15px;
         }
 
         .project_imgs_carousel {
@@ -255,9 +263,10 @@
 
         .project_imgs_carousel img {
             height: 100%;
-
             width: 33.3333%;
             flex-shrink: 0;
+            object-fit: cover;
+
         }
 
         .project_imgs_carousel img:not(:first-child) {
@@ -310,15 +319,54 @@
             width: 100%;
             height: 0px;
         }
+
+        .contact {
+            height: 60px;
+            /*background-color: var(--primary-color);*/
+            /*border-radius: 16px;*/
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*padding: 0 15px;*/
+            /*transition: 0.5s ease-in-out;*/
+            /*margin-bottom: 15px;*/
+        }
+
+        #contact_container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #contact_container > img {
+            width: 400px;
+            height: 400px;
+            border-radius: 16px;
+            margin-right: 15px;
+            display: block;
+            transition: 0.5s ease-in-out;
+        }
+
+        #contact_list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 80%;
+        }
+
+        .contact_logo {
+            background-color: var(--primary-color);
+            height: 64px;
+            width: 64px;
+            border-radius: 8px;
+        }
+
+        .contact_img {
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-<!--
-idée,
-- pour les formation faire un carousel vertical avec
-- tools box, faire defiler de gauche a droite avec les tools avec un effect de wave et au click focus sur une description
-- carte de contact
--->
 <header>
     <h1>I'm <span id="name"></span></h1>
     <nav>
@@ -335,11 +383,32 @@ idée,
 
 <main>
     <article id="home">
-        <img alt="Grégoire 2024" id="linventif_img" src="img/gregoire_2024.png">
-        <p>Hi, I'm Grégoire LaunayBecue a.k.a Linventif, I'm a french student in computer science at the <a
-                href="https://www.univ-lille.fr/"> University of
-            Lille</a> in France. I'm a passionate developer, I love to learn new things and I'm always looking for new
-            challenges.</p>
+        <img alt="picture_of_me" id="linventif_img" src="img/gregoire_2024.png">
+        <div id="home_description">
+            <p>
+                Hi, I'm Grégoire Launay--Bécue but well known as Linventif on the internet.
+            </p>
+            <p>
+                Native French but English Adept, I currently live in France.
+            </p>
+            <p>
+                Currently, I study at the <a href="https://www.univ-lille.fr/"> University of Lille</a> in France to get
+                a
+                Bachelor's degree in Computer Science, my objective is to get a Master's degree in Computer Science.
+            </p>
+            <p>
+                I'm a passionate developer, I love made new projects, actually I'm working on <a
+                    href="https://gmod-integration.com">Gmod Integration</a> a platform to create interaction
+                between Garry's Mod servers and their Discord communities.
+            </p>
+            <p>
+                Also for me sport and social life are very important, I'm the president of a student climbing club in
+                my university and an active member of other social communities.
+            </p>
+            <p>
+                In April 2024 I will work for 2 months on a VR in Web Browser project.
+            </p>
+        </div>
     </article>
 
     <article id="education">
@@ -357,10 +426,6 @@ idée,
             <h2>Projects</h2>
             <hr class="hr2">
         </div>
-
-        <p>
-            Here is a list of projects I've worked on.
-        </p>
 
         <div id="projects_list">
             <div class="project example">
@@ -395,32 +460,11 @@ idée,
         </div>
     </article>
 
-    <!--        'Beginner',-->
-    <!--        'Intermediate',-->
-    <!--        'Advanced',-->
-    <!--        'Daily',-->
-    <!--        'Expert',-->
-
     <article id="toolbox">
         <div class="title">
             <hr class="hr2">
             <h2>ToolsBox</h2>
             <hr class="hr2">
-        </div>
-        <div id="tools_info">
-            <p>
-                Here is a list of tools I'm using.
-                For reference, I'm using '*' to indicate my level of knowledge.
-            </p>
-            <ul>
-                <li>⭐ Beginner: Basic knowledge, used in a few projects or actually learning.</li>
-                <li>⭐⭐ Intermediate (50+ hours): Capable of using the language in projects with some completed
-                    projects.
-                </li>
-                <li>⭐⭐⭐ Advanced (200+ hours): Proficient with substantial experience and many projects completed.</li>
-                <li>⭐⭐⭐⭐ Daily Use (1000+ hours): Used daily in many projects and tasks, highly skilled.</li>
-                <li>⭐⭐⭐⭐⭐ Expert (2000+ hours): Senior level, used in many projects and tasks, highly skilled.</li>
-            </ul>
         </div>
         <div id="tools_cat"></div>
     </article>
@@ -431,10 +475,21 @@ idée,
             <h2>Contact</h2>
             <hr class="hr2">
         </div>
-        <ul>
-            <li><a href="mailto:contact@linv.dev">Mail</a></li>
-            <li><a href="https://linv.dev/discord">Discord</a></li>
-        </ul>
+
+        <div id="contact_container">
+            <img alt="undraw_contact" src="img/contact/undraw_contact_us_re_4qqt.svg">
+
+            <div id="contact_list">
+                <a class="contact" href="mailto:contact@linv.dev">
+                    <div class="contact_logo">
+                        <img alt="mail" class="contact_img" src="img/contact/envelope-solid.svg" style="fill: white">
+                    </div>
+                    <div class="contact_info">
+                        <p>Send me an email</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </article>
 </main>
 
@@ -451,72 +506,42 @@ idée,
         'Linventif'
     ]
 
-    // wait dom load
-    document.addEventListener('DOMContentLoaded', () => {
-        const projectImgs = document.querySelector('.project_imgs');
-        let index = 0;
-        let forward = true;
-
-        function moveCarousel() {
-            if (forward) {
-                index++;
-                if (index > projectImgs.children.length - 3) {
-                    forward = false;
-                }
-            } else {
-                index--;
-                if (index < 0) {
-                    forward = true;
-                }
-            }
-            // -(index * 100 / 3)% + 15px(margin) * 2
-            projectImgs.style.transform = `translateX(-${(index * 100 / 3) + 30}%)`;
-        }
-
-        setInterval(moveCarousel, 2000);
-
-        let isAdding = true;
-        let i = 0;
-        const namesLength = names.length;
-        let nameInCreation = '';
-
-        function updateName() {
-            // Ajout du curseur à la fin du texte
-            name.innerText = nameInCreation + '|';
-
-            if (isAdding) {
-                if (nameInCreation.length < names[i].length) {
-                    nameInCreation = names[i].slice(0, nameInCreation.length + 1);
-                    setTimeout(updateName, 100);
-                } else {
-                    isAdding = false;
-                    // Suppression temporaire du curseur avant la pause
-                    name.innerText = nameInCreation;
-                    setTimeout(updateName, 3000);
-                }
-            } else {
-                if (nameInCreation.length > 0) {
-                    nameInCreation = nameInCreation.slice(0, -1);
-                    setTimeout(updateName, 100);
-                } else {
-                    isAdding = true;
-                    i++;
-                    i %= namesLength;
-                    updateName();
-                }
-            }
-        }
-
-        updateName();
-    })
-
     const learnStatus = [
-        'Beginner',
-        'Intermediate',
-        'Advanced',
-        'Daily',
-        'Expert',
+        {
+            name: 'Beginner',
+            star: '⭐',
+            description: 'Basic knowledge, used in a project or actually learning.',
+            hoursMin: 2
+        },
+        {
+            name: 'Intermediate',
+            star: '⭐⭐',
+            description: 'Already used in a few projects and tasks, capable of using it in projects.',
+            hoursMin: 50
+        },
+        {
+            name: 'Advanced',
+            star: '⭐⭐⭐',
+            description: 'Proficient with substantial experience and many projects completed.',
+            hoursMin: 200
+        },
+        {
+            name: 'Daily',
+            star: '⭐⭐⭐⭐',
+            description: 'Used daily in many projects and tasks, highly skilled.',
+            hoursMin: 1000
+        },
+        {
+            name: 'Expert',
+            star: '⭐⭐⭐⭐⭐',
+            description: 'Senior level, used in many projects and tasks, highly skilled.',
+            hoursMin: 2000
+        }
     ]
+
+    function getLearnStatus(name) {
+        return learnStatus.find(status => status.name === name)
+    }
 
     const toolsCat = [
         'IDE',
@@ -813,7 +838,7 @@ idée,
             name: 'WireShark',
             img: 'img/tools/wireshark.png',
             cat: 'Others',
-            level: 'Intermediate'
+            level: 'Beginner'
         },
         {
             name: 'VirtualBox',
@@ -843,21 +868,6 @@ idée,
 
     const toolsCatDiv = document.getElementById('tools_cat')
 
-    function getStarEquivalent(level) {
-        switch (level) {
-            case 'Beginner':
-                return '⭐'
-            case 'Intermediate':
-                return '⭐⭐'
-            case 'Advanced':
-                return '⭐⭐⭐'
-            case 'Daily':
-                return '⭐⭐⭐⭐'
-            case 'Expert':
-                return '⭐⭐⭐⭐⭐'
-        }
-    }
-
     toolsCat.forEach(cat => {
         const catDiv = document.createElement('div')
         catDiv.classList.add('tools_cat')
@@ -871,9 +881,11 @@ idée,
 
     tools.forEach(tool => {
         const toolDiv = document.createElement('div')
+        const toolStatus = getLearnStatus(tool.level)
+        toolDiv.title = `${toolStatus.description}\nEquivalent to ${toolStatus.hoursMin}+ hours of practice`
         toolDiv.classList.add('tools')
         toolDiv.id = `tool_${tool.name.toLowerCase()}`
-        toolDiv.innerHTML = `<img alt="${tool.name}" src="${tool.img}"> <p>${tool.name}</p> <p title="${tool.level}">${getStarEquivalent(tool.level)}</p>`
+        toolDiv.innerHTML = `<img alt="${tool.name}" src="${tool.img}"> <p>${tool.name}</p> <p>${toolStatus.star}</p>`
         document.getElementById(`tools_${tool.cat.toLowerCase()}`).appendChild(toolDiv)
     })
 
@@ -946,31 +958,41 @@ que des solutions sur-mesure et des abonnements premium.
             name: 'Gmod Integration',
             description: 'Gmod Integration is an innovative platform designed to create interaction between Garry\'s Mod servers and their Discord communities. This all-in-one service offers advanced features such as chat synchronization, player statistics and a trust factor system, all with quick and easy setup. Praised by more than 50 servers for a total of 6,150 users, Gmod Integration is the solution of choice to enrich community interactions. We adopt a freemium business model, offering free basic services as well as tailor-made solutions and premium subscriptions.',
             link: 'https://gmod-integration.com',
-            img: 'img/projects/gmodintegration.png',
-            technologies: ['HTML', 'CSS', 'JS', 'EJS', 'NodeJS', 'Express', 'MariaDB', 'Redis', 'Nginx', 'Cloudflare', 'PayPal', 'Stripe', 'Git', 'GitHub', 'Kubernetes', 'Ubuntu', 'DJS', 'SQL'],
+            img: [
+                'img/projects/gmod_integration_main.png',
+                'img/projects/gmod_integration_bot.png',
+                'img/projects/gmod_integration_link.png',
+                'img/projects/gmod_integration_profile.png',
+                'img/projects/gmod_integration_verif.png',
+                'img/projects/gmod_integration_panel.png'
+            ],
+            technologies: ['HTML', 'CSS', 'JS', 'EJS', 'NodeJS', 'Express', 'MariaDB', 'Redis', 'Nginx', 'Cloudflare', 'PayPal', 'Stripe', 'Git', 'GitHub', 'Kubernetes', 'Ubuntu', 'DJS', 'SQL', 'Figma'],
             status: 'In Development',
             date: '2023 - Current',
             languages: ['English', 'French', 'German'],
             education: 'Self-Taught'
         },
-        {
-            name: 'Portfolio',
-            description: 'This is my portfolio, it\'s a simple website to present myself and my projects.',
-            link: 'https://linv.dev',
-            img: 'img/projects/portfolio.png',
-            technologies: ['HTML', 'CSS', 'JS', 'Cloudflare', 'Git', 'GitHub', 'Ubuntu', 'Nginx'],
-            status: 'Finished',
-            date: '2023',
-            languages: ['English', 'French'],
-            education: 'University of Lille'
-        },
+        // {
+        //     name: 'Portfolio',
+        //     description: 'This is my portfolio, it\'s a simple website to present myself and my projects.',
+        //     link: 'https://linv.dev',
+        //     img: ['img/projects/gmod_integration.png'],
+        //     technologies: ['HTML', 'CSS', 'JS', 'Cloudflare', 'Git', 'GitHub', 'Ubuntu', 'Nginx', 'Figma'],
+        //     status: 'Finished',
+        //     date: '2023',
+        //     languages: ['English', 'French'],
+        //     education: 'University of Lille'
+        // },
         {
             name: 'SAE 1.5 - 1.6',
             description: `
             Collaborated on WordPress site promoting eco-friendly transport for SAÉ 1.05 and 1.06 projects, emphasizing teamwork, economic analysis, and cost-sharing. Strengthened awareness of eco-friendly solutions and plan to use HTML/CSS for future projects.
             `,
             link: 'todo',
-            img: 'img/projects/sae.png',
+            img: [
+                'img/projects/sae_1.5_1.png',
+                'img/projects/sae_1.5_2.png'
+            ],
             technologies: ['WordPress'],
             status: 'Finished',
             date: '2022',
@@ -982,7 +1004,7 @@ que des solutions sur-mesure et des abonnements premium.
             description: `Participated in SAÉ 1.02 project "Algorithm Comparisons" to enhance algorithm analysis skills. Explored algorithm implementation, performance measurement, and user input handling using IJava. Acquired scripting and ASCII art skills. Managed solo work due to a partner's withdrawal, achieving a score of 16/20. Planning better team collaboration for future projects`
             ,
             link: 'todo',
-            img: 'img/projects/sae.png',
+            img: ['img/projects/sae_1.2.png'],
             technologies: ['IJava'],
             status: 'Finished',
             date: '2022',
@@ -995,7 +1017,10 @@ que des solutions sur-mesure et des abonnements premium.
             Enhanced network admin skills through Debian Mate setup and network virtualization (SAÉ 1.03). Mastered service installation and system config in SAÉ 2.03. Created detailed documentation. Strong in virtualization and network config from personal experience. Ready for network system projects.
             `,
             link: 'todo',
-            img: 'img/projects/sae.png',
+            img: [
+                'img/projects/sae_1.3_1.png',
+                'img/projects/sae_1.3_2.png'
+            ],
             technologies: ['Debian', 'VirtualBox'],
             status: 'Finished',
             date: '2022',
@@ -1012,12 +1037,118 @@ que des solutions sur-mesure et des abonnements premium.
         projectDiv.classList.add('project')
         projectDiv.innerHTML = `
             <h4>${project.name}</h4>
+            <div class="project_imgs">
+                <div class="project_imgs_carousel">
+                    ${project.img.map(img => `<img alt="${project.name}" src="${img}">`).join('')}
+                </div>
+            </div>
             <p>${project.description}</p>
             <div class="technologies">
-                ${project.technologies.map(tech => `<a href="#tool_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase()}.png"></a>`).join('')}
+                ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase()}.png"></a>`).join('')}
             </div>
         `
         projectsList.appendChild(projectDiv)
+    })
+
+    const contact = [
+        {
+            name: 'Mail',
+            description: 'Send me an email',
+            link: 'mailto:contact@linv.dev',
+            img: 'img/contact/mail.png'
+        },
+        {
+            name: 'Discord',
+            description: 'Join my Discord server',
+            link: 'https://linv.dev/discord',
+            img: 'img/contact/discord.png'
+        }
+    ]
+
+    const contactList = document.getElementById('contact_list')
+
+    contact.forEach(contact => {
+        const contactDiv = document.createElement('div')
+        contactDiv.classList.add('contact')
+        contactDiv.innerHTML = `
+            <a href="${contact.link}" target="_blank">
+                <div class="contact_logo">
+                    <img alt="${contact.name}" class="contact_img" src="${contact.img}" style="fill: white">
+                </div>
+                <div class="contact_info">
+                    <p>${contact.description}</p>
+                </div>
+            </a>
+        `
+        contactList.appendChild(contactDiv)
+    })
+
+
+    // wait dom load
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all elements with the class 'project_imgs_carousel'
+        const projectImgsCarousels = document.querySelectorAll('.project_imgs_carousel');
+
+        projectImgsCarousels.forEach(projectImgs => {
+            let index = 0;
+            let forward = true;
+
+            if (projectImgs.children.length < 3) {
+                return;
+            }
+
+            function moveCarousel() {
+                if (forward) {
+                    index++;
+                    if (index > projectImgs.children.length - 3) {
+                        forward = false;
+                    }
+                } else {
+                    index--;
+                    if (index < 0) {
+                        forward = true;
+                    }
+                }
+                // -(index * 100 / 3)% + 15px(margin) * 2
+                projectImgs.style.transform = `translateX(-${(index * 100 / 3) + 30}%)`;
+            }
+
+            setInterval(moveCarousel, 2000);
+        });
+
+        let isAdding = true;
+        let i = 0;
+        const namesLength = names.length;
+        let nameInCreation = '';
+
+        function updateName() {
+            // Ajout du curseur à la fin du texte
+            name.innerText = nameInCreation + '|';
+
+            if (isAdding) {
+                if (nameInCreation.length < names[i].length) {
+                    nameInCreation = names[i].slice(0, nameInCreation.length + 1);
+                    setTimeout(updateName, 100);
+                } else {
+                    isAdding = false;
+                    // Suppression temporaire du curseur avant la pause
+                    name.innerText = nameInCreation;
+                    setTimeout(updateName, 3000);
+                }
+            } else {
+                if (nameInCreation.length > 0) {
+                    nameInCreation = nameInCreation.slice(0, -1);
+                    setTimeout(updateName, 100);
+                } else {
+                    isAdding = true;
+                    i++;
+                    i %= namesLength;
+                    updateName();
+                }
+            }
+        }
+
+        updateName();
     })
 </script>
 
