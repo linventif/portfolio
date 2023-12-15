@@ -428,35 +428,35 @@
         </div>
 
         <div id="projects_list">
-            <div class="project example">
-                <h4>Example Project</h4>
+            <!--            <div class="project example">-->
+            <!--                <h4>Example Project</h4>-->
 
-                <div class="project_imgs">
-                    <div class="project_imgs_carousel">
-                        <img alt="Example Project" src="img/screen.png">
-                        <img alt="Example Project" src="img/screen.png">
-                        <img alt="Example Project" src="img/screen.png">
-                        <img alt="Example Project" src="img/screen.png">
-                        <img alt="Example Project" src="img/screen.png">
-                        <img alt="Example Project" src="img/screen.png">
-                        <img alt="Example Project" src="img/screen.png">
-                    </div>
-                </div>
+            <!--                <div class="project_imgs">-->
+            <!--                    <div class="project_imgs_carousel">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                        <img alt="Example Project" src="img/screen.png">-->
+            <!--                    </div>-->
+            <!--                </div>-->
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci alias asperiores
-                    aspernatur atque autem blanditiis consequatur cumque cupiditate delectus doloremque doloribus
-                    ducimus ea earum eius eligendi eos error est eum eveniet excepturi exercitationem facilis fugiat
-                    hic id illum impedit in incidunt ipsa ipsum iure iusto labore laboriosam laborum libero magnam
-                </p>
+            <!--                <p>-->
+            <!--                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci alias asperiores-->
+            <!--                    aspernatur atque autem blanditiis consequatur cumque cupiditate delectus doloremque doloribus-->
+            <!--                    ducimus ea earum eius eligendi eos error est eum eveniet excepturi exercitationem facilis fugiat-->
+            <!--                    hic id illum impedit in incidunt ipsa ipsum iure iusto labore laboriosam laborum libero magnam-->
+            <!--                </p>-->
 
-                <div class="technologies">
-                    <a href="#tech_html" title="HTML"><img alt="HTML" src="img/tools/html.png"></a>
-                    <a href="#tech_css" title="CSS"><img alt="CSS" src="img/tools/css.png"></a>
-                    <a href="#tech_js" title="Javascript"><img alt="Javascript" src="img/tools/js.png"></a>
-                    <a href="#tech_ejs" title="EJS"><img alt="EJS" src="img/tools/ejs.png"></a>
-                </div>
-            </div>
+            <!--                <div class="technologies">-->
+            <!--                    <a href="#tech_html" title="HTML"><img alt="HTML" src="img/tools/html.png"></a>-->
+            <!--                    <a href="#tech_css" title="CSS"><img alt="CSS" src="img/tools/css.png"></a>-->
+            <!--                    <a href="#tech_js" title="Javascript"><img alt="Javascript" src="img/tools/js.png"></a>-->
+            <!--                    <a href="#tech_ejs" title="EJS"><img alt="EJS" src="img/tools/ejs.png"></a>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </article>
 
@@ -481,12 +481,12 @@
 
             <div id="contact_list">
                 <a class="contact" href="mailto:contact@linv.dev">
-                    <div class="contact_logo">
-                        <img alt="mail" class="contact_img" src="img/contact/envelope-solid.svg" style="fill: white">
-                    </div>
-                    <div class="contact_info">
-                        <p>Send me an email</p>
-                    </div>
+                    <!--                    <div class="contact_logo">-->
+                    <!--                        <img alt="mail" class="contact_img" src="img/contact/envelope-solid.svg" style="fill: white">-->
+                    <!--                    </div>-->
+                    <!--                    <div class="contact_info">-->
+                    <!--                        <p>Send me an email</p>-->
+                    <!--                    </div>-->
                 </a>
             </div>
         </div>
@@ -1047,6 +1047,11 @@ que des solutions sur-mesure et des abonnements premium.
                 ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase()}.png"></a>`).join('')}
             </div>
         `
+        // on click open link
+        projectDiv.addEventListener('click', () => {
+            window.open(project.link, '_blank')
+        })
+
         projectsList.appendChild(projectDiv)
     })
 
@@ -1062,6 +1067,11 @@ que des solutions sur-mesure et des abonnements premium.
             description: 'Join my Discord server',
             link: 'https://linv.dev/discord',
             img: 'img/contact/discord.png'
+        },
+        {
+            name: 'Linkedin',
+            description: 'Connect with me on Linkedin',
+            link: 'https://linv.dev/linkedin',
         }
     ]
 
@@ -1072,9 +1082,6 @@ que des solutions sur-mesure et des abonnements premium.
         contactDiv.classList.add('contact')
         contactDiv.innerHTML = `
             <a href="${contact.link}" target="_blank">
-                <div class="contact_logo">
-                    <img alt="${contact.name}" class="contact_img" src="${contact.img}" style="fill: white">
-                </div>
                 <div class="contact_info">
                     <p>${contact.description}</p>
                 </div>
