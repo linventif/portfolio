@@ -786,7 +786,6 @@
             level: 'Advanced',
             url: 'https://www.postgresql.org/'
         },
-
         {
             name: 'Unreal Engine',
             img: 'img/tools/unreal.png',
@@ -1033,6 +1032,27 @@
             url: 'https://en.wikipedia.org/wiki/Test-driven_development'
         },
         {
+            name: 'JUnit',
+            img: 'img/tools/junit.png',
+            cat: 'Testing',
+            level: 'Intermediate',
+            url: 'https://junit.org/junit5/'
+        },
+        {
+            name: 'Gherkin',
+            img: 'img/tools/gherkin.png',
+            cat: 'Testing',
+            level: 'Intermediate',
+            url: 'https://cucumber.io/docs/gherkin/'
+        },
+        {
+            name: 'GitKraken',
+            img: 'img/tools/gitkraken.png',
+            cat: 'Versioning',
+            level: 'Intermediate',
+            url: 'https://www.gitkraken.com/'
+        },
+        {
             name: 'Figma',
             img: 'img/tools/figma.png',
             cat: 'Others',
@@ -1053,6 +1073,13 @@
             level: 'Intermediate',
             url: 'https://trello.com/'
         },
+        {
+            name: 'Genially',
+            img: 'img/tools/genially.png',
+            cat: 'Others',
+            level: 'Intermediate',
+            url: 'https://www.genial.ly/'
+        }
     ];
 
     const toolsCatDiv = document.getElementById('tools_cat')
@@ -1128,60 +1155,103 @@
             education: 'Self-Taught'
         },
         {
-            name: 'Portfolio',
-            description: 'This is my portfolio, it\'s a simple website to present myself and my projects.',
-            link: 'https://linv.dev',
-            img: ['img/projects/gmod_integration.png'],
-            technologies: ['HTML', 'CSS', 'JS'],
+            name: 'SAE 1.02 (Algorithm Comparisons)',
+            description: `
+                In project SAÉ 1.02, our aim was to refine our algorithm analysis skills by implementing and comparing various algorithms. We utilized resources like algorithmic books and programming tools such as IJava for implementation and data collection.
+                Soft skills like creativity and brainstorming were crucial in devising the game structure during team meetings. Despite facing the challenge of working solo due to my partner's withdrawal, I achieved a commendable score of 16/20.
+                Through this project, I honed my abilities in Bash scripting, ASCII art, and game design, particularly improving my understanding of terminal operations. Moving forward, I'll be more discerning in selecting team members to enhance collaboration in future projects.
+            `,
+            link: 'https://moodle.univ-lille.fr/mod/assign/view.php?id=985841',
+            img: ['img/projects/sae_1.2.png'],
+            technologies: ['IJava'],
             status: 'Finished',
-            date: '2023',
-            languages: ['English', 'French'],
+            date: '2022-2023',
+            languages: ['French'],
             education: 'University of Lille'
         },
         {
-            name: 'SAE 1.5 - 1.6',
+            name: 'SAE 1.05 - 1.06 (Collection of Needs / Discovery of the Economic Environment)',
             description: `
-            Collaborated on WordPress site promoting eco-friendly transport for SAÉ 1.05 and 1.06 projects, emphasizing teamwork, economic analysis, and cost-sharing. Strengthened awareness of eco-friendly solutions and plan to use HTML/CSS for future projects.
+                In projects SAÉ 1.05 and 1.06, we collaborated on a WordPress website promoting eco-friendly transportation modes. We conducted an economic analysis, advocating cost-sharing between employees and employers to encourage adoption.
+                Developing informative pages and vehicle reservation forms were crucial tasks, adhering to Rockstar's graphic standards for design consistency.
+                While leveraging team expertise was beneficial, I found WordPress limiting compared to direct HTML and CSS control.
+                Despite challenges, we successfully completed the project, accessible here.
+                These projects enhanced my teamwork skills and deepened my understanding of eco-friendly transportation and its economic implications.
+                For future projects, I aim to apply these skills, favoring HTML and CSS for more control over web development.
             `,
-            link: 'todo',
+            link: 'https://moodle.univ-lille.fr/course/view.php?id=30388&sectionid=262716',
             img: [
                 'img/projects/sae_1.5_1.png',
                 'img/projects/sae_1.5_2.png'
             ],
             technologies: ['WordPress'],
             status: 'Finished',
-            date: '2022',
+            date: '2022-2023',
             languages: ['French'],
             education: 'University of Lille'
         },
         {
-            name: 'SAE 1.2',
-            description: `Participated in SAÉ 1.02 project "Algorithm Comparisons" to enhance algorithm analysis skills. Explored algorithm implementation, performance measurement, and user input handling using IJava. Acquired scripting and ASCII art skills. Managed solo work due to a partner's withdrawal, achieving a score of 16/20. Planning better team collaboration for future projects`
-            ,
-            link: 'todo',
-            img: ['img/projects/sae_1.2.png'],
-            technologies: ['IJava'],
-            status: 'Finished',
-            date: '2022',
-            languages: ['French'],
-            education: 'University of Lille'
-        },
-        {
-            name: 'SAE 1.3',
+            name: 'SAE 1.03 - 2.03 (Installation of a Workstation and it\'s Network Services)',
             description: `
-            Enhanced network admin skills through Debian Mate setup and network virtualization (SAÉ 1.03). Mastered service installation and system config in SAÉ 2.03. Created detailed documentation. Strong in virtualization and network config from personal experience. Ready for network system projects.
+                In project SAÉ 1.03, I installed a Debian Mate workstation and virtualized a network system to enhance my networking and IP address management skills.
+                Project SAÉ 2.03 focused on installing network services and configuring a virtualized system, allowing practical application of my system administration and network management knowledge.
+                The overarching goal was to produce comprehensive documentation on Debian Mate workstation installation and configuration, with minimal challenges due to prior coursework coverage.
+                My strength lay in virtualization and network configuration, stemming from personal experience managing home network infrastructures.
+                These projects deepened my networking administration skills, IP address management, and technical documentation writing, preparing me for future IT projects involving network system installation and configuration.
             `,
-            link: 'todo',
+            link: 'https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266881',
             img: [
-                'img/projects/sae_1.3_1.png',
-                'img/projects/sae_1.3_2.png'
+                './img/projects/sae-1-03/sae_1.3_1.png',
+                './img/projects/sae-1-03/sae_1.3_2.png',
             ],
-            technologies: ['Debian', 'VirtualBox'],
+            technologies: ['Debian', 'VirtualBox', 'GNS3'],
             status: 'Finished',
-            date: '2022',
+            date: '2022-2023',
             languages: ['French'],
             education: 'University of Lille'
-
+        },
+        {
+            name: 'SAE 1.04 - 2.04 (Introduction and Exploitation of BDD)',
+            description: `
+                In project SAÉ 1.04, I developed a simple student management system using Microsoft Access forms to grasp database fundamentals.
+                Project SAÉ 2.04 focused on a more intricate database using Olympic Games data, requiring advanced data manipulation skills.
+                My strengths lay in prior knowledge of tools like Data Grip and SQL proficiency from extracurricular projects.
+                The main challenge was the solo execution, yet I managed to master necessary skills.
+                Database proficiency is crucial in computing, shaping my future goal of mastering various database systems like MySQL or PostgreSQL.
+            `,
+            link: 'https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266882',
+            img: [
+                './img/projects/sae-2-04/img.png',
+            ],
+            technologies: ['SQL', 'PostgresSQL', 'DataGrip', 'Access'],
+            status: 'Finished',
+            date: '2022-2023',
+            languages: ['French'],
+            education: 'University of Lille'
+        },
+        {
+            name: 'SAE 2.05 - 2.06 (Project Management / Teamwork)',
+            description: `
+                In projects SAÉ 2.05 and 2.06, our goal was to enhance project management and teamwork skills through creating an escape game and managing its promotion.
+                We designed captivating puzzles and an engaging storyline for the game, utilizing tools like Trello and Asana for project coordination.
+                My creativity played a significant role, guiding the team from concept to execution seamlessly.
+                Communication proved challenging due to frequent illnesses among team members.
+                Nevertheless, these projects provided valuable experience in planning, coordinating, and collaborating within a team.
+                They equipped us with essential skills for future careers requiring effective project management and teamwork.
+            `,
+            link: 'https://app.genial.ly/editor/642150f644300e001276ed76',
+            img: [
+                './img/projects/sae-2-05/affiche.png',
+                './img/projects/sae-2-05/img_3.png',
+                './img/projects/sae-2-05/img.png',
+                './img/projects/sae-2-05/img_1.png',
+                './img/projects/sae-2-05/img_2.png',
+            ],
+            technologies: ['Genially'],
+            status: 'Finished',
+            date: '2022-2023',
+            languages: ['French'],
+            education: 'University of Lille'
         }
     ]
 
