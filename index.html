@@ -166,12 +166,31 @@
             transition: 0.5s ease-in-out;
         }
 
-        .tools_cat_title {
-            margin: 25px 0 0 10px;
-            text-align: center;
+        #tools_cat {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .tools_cat {
+        .tools_cat_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% - 20px);
+            margin: 15px 10px 0;
+        }
+
+        .tools_cat_title h3 {
+            margin: 0 15px;
+            white-space: nowrap;
+        }
+
+        .tools_cat_title hr {
+            width: 100%;
+            height: 0;
+        }
+
+        .toolsList {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -192,7 +211,7 @@
         }
 
         .tools:hover {
-            transform: scale(1.1);
+            border: 2px solid var(--blue-color);
         }
 
         .tools p {
@@ -912,10 +931,21 @@
         const catDiv = document.createElement('div')
         catDiv.classList.add('tools_cat')
         catDiv.id = `tools_${cat.toLowerCase()}`
-        const catTitle = document.createElement('h3')
-        catTitle.innerText = cat
+
+        const catTitle = document.createElement('div')
+        catTitle.innerHTML = `
+            <hr class="hr2">
+            <h3>${cat}</h3>
+            <hr class="hr2">
+        `
         catTitle.className = 'tools_cat_title'
-        toolsCatDiv.appendChild(catTitle)
+        catDiv.appendChild(catTitle)
+
+        const catList = document.createElement('div')
+        catList.classList.add('toolsList')
+        catList.id = `tools_${cat.toLowerCase()}_list`
+        catDiv.appendChild(catList)
+
         toolsCatDiv.appendChild(catDiv)
     })
 
@@ -926,7 +956,7 @@
         toolDiv.classList.add('tools')
         toolDiv.id = `tool_${tool.name.toLowerCase()}`
         toolDiv.innerHTML = `<img alt="${tool.name}" src="${tool.img}"> <p>${tool.name}</p> <p>${toolStatus.star}</p>`
-        document.getElementById(`tools_${tool.cat.toLowerCase()}`).appendChild(toolDiv)
+        document.getElementById(`tools_${tool.cat.toLowerCase()}_list`).appendChild(toolDiv)
     })
 
     const projects = [
