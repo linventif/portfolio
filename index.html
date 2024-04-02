@@ -556,10 +556,42 @@
         'AI',
         'Payment',
         'Deployment',
+        'Game Engines',
+        '3D Software',
         'Others'
     ]
 
     const tools = [
+        {
+            name: 'Unreal Engine',
+            img: 'img/tools/unreal.png',
+            cat: 'Game Engines',
+            level: 'Intermediate'
+        },
+        {
+            name: 'Source Engine',
+            img: 'img/tools/source.png',
+            cat: 'Game Engines',
+            level: 'Daily'
+        },
+        {
+            name: 'Blender',
+            img: 'img/tools/blender.png',
+            cat: '3D Software',
+            level: 'Beginner'
+        },
+        {
+            name: 'Fusion 360',
+            img: 'img/tools/fusion.png',
+            cat: '3D Software',
+            level: 'Advanced'
+        },
+        {
+            name: 'Sketchup',
+            img: 'img/tools/sketchup.png',
+            cat: '3D Software',
+            level: 'Advanced'
+        },
         {
             name: 'Visual Studio Code',
             img: 'img/tools/vscode.png',
@@ -584,12 +616,12 @@
             cat: 'IDE',
             level: 'Advanced'
         },
-        // {
-        //     name: 'CLion',
-        //     img: 'img/tools/clion.png',
-        //     cat: 'IDE',
-        //     level: 'Intermediate'
-        // },
+        {
+            name: 'CLion',
+            img: 'img/tools/clion.png',
+            cat: 'IDE',
+            level: 'Beginner'
+        },
         {
             name: 'Windows',
             img: 'img/tools/windows.png',
@@ -620,12 +652,12 @@
             cat: 'Hosting',
             level: 'Advanced'
         },
-        // {
-        //     name: 'Kali',
-        //     img: 'img/tools/kali.png',
-        //     cat: 'OS',
-        //     level: 'Intermediate'
-        // },
+        {
+            name: 'Kali',
+            img: 'img/tools/kali.png',
+            cat: 'OS',
+            level: 'Beginner'
+        },
         {
             name: 'NodeJS',
             img: 'img/tools/nodejs.png',
@@ -650,12 +682,12 @@
             cat: 'Frameworks',
             level: 'Advanced'
         },
-        // {
-        //     name: 'VueJS',
-        //     img: 'img/tools/vue.png',
-        //     cat: 'Frameworks',
-        //     level: 'Beginner'
-        // },
+        {
+            name: 'VueJS',
+            img: 'img/tools/vue.png',
+            cat: 'Frameworks',
+            level: 'Beginner'
+        },
         {
             name: 'Java',
             img: 'img/tools/java.png',
@@ -680,36 +712,36 @@
             cat: 'Languages',
             level: 'Advanced'
         },
-        // {
-        //     name: 'C',
-        //     img: 'img/tools/c.png',
-        //     cat: 'Languages',
-        //     level: 'Intermediate'
-        // },
-        // {
-        //     name: 'C++',
-        //     img: 'img/tools/c++.png',
-        //     cat: 'Languages',
-        //     level: 'Beginner'
-        // },
-        // {
-        //     name: 'Lua',
-        //     img: 'img/tools/lua.png',
-        //     cat: 'Languages',
-        //     level: 'Intermediate'
-        // },
+        {
+            name: 'C',
+            img: 'img/tools/c.png',
+            cat: 'Languages',
+            level: 'Intermediate'
+        },
+        {
+            name: 'C++',
+            img: 'img/tools/c++.png',
+            cat: 'Languages',
+            level: 'Beginner'
+        },
+        {
+            name: 'Lua',
+            img: 'img/tools/lua.png',
+            cat: 'Languages',
+            level: 'Intermediate'
+        },
         {
             name: 'GLua',
             img: 'img/tools/glua.png',
             cat: 'Languages',
             level: 'Advanced'
         },
-        // {
-        //     name: 'Python',
-        //     img: 'img/tools/python.png',
-        //     cat: 'Languages',
-        //     level: 'Beginner'
-        // },
+        {
+            name: 'Python',
+            img: 'img/tools/python.png',
+            cat: 'Languages',
+            level: 'Intermediate'
+        },
         {
             name: 'MySQL',
             img: 'img/tools/mysql.png',
@@ -722,14 +754,14 @@
             cat: 'Databases',
             level: 'Advanced'
         },
-        // {
-        //     name: 'Redis',
-        //     img: 'img/tools/redis.png',
-        //     cat: 'Databases',
-        //     level: 'Beginner'
-        // },
         {
-            name: 'PostgreSQL',
+            name: 'Redis',
+            img: 'img/tools/redis.png',
+            cat: 'Databases',
+            level: 'Beginner'
+        },
+        {
+            name: 'PostgresSQL',
             img: 'img/tools/postgresql.png',
             cat: 'Databases',
             level: 'Advanced'
@@ -792,13 +824,13 @@
             name: 'Nginx',
             img: 'img/tools/nginx.png',
             cat: 'Others',
-            level: 'Intermediate'
+            level: 'Advanced'
         },
         {
             name: 'Discord',
             img: 'img/tools/discord.png',
             cat: 'Others',
-            level: 'Advanced'
+            level: 'Daily'
         },
         {
             name: 'Trello',
@@ -842,36 +874,36 @@
             cat: 'Languages',
             level: 'Advanced'
         },
-        // {
-        //     name: 'WireShark',
-        //     img: 'img/tools/wireshark.png',
-        //     cat: 'Others',
-        //     level: 'Beginner'
-        // },
-        // {
-        //     name: 'VirtualBox',
-        //     img: 'img/tools/virtualbox.png',
-        //     cat: 'Others',
-        //     level: 'Beginner'
-        // },
-        // {
-        //     name: 'VmWare',
-        //     img: 'img/tools/vmware.png',
-        //     cat: 'Others',
-        //     level: 'Beginner'
-        // },
-        // {
-        //     name: 'IJava',
-        //     img: 'img/tools/ijava.png',
-        //     cat: 'Languages',
-        //     level: 'Intermediate'
-        // },
-        // {
-        //     name: 'WordPress',
-        //     img: 'img/tools/wordpress.png',
-        //     cat: 'Frameworks',
-        //     level: 'Beginner'
-        // }
+        {
+            name: 'WireShark',
+            img: 'img/tools/wireshark.png',
+            cat: 'Others',
+            level: 'Beginner'
+        },
+        {
+            name: 'VirtualBox',
+            img: 'img/tools/virtualbox.png',
+            cat: 'Others',
+            level: 'Beginner'
+        },
+        {
+            name: 'VmWare',
+            img: 'img/tools/vmware.png',
+            cat: 'Others',
+            level: 'Beginner'
+        },
+        {
+            name: 'IJava',
+            img: 'img/tools/ijava.png',
+            cat: 'Languages',
+            level: 'Intermediate'
+        },
+        {
+            name: 'WordPress',
+            img: 'img/tools/wordpress.png',
+            cat: 'Frameworks',
+            level: 'Beginner'
+        }
     ]
 
     const toolsCatDiv = document.getElementById('tools_cat')
