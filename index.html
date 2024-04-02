@@ -574,60 +574,7 @@
         return learnStatus.find(status => status.name === name)
     }
 
-    const toolsCat = [
-        'IDE',
-        'OS',
-        'Hosting',
-        'Frameworks',
-        'Languages',
-        'Databases',
-        'Versioning',
-        'AI',
-        'Payment',
-        'Deployment',
-        '3D Software',
-        'Game Engines',
-        'Virtualization',
-        'Networking',
-        'Others'
-    ]
-
     const tools = [
-        {
-            name: 'Unreal Engine',
-            img: 'img/tools/unreal.png',
-            cat: 'Game Engines',
-            level: 'Intermediate',
-            url: 'https://www.unrealengine.com/'
-        },
-        {
-            name: 'Source Engine',
-            img: 'img/tools/source.png',
-            cat: 'Game Engines',
-            level: 'Daily',
-            url: 'https://partner.steamgames.com/doc/sdk'
-        },
-        {
-            name: 'Blender',
-            img: 'img/tools/blender.png',
-            cat: '3D Software',
-            level: 'Beginner',
-            url: 'https://www.blender.org/'
-        },
-        {
-            name: 'Fusion 360',
-            img: 'img/tools/fusion.png',
-            cat: '3D Software',
-            level: 'Advanced',
-            url: 'https://www.autodesk.com/products/fusion-360/'
-        },
-        {
-            name: 'Sketchup',
-            img: 'img/tools/sketchup.png',
-            cat: '3D Software',
-            level: 'Advanced',
-            url: 'https://www.sketchup.com/'
-        },
         {
             name: 'Visual Studio Code',
             img: 'img/tools/vscode.png',
@@ -662,83 +609,6 @@
             cat: 'IDE',
             level: 'Beginner',
             url: 'https://www.jetbrains.com/clion/'
-        },
-        {
-            name: 'Windows',
-            img: 'img/tools/windows.png',
-            cat: 'OS',
-            level: 'Advanced',
-            url: 'https://www.microsoft.com/en-us/windows'
-        },
-        {
-            name: 'Ubuntu',
-            img: 'img/tools/ubuntu.png',
-            cat: 'OS',
-            level: 'Daily',
-            url: 'https://ubuntu.com/'
-        },
-        {
-            name: 'Debian',
-            img: 'img/tools/debian.png',
-            cat: 'OS',
-            level: 'Advanced',
-            url: 'https://www.debian.org/'
-        },
-        {
-            name: 'Ubuntu',
-            img: 'img/tools/ubuntu.png',
-            cat: 'Hosting',
-            level: 'Daily',
-            url: 'https://ubuntu.com/'
-        },
-        {
-            name: 'Debian',
-            img: 'img/tools/debian.png',
-            cat: 'Hosting',
-            level: 'Advanced',
-            url: 'https://www.debian.org/'
-        },
-        {
-            name: 'Kali',
-            img: 'img/tools/kali.png',
-            cat: 'OS',
-            level: 'Beginner',
-            url: 'https://www.kali.org/'
-        },
-        {
-            name: 'NodeJS',
-            img: 'img/tools/nodejs.png',
-            cat: 'Frameworks',
-            level: 'Advanced',
-            url: 'https://nodejs.org/'
-        },
-        {
-            name: 'DiscordJS',
-            img: 'img/tools/djs.png',
-            cat: 'Frameworks',
-            level: 'Advanced',
-            url: 'https://discord.js.org/'
-        },
-        {
-            name: 'Express',
-            img: 'img/tools/express.png',
-            cat: 'Frameworks',
-            level: 'Advanced',
-            url: 'https://expressjs.com/'
-        },
-        {
-            name: 'EJS',
-            img: 'img/tools/ejs.png',
-            cat: 'Frameworks',
-            level: 'Advanced',
-            url: 'https://ejs.co/'
-        },
-        {
-            name: 'VueJS',
-            img: 'img/tools/vue.png',
-            cat: 'Frameworks',
-            level: 'Beginner',
-            url: 'https://vuejs.org/'
         },
         {
             name: 'Java',
@@ -804,6 +674,84 @@
             url: 'https://www.python.org/'
         },
         {
+            name: 'NodeJS',
+            img: 'img/tools/nodejs.png',
+            cat: 'Frameworks',
+            level: 'Advanced',
+            url: 'https://nodejs.org/'
+        },
+        {
+            name: 'DiscordJS',
+            img: 'img/tools/djs.png',
+            cat: 'Frameworks',
+            level: 'Advanced',
+            url: 'https://discord.js.org/'
+        },
+        {
+            name: 'Express',
+            img: 'img/tools/express.png',
+            cat: 'Frameworks',
+            level: 'Advanced',
+            url: 'https://expressjs.com/'
+        },
+        {
+            name: 'EJS',
+            img: 'img/tools/ejs.png',
+            cat: 'Frameworks',
+            level: 'Advanced',
+            url: 'https://ejs.co/'
+        },
+        {
+            name: 'VueJS',
+            img: 'img/tools/vue.png',
+            cat: 'Frameworks',
+            level: 'Beginner',
+            url: 'https://vuejs.org/'
+        },
+
+        {
+            name: 'Windows',
+            img: 'img/tools/windows.png',
+            cat: 'OS',
+            level: 'Advanced',
+            url: 'https://www.microsoft.com/en-us/windows'
+        },
+        {
+            name: 'Ubuntu',
+            img: 'img/tools/ubuntu.png',
+            cat: 'OS',
+            level: 'Daily',
+            url: 'https://ubuntu.com/'
+        },
+        {
+            name: 'Debian',
+            img: 'img/tools/debian.png',
+            cat: 'OS',
+            level: 'Advanced',
+            url: 'https://www.debian.org/'
+        },
+        {
+            name: 'Ubuntu',
+            img: 'img/tools/ubuntu.png',
+            cat: 'Hosting',
+            level: 'Daily',
+            url: 'https://ubuntu.com/'
+        },
+        {
+            name: 'Debian',
+            img: 'img/tools/debian.png',
+            cat: 'Hosting',
+            level: 'Advanced',
+            url: 'https://www.debian.org/'
+        },
+        {
+            name: 'Kali',
+            img: 'img/tools/kali.png',
+            cat: 'OS',
+            level: 'Beginner',
+            url: 'https://www.kali.org/'
+        },
+        {
             name: 'MySQL',
             img: 'img/tools/mysql.png',
             cat: 'Databases',
@@ -830,6 +778,42 @@
             cat: 'Databases',
             level: 'Advanced',
             url: 'https://www.postgresql.org/'
+        },
+
+        {
+            name: 'Unreal Engine',
+            img: 'img/tools/unreal.png',
+            cat: 'Game Engines',
+            level: 'Intermediate',
+            url: 'https://www.unrealengine.com/'
+        },
+        {
+            name: 'Source Engine',
+            img: 'img/tools/source.png',
+            cat: 'Game Engines',
+            level: 'Daily',
+            url: 'https://partner.steamgames.com/doc/sdk'
+        },
+        {
+            name: 'Blender',
+            img: 'img/tools/blender.png',
+            cat: '3D Software',
+            level: 'Beginner',
+            url: 'https://www.blender.org/'
+        },
+        {
+            name: 'Fusion 360',
+            img: 'img/tools/fusion.png',
+            cat: '3D Software',
+            level: 'Advanced',
+            url: 'https://www.autodesk.com/products/fusion-360/'
+        },
+        {
+            name: 'Sketchup',
+            img: 'img/tools/sketchup.png',
+            cat: '3D Software',
+            level: 'Advanced',
+            url: 'https://www.sketchup.com/'
         },
         {
             name: 'Git',
@@ -918,14 +902,14 @@
         {
             name: 'Postman',
             img: 'img/tools/postman.png',
-            cat: 'Networking',
+            cat: 'API',
             level: 'Advanced',
             url: 'https://www.postman.com/'
         },
         {
             name: 'Bruno',
             img: 'img/tools/bruno.png',
-            cat: 'Networking',
+            cat: 'API',
             level: 'Advanced',
             url: 'https://www.bruno.com/'
         },
@@ -991,12 +975,86 @@
             cat: 'Frameworks',
             level: 'Beginner',
             url: 'https://wordpress.org/'
+        },
+        {
+            name: 'Tomcat',
+            img: 'img/tools/tomcat.png',
+            cat: 'Frameworks',
+            level: 'Intermediate',
+        },
+        {
+            name: 'Java EE',
+            img: 'img/tools/javaee.png',
+            cat: 'Frameworks',
+            level: 'Intermediate',
+        },
+        {
+            name: 'JQuery',
+            img: 'img/tools/jquery.png',
+            cat: 'Frameworks',
+            level: 'Intermediate',
+        },
+        {
+            name: 'SQLite',
+            img: 'img/tools/sqlite.png',
+            cat: 'Databases',
+            level: 'Intermediate',
+        },
+        {
+            name: 'Bootstrap',
+            img: 'img/tools/bootstrap.png',
+            cat: 'Frameworks',
+            level: 'Beginner',
+        },
+        {
+            name: 'Android Studio',
+            img: 'img/tools/android-studio.png',
+            cat: 'IDE',
+            level: 'Intermediate'
+        },
+        {
+            name: 'Apache',
+            img: 'img/tools/apache.png',
+            cat: 'Hosting',
+            level: 'Intermediate'
+        },
+        {
+            name: 'GNS3',
+            img: 'img/tools/gns3.png',
+            cat: 'Networking',
+            level: 'Intermediate'
+        },
+        {
+            name: 'SolidWorks',
+            img: 'img/tools/solidworks.png',
+            cat: '3D Software',
+            level: 'Intermediate'
+        },
+        {
+            name: 'Scrum',
+            img: 'img/tools/scrum.png',
+            cat: 'Methodologies',
+            level: 'Intermediate'
+        },
+        {
+            name: 'Kanban',
+            img: 'img/tools/kanban.png',
+            cat: 'Methodologies',
+            level: 'Intermediate'
+        },
+        {
+            name: 'TDD',
+            img: 'img/tools/tdd.png',
+            cat: 'Methodologies',
+            level: 'Intermediate'
         }
     ];
 
     const toolsCatDiv = document.getElementById('tools_cat')
 
-    toolsCat.forEach(cat => {
+    function createCat(name) {
+        const cat = name.charAt(0).toUpperCase() + name.slice(1)
+
         const catDiv = document.createElement('div')
         catDiv.classList.add('tools_cat')
         catDiv.id = `tools_${cat.toLowerCase()}`
@@ -1016,7 +1074,20 @@
         catDiv.appendChild(catList)
 
         toolsCatDiv.appendChild(catDiv)
-    })
+    }
+
+    function addToolToCat(toolDiv,  tool) {
+        const category = document.getElementById(`tools_${tool.cat.toLowerCase()}`)
+
+        if (!category) {
+            createCat(tool.cat)
+            return addToolToCat(toolDiv, tool)
+        }
+
+        document.getElementById(`tools_${tool.cat.toLowerCase()}_list`).appendChild(toolDiv)
+    }
+
+    // sort tools to have 7tools by line example: database  = 5element, we can set Payment to have a 7tools by line
 
     tools.forEach(tool => {
         const toolDiv = document.createElement('div')
@@ -1028,7 +1099,8 @@
         toolDiv.addEventListener('click', () => {
             window.open(tool.url, '_blank')
         })
-        document.getElementById(`tools_${tool.cat.toLowerCase()}_list`).appendChild(toolDiv)
+
+        addToolToCat(toolDiv, tool)
     })
 
     const projects = [
