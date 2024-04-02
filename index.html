@@ -731,18 +731,25 @@
             url: 'https://www.debian.org/'
         },
         {
-            name: 'Ubuntu',
-            img: 'img/tools/ubuntu.png',
-            cat: 'Hosting',
-            level: 'Daily',
-            url: 'https://ubuntu.com/'
-        },
-        {
-            name: 'Debian',
-            img: 'img/tools/debian.png',
+            name: 'Nginx',
+            img: 'img/tools/nginx.png',
             cat: 'Hosting',
             level: 'Advanced',
-            url: 'https://www.debian.org/'
+            url: 'https://www.nginx.com/'
+        },
+        {
+            name: 'Apache',
+            img: 'img/tools/apache.png',
+            cat: 'Hosting',
+            level: 'Intermediate',
+            url: 'https://httpd.apache.org/'
+        },
+        {
+            name: 'Tomcat',
+            img: 'img/tools/tomcat.png',
+            cat: 'Hosting',
+            level: 'Intermediate',
+            url: 'http://tomcat.apache.org/'
         },
         {
             name: 'Kali',
@@ -879,27 +886,6 @@
             url: 'https://www.docker.com/'
         },
         {
-            name: 'Nginx',
-            img: 'img/tools/nginx.png',
-            cat: 'Networking',
-            level: 'Advanced',
-            url: 'https://www.nginx.com/'
-        },
-        {
-            name: 'Discord',
-            img: 'img/tools/discord.png',
-            cat: 'Others',
-            level: 'Daily',
-            url: 'https://discord.com/'
-        },
-        {
-            name: 'Trello',
-            img: 'img/tools/trello.png',
-            cat: 'Others',
-            level: 'Intermediate',
-            url: 'https://trello.com/'
-        },
-        {
             name: 'Postman',
             img: 'img/tools/postman.png',
             cat: 'API',
@@ -919,13 +905,6 @@
             cat: 'Deployment',
             level: 'Beginner',
             url: 'https://kubernetes.io/'
-        },
-        {
-            name: 'Figma',
-            img: 'img/tools/figma.png',
-            cat: 'Others',
-            level: 'Advanced',
-            url: 'https://www.figma.com/'
         },
         {
             name: 'Cloudflare',
@@ -977,77 +956,103 @@
             url: 'https://wordpress.org/'
         },
         {
-            name: 'Tomcat',
-            img: 'img/tools/tomcat.png',
-            cat: 'Frameworks',
-            level: 'Intermediate',
-        },
-        {
             name: 'Java EE',
             img: 'img/tools/javaee.png',
             cat: 'Frameworks',
             level: 'Intermediate',
+            url: 'https://www.oracle.com/java/technologies/java-ee-glance.html'
+        },
+        {
+            name: 'Java FX',
+            img: 'img/tools/javafx.png',
+            cat: 'Frameworks',
+            level: 'Intermediate',
+            url: 'https://openjfx.io/'
         },
         {
             name: 'JQuery',
             img: 'img/tools/jquery.png',
             cat: 'Frameworks',
             level: 'Intermediate',
+            url: 'https://jquery.com/'
         },
         {
             name: 'SQLite',
             img: 'img/tools/sqlite.png',
             cat: 'Databases',
             level: 'Intermediate',
+            url: 'https://www.sqlite.org/'
         },
         {
             name: 'Bootstrap',
             img: 'img/tools/bootstrap.png',
             cat: 'Frameworks',
             level: 'Beginner',
+            url: 'https://getbootstrap.com/'
         },
         {
             name: 'Android Studio',
             img: 'img/tools/android-studio.png',
             cat: 'IDE',
-            level: 'Intermediate'
-        },
-        {
-            name: 'Apache',
-            img: 'img/tools/apache.png',
-            cat: 'Hosting',
-            level: 'Intermediate'
+            level: 'Intermediate',
+            url: 'https://developer.android.com/studio'
         },
         {
             name: 'GNS3',
             img: 'img/tools/gns3.png',
             cat: 'Networking',
-            level: 'Intermediate'
+            level: 'Intermediate',
+            url: 'https://www.gns3.com/'
         },
         {
             name: 'SolidWorks',
             img: 'img/tools/solidworks.png',
             cat: '3D Software',
-            level: 'Intermediate'
+            level: 'Intermediate',
+            url: 'https://www.solidworks.com/'
         },
         {
             name: 'Scrum',
             img: 'img/tools/scrum.png',
             cat: 'Methodologies',
-            level: 'Intermediate'
+            level: 'Intermediate',
+            url: 'https://www.scrum.org/'
         },
         {
             name: 'Kanban',
             img: 'img/tools/kanban.png',
             cat: 'Methodologies',
-            level: 'Intermediate'
+            level: 'Intermediate',
+            url: 'https://www.atlassian.com/agile/kanban'
         },
         {
             name: 'TDD',
             img: 'img/tools/tdd.png',
             cat: 'Methodologies',
-            level: 'Intermediate'
-        }
+            level: 'Intermediate',
+            url: 'https://en.wikipedia.org/wiki/Test-driven_development'
+        },
+        {
+            name: 'Figma',
+            img: 'img/tools/figma.png',
+            cat: 'Others',
+            level: 'Advanced',
+            url: 'https://www.figma.com/'
+        },
+        {
+            name: 'Discord',
+            img: 'img/tools/discord.png',
+            cat: 'Others',
+            level: 'Daily',
+            url: 'https://discord.com/'
+        },
+        {
+            name: 'Trello',
+            img: 'img/tools/trello.png',
+            cat: 'Others',
+            level: 'Intermediate',
+            url: 'https://trello.com/'
+        },
     ];
 
     const toolsCatDiv = document.getElementById('tools_cat')
