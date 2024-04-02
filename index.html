@@ -781,7 +781,7 @@
         },
         {
             name: 'PostgresSQL',
-            img: 'img/tools/postgresql.png',
+            img: 'img/tools/postgres-sql.png',
             cat: 'Databases',
             level: 'Advanced',
             url: 'https://www.postgresql.org/'
@@ -1119,8 +1119,6 @@
         document.getElementById(`tools_${tool.cat.toLowerCase()}_list`).appendChild(toolDiv)
     }
 
-    // sort tools to have 7tools by line example: database  = 5element, we can set Payment to have a 7tools by line
-
     tools.forEach(tool => {
         const toolDiv = document.createElement('div')
         const toolStatus = getLearnStatus(tool.level)
@@ -1137,8 +1135,13 @@
 
     const projects = [
         {
-            name: 'Gmod Integration',
-            description: 'Gmod Integration is an innovative platform designed to create interaction between Garry\'s Mod servers and their Discord communities. This all-in-one service offers advanced features such as chat synchronization, player statistics and a trust factor system, all with quick and easy setup. Praised by more than 50 servers for a total of 6,150 users, Gmod Integration is the solution of choice to enrich community interactions. We adopt a freemium business model, offering free basic services as well as tailor-made solutions and premium subscriptions.',
+            name: 'Gmod Integration - SaaS',
+            description: `
+                Gmod Integration is an innovative platform designed to create interaction between Garry\'s Mod servers and their Discord communities.
+                This all-in-one service offers advanced features such as chat synchronization, player statistics and a trust factor system, all with quick and easy setup.
+                Praised by more than +200 servers for a total of +24,000 users, Gmod Integration is the solution of choice to enrich community interactions.
+                We adopt a freemium business model, offering free basic services as well as tailor-made solutions and premium subscriptions.
+            `,
             link: 'https://gmod-integration.com',
             img: [
                 'img/projects/gmod_integration_main.png',
@@ -1155,15 +1158,121 @@
             education: 'Self-Taught'
         },
         {
-            name: 'SAE 1.02 (Algorithm Comparisons)',
+            name: 'SAE 3.03 (Application Deployment)',
             description: `
-                In project SAÉ 1.02, our aim was to refine our algorithm analysis skills by implementing and comparing various algorithms. We utilized resources like algorithmic books and programming tools such as IJava for implementation and data collection.
-                Soft skills like creativity and brainstorming were crucial in devising the game structure during team meetings. Despite facing the challenge of working solo due to my partner's withdrawal, I achieved a commendable score of 16/20.
-                Through this project, I honed my abilities in Bash scripting, ASCII art, and game design, particularly improving my understanding of terminal operations. Moving forward, I'll be more discerning in selecting team members to enhance collaboration in future projects.
+                In project SAÉ 3.03, I secured Matrix Chat deployment on a Debian server with Element Web, focusing on secure communication and data privacy.
+                The project required advanced knowledge of Debian, Nginx configuration, and SSL certificate installation.
+                My strengths in system administration and network security were crucial for successful deployment.
+                The main challenge was configuring Nginx to proxy requests to the Matrix server, requiring extensive research.
+                This project deepened my understanding of secure application deployment and network security, preparing me for future projects involving secure communication systems.
             `,
-            link: 'https://moodle.univ-lille.fr/mod/assign/view.php?id=985841',
-            img: ['img/projects/sae_1.2.png'],
-            technologies: ['IJava'],
+            link: 'https://gitlab.univ-lille.fr/etu/2023-2024/s303/i-launaybecue-collin',
+            img: [
+                './img/projects/sae-3-03/element_1.png',
+                './img/projects/sae-3-03/element_2.png',
+                './img/projects/sae-3-03/architecture.png',
+            ],
+            technologies: ['Debian', 'Nginx', 'Cloudflare', 'Matrix', 'Element Web'],
+            status: 'Finished',
+            date: '2023-2024',
+            languages: ['French'],
+            education: 'University of Lille'
+        },
+        {
+            name: 'SAE 3.02 (Game Development - Monster Hunter)',
+            description: `
+                In project SAÉ 3.02, I developed a 2D Monster Hunter-inspired game using javaFX, focusing on game mechanics and user experience.
+                There are a monster and a hunter, and the goal is to kill the monster before it escapes the labyrinth.
+                A big point of this project was the use Dijkstra's algorithm to made the AI of the monster and custom pathfinding for the hunter.
+                The main challenge was the pathfinding of the hunter, but I managed to make it work.
+                This project deepened my understanding of game development and pathfinding, preparing me for future projects involving game development.
+            `,
+            link: 'https://gitlab.univ-lille.fr/sae302/2023/I3_SAE3A',
+            img: [
+                './img/projects/sae-3-02/cas-utilisation.png',
+                './img/projects/sae-3-02/diagrame_uml.png',
+            ],
+            technologies: ['Java', 'JavaFX'],
+            status: 'Finished',
+            date: '2023-2024',
+            languages: ['French'],
+            education: 'University of Lille'
+        },
+        {
+            name: 'Back to School Project (Ascii Invaders)',
+            description: `
+                AsciiInvader is a Space Invaders in command prompt, made in a group of 5 in a Scrum framework.
+                The goal of this project was to get us back into programming after the summer break and to train us in the Scrum framework.
+                Time being precious, we settled for 5 sprints of 3 hours spread over 4 days before presenting the final result to the first-year students.
+            `,
+            link: 'https://gitlab.univ-lille.fr/2023-projet-agile-de-rentree/groupe-7',
+            img: [
+                './img/projects/back-to-school/ascii_invader.png',
+            ],
+            technologies: ['Java', 'Scrum'],
+            status: 'Finished',
+            date: '2023',
+            languages: ['French'],
+            education: 'University of Lille'
+        },
+        {
+            name: 'SAE 2.05 - 2.06 (Project Management / Teamwork)',
+            description: `
+                In projects SAÉ 2.05 and 2.06, our goal was to enhance project management and teamwork skills through creating an escape game and managing its promotion.
+                We designed captivating puzzles and an engaging storyline for the game, utilizing tools like Trello and Asana for project coordination.
+                My creativity played a significant role, guiding the team from concept to execution seamlessly.
+                Communication proved challenging due to frequent illnesses among team members.
+                Nevertheless, these projects provided valuable experience in planning, coordinating, and collaborating within a team.
+                They equipped us with essential skills for future careers requiring effective project management and teamwork.
+            `,
+            link: 'https://app.genial.ly/editor/642150f644300e001276ed76',
+            img: [
+                './img/projects/sae-2-05/affiche.png',
+                './img/projects/sae-2-05/img_3.png',
+                './img/projects/sae-2-05/img.png',
+                './img/projects/sae-2-05/img_1.png',
+                './img/projects/sae-2-05/img_2.png',
+            ],
+            technologies: ['Genially'],
+            status: 'Finished',
+            date: '2022-2023',
+            languages: ['French'],
+            education: 'University of Lille'
+        },
+        {
+            name: 'SAE 1.04 - 2.04 (Introduction and Exploitation of BDD)',
+            description: `
+                In project SAÉ 1.04, I developed a simple student management system using Microsoft Access forms to grasp database fundamentals.
+                Project SAÉ 2.04 focused on a more intricate database using Olympic Games data, requiring advanced data manipulation skills.
+                My strengths lay in prior knowledge of tools like Data Grip and SQL proficiency from extracurricular projects.
+                The main challenge was the solo execution, yet I managed to master necessary skills.
+                Database proficiency is crucial in computing, shaping my future goal of mastering various database systems like MySQL or PostgreSQL.
+            `,
+            link: 'https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266882',
+            img: [
+                './img/projects/sae-2-04/img.png',
+            ],
+            technologies: ['SQL', 'Postgres SQL', 'DataGrip', 'Access'],
+            status: 'Finished',
+            date: '2022-2023',
+            languages: ['French'],
+            education: 'University of Lille'
+        },
+        {
+            name: 'SAE 1.03 - 2.03 (Installation of a Workstation and it\'s Network Services)',
+            description: `
+                In project SAÉ 1.03, I installed a Debian Mate workstation and virtualized a network system to enhance my networking and IP address management skills.
+                Project SAÉ 2.03 focused on installing network services and configuring a virtualized system, allowing practical application of my system administration and network management knowledge.
+                The overarching goal was to produce comprehensive documentation on Debian Mate workstation installation and configuration, with minimal challenges due to prior coursework coverage.
+                My strength lay in virtualization and network configuration, stemming from personal experience managing home network infrastructures.
+                These projects deepened my networking administration skills, IP address management, and technical documentation writing, preparing me for future IT projects involving network system installation and configuration.
+            `,
+            link: 'https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266881',
+            img: [
+                './img/projects/sae-1-03/sae_1.3_1.png',
+                './img/projects/sae-1-03/sae_1.3_2.png',
+            ],
+            technologies: ['Debian', 'VirtualBox', 'GNS3'],
             status: 'Finished',
             date: '2022-2023',
             languages: ['French'],
@@ -1191,68 +1300,20 @@
             education: 'University of Lille'
         },
         {
-            name: 'SAE 1.03 - 2.03 (Installation of a Workstation and it\'s Network Services)',
+            name: 'SAE 1.02 (Algorithm Comparisons)',
             description: `
-                In project SAÉ 1.03, I installed a Debian Mate workstation and virtualized a network system to enhance my networking and IP address management skills.
-                Project SAÉ 2.03 focused on installing network services and configuring a virtualized system, allowing practical application of my system administration and network management knowledge.
-                The overarching goal was to produce comprehensive documentation on Debian Mate workstation installation and configuration, with minimal challenges due to prior coursework coverage.
-                My strength lay in virtualization and network configuration, stemming from personal experience managing home network infrastructures.
-                These projects deepened my networking administration skills, IP address management, and technical documentation writing, preparing me for future IT projects involving network system installation and configuration.
+                In project SAÉ 1.02, our aim was to refine our algorithm analysis skills by implementing and comparing various algorithms. We utilized resources like algorithmic books and programming tools such as IJava for implementation and data collection.
+                Soft skills like creativity and brainstorming were crucial in devising the game structure during team meetings. Despite facing the challenge of working solo due to my partner's withdrawal, I achieved a commendable score of 16/20.
+                Through this project, I honed my abilities in Bash scripting, ASCII art, and game design, particularly improving my understanding of terminal operations. Moving forward, I'll be more discerning in selecting team members to enhance collaboration in future projects.
             `,
-            link: 'https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266881',
-            img: [
-                './img/projects/sae-1-03/sae_1.3_1.png',
-                './img/projects/sae-1-03/sae_1.3_2.png',
-            ],
-            technologies: ['Debian', 'VirtualBox', 'GNS3'],
+            link: 'https://moodle.univ-lille.fr/mod/assign/view.php?id=985841',
+            img: ['img/projects/sae_1.2.png'],
+            technologies: ['IJava'],
             status: 'Finished',
             date: '2022-2023',
             languages: ['French'],
             education: 'University of Lille'
         },
-        {
-            name: 'SAE 1.04 - 2.04 (Introduction and Exploitation of BDD)',
-            description: `
-                In project SAÉ 1.04, I developed a simple student management system using Microsoft Access forms to grasp database fundamentals.
-                Project SAÉ 2.04 focused on a more intricate database using Olympic Games data, requiring advanced data manipulation skills.
-                My strengths lay in prior knowledge of tools like Data Grip and SQL proficiency from extracurricular projects.
-                The main challenge was the solo execution, yet I managed to master necessary skills.
-                Database proficiency is crucial in computing, shaping my future goal of mastering various database systems like MySQL or PostgreSQL.
-            `,
-            link: 'https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266882',
-            img: [
-                './img/projects/sae-2-04/img.png',
-            ],
-            technologies: ['SQL', 'PostgresSQL', 'DataGrip', 'Access'],
-            status: 'Finished',
-            date: '2022-2023',
-            languages: ['French'],
-            education: 'University of Lille'
-        },
-        {
-            name: 'SAE 2.05 - 2.06 (Project Management / Teamwork)',
-            description: `
-                In projects SAÉ 2.05 and 2.06, our goal was to enhance project management and teamwork skills through creating an escape game and managing its promotion.
-                We designed captivating puzzles and an engaging storyline for the game, utilizing tools like Trello and Asana for project coordination.
-                My creativity played a significant role, guiding the team from concept to execution seamlessly.
-                Communication proved challenging due to frequent illnesses among team members.
-                Nevertheless, these projects provided valuable experience in planning, coordinating, and collaborating within a team.
-                They equipped us with essential skills for future careers requiring effective project management and teamwork.
-            `,
-            link: 'https://app.genial.ly/editor/642150f644300e001276ed76',
-            img: [
-                './img/projects/sae-2-05/affiche.png',
-                './img/projects/sae-2-05/img_3.png',
-                './img/projects/sae-2-05/img.png',
-                './img/projects/sae-2-05/img_1.png',
-                './img/projects/sae-2-05/img_2.png',
-            ],
-            technologies: ['Genially'],
-            status: 'Finished',
-            date: '2022-2023',
-            languages: ['French'],
-            education: 'University of Lille'
-        }
     ]
 
     const projectsList = document.getElementById('projects_list')
@@ -1269,7 +1330,7 @@
             </div>
             <p>${project.description}</p>
             <div class="technologies">
-                ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase()}.png"></a>`).join('')}
+                ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase().replace(' ', '-')}.png"></a>`).join('')}
             </div>
         `
         // on click open link
