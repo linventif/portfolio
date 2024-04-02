@@ -5,27 +5,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Grégoire LaunayBecue a.k.a Linventif, I'm a french student in computer science at the University of Lille in France. I'm a passionate developer, I love to learn new things and I'm always looking for new challenges."
           name="description">
+    <meta content="Grégoire LaunayBecue, Linventif, Linventif Portfolio, Linventif Projects, Linventif Tools, Linventif Contact, Linventif Certifications" name="keywords">
     <title>Portfolio - Linventif</title>
-    <link href="img/gregoire_2024.png" rel="icon">
+    <link href="./img/gregoire_2024.png" rel="icon">
+    <script src="https://kit.fontawesome.com/3df2e97dd7.js" crossorigin="anonymous"></script>
     <style>
-        /* Global Color */
         :root {
             --background-color: #292C36;
 
             --primary-color: #3A3E49;
-            --primary-color-active: #2C2F3B;
-
-            --secondary-color: #2c2f3b;
-            --secondary-color-active: #1f2128;
-
-            --green-color: #4E9735;
-            --green-color-active: #3A7A26;
-
-            --orange-color: #CC913E;
-            --orange-color-active: #A87A2B;
-
-            --red-color: #C93B3B;
-            --red-color-active: #A82B2B;
+            --primary-color-active: #343744;
 
             --blue-color: #43c5d6;
             --blue-color-active: #2998a7;
@@ -51,8 +40,28 @@
             justify-content: space-between;
             align-items: center;
             height: 80px;
-            /*width: 1400px;*/
             margin: 0 auto;
+        }
+
+        @media (max-width: 1400px) {
+            body {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            header > h1 {
+                display: none;
+            }
+
+            header {
+                justify-content: space-around;
+            }
+
+            nav {
+                justify-content: space-around;
+                width: 100%;
+            }
         }
 
         .education {
@@ -201,21 +210,7 @@
         }
 
         article {
-            margin-top: 140px;
-        }
-
-        #home {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        #home_description {
-            width: 600px;
-            text-align: justify;
-            /*display: flex;*/
-            /*flex-direction: column;*/
-            /*justify-content: space-around;*/
+            margin-top: 120px;
         }
 
         #projects_list {
@@ -308,73 +303,125 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 60px;
         }
 
         .title h2 {
             margin: 0 15px;
+            width: 50%;
         }
 
         .hr2 {
             width: 100%;
-            height: 0px;
+            height: 0;
         }
 
-        .contact {
-            height: 60px;
-            /*background-color: var(--primary-color);*/
-            /*border-radius: 16px;*/
-            /*display: flex;*/
-            /*align-items: center;*/
-            /*padding: 0 15px;*/
-            /*transition: 0.5s ease-in-out;*/
-            /*margin-bottom: 15px;*/
-        }
-
-        #contact_container {
+        .social-links {
             display: flex;
-            justify-content: space-around;
+            justify-content: start;
+            margin-top: 15px;
         }
 
-        #contact_container > img {
-            width: 400px;
-            height: 400px;
-            border-radius: 16px;
+        .social-links a:not(:last-child) {
             margin-right: 15px;
+        }
+
+        .social-link {
+            height: 40px;
+            background-color: var(--primary-color-active);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 6px;
+            padding: 0 15px;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: var(--blue-color);
+        }
+
+        .social-link i {
+            margin-right: 15px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-link p {
+            color: var(--font-color);
+            text-decoration: none;
+
+        }
+
+        #about-me {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #about-me > div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #about-me-text {
+            width: 800px;
+            text-align: justify;
+        }
+
+        #about-me img {
+            width: 380px;
+            height: 360px;
+            border-radius: 50%;
+            margin: auto 60px;
             display: block;
             transition: 0.5s ease-in-out;
         }
 
-        #contact_list {
+        .date {
+            font-weight: bold;
+        }
+
+        #thanks {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            height: 80%;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
         }
 
-        .contact_logo {
-            background-color: var(--primary-color);
-            height: 64px;
-            width: 64px;
-            border-radius: 8px;
+        #name {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
         }
 
-        .contact_img {
-            padding: 10px;
-            height: 100%;
-            width: 100%;
+        #helloThere {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--blue-color);
+        }
+
+        #home {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>I'm <span id="name"></span></h1>
+    <a href="/" id="fqdn"></a>
     <nav>
         <a href="#home">Home</a>
-        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#toolbox">ToolsBox</a>
-        <!--        <a href="#certifications">Certifications</a>-->
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -383,41 +430,33 @@
 
 <main>
     <article id="home">
-        <img alt="picture_of_me" id="linventif_img" src="img/gregoire_2024.png">
-        <div id="home_description">
-            <p>
-                Hi, I'm Grégoire Launay--Bécue but well known as Linventif on the internet.
-            </p>
-            <p>
-                Native French but English Adept, I currently live in France.
-            </p>
-            <p>
-                Currently, I study at the <a href="https://www.univ-lille.fr/"> University of Lille</a> in France to get
-                a
-                Bachelor's degree in Computer Science, my objective is to get a Master's degree in Computer Science.
-            </p>
-            <p>
-                I'm a passionate developer, I love made new projects, actually I'm working on <a
-                    href="https://gmod-integration.com">Gmod Integration</a> a platform to create interaction
-                between Garry's Mod servers and their Discord communities.
-            </p>
-            <p>
-                Also for me sport and social life are very important, I'm the president of a student climbing club in
-                my university and an active member of other social communities.
-            </p>
-            <p>
-                In April 2024 I will work for 2 months on a VR in Web Browser project.
-            </p>
-        </div>
+        <h2 id="helloThere">Hello there!, I'm</h2>
+        <span id="name"></span>
+        <p><span class="fontWhite">Passionate Developer</span> who loves creating new projects and learning new technologies.</p>
+        <div class="social-links"></div>
     </article>
 
-    <article id="education">
+    <article id="about-me">
         <div class="title">
             <hr class="hr2">
-            <h2>Education</h2>
+            <h2>About Me</h2>
             <hr class="hr2">
         </div>
-        <div id="education_list"></div>
+
+        <div>
+            <div id="about-me-text">
+                <p>Hey! I'm Grégoire Launay--Bécue. I'm a passionate developer who loves creating new things and learning new technologies. I'm always involved in a ton of projects and looking for new challenges.</p>
+
+                <p>Currently, I'm studying at the <a href="https://www.univ-lille.fr/">University of Lille</a> in France to obtain a Bachelor's degree in Computer Science. My goal is to achieve a Master's degree in Computer Science and perhaps even a PhD.</p>
+
+                <p>I started coding in <span class="date">2018</span> at the age of 14 with C++ on Arduino. A few months later, I started to learn 3D modeling with <a href="https://www.sketchup.com/">Google Sketchup</a>, and then <a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360</a> for 3D printing components for my DIY electronic projects. These were open source and posted on my <a href="https://cults3d.com/en/users/Linventif">Cults3D</a> page. In <span class="date">2020</span>, I started to learn Source Engine Mapping for Garry's Mod. I created my first Gmod server in <span class="date">2021</span>, and I started to learn Lua to create open-source addons for my server in <span class="date">2022</span>. All my public content is available on my <a href="https://aide-serveur.fr/members/linventif.157100/#resources">Aide Serveur</a>, <a href="https://steamcommunity.com/id/linventif/myworkshopfiles/">Steam Workshop</a>, and my <a href="https://github.com/linventif?tab=repositories">GitHub</a>. From <span class="date">2023</span> to now, I've been focusing on learning DiscordJS and Web Development to create my own SaaS, <a href="https://gmod-integration.com">Gmod Integration</a>, to address a problem I encountered on my Garry's Mod server: how to create an interconnection between my server and my Discord community.</p>
+
+                <p>When I'm not coding, I'm at the climbing gym. I'm a High-Level Climber, and I compete in numerous competitions. I began climbing at the age of 7 and started competing in <span class="date">2015</span>. For me, climbing is a way to relax and push my limits.</p>
+            </div>
+
+
+            <img alt="picture_of_me" src="img/gregoire_2024.png">
+        </div>
     </article>
 
     <article id="projects">
@@ -427,37 +466,7 @@
             <hr class="hr2">
         </div>
 
-        <div id="projects_list">
-            <!--            <div class="project example">-->
-            <!--                <h4>Example Project</h4>-->
-
-            <!--                <div class="project_imgs">-->
-            <!--                    <div class="project_imgs_carousel">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                        <img alt="Example Project" src="img/screen.png">-->
-            <!--                    </div>-->
-            <!--                </div>-->
-
-            <!--                <p>-->
-            <!--                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci alias asperiores-->
-            <!--                    aspernatur atque autem blanditiis consequatur cumque cupiditate delectus doloremque doloribus-->
-            <!--                    ducimus ea earum eius eligendi eos error est eum eveniet excepturi exercitationem facilis fugiat-->
-            <!--                    hic id illum impedit in incidunt ipsa ipsum iure iusto labore laboriosam laborum libero magnam-->
-            <!--                </p>-->
-
-            <!--                <div class="technologies">-->
-            <!--                    <a href="#tech_html" title="HTML"><img alt="HTML" src="img/tools/html.png"></a>-->
-            <!--                    <a href="#tech_css" title="CSS"><img alt="CSS" src="img/tools/css.png"></a>-->
-            <!--                    <a href="#tech_js" title="Javascript"><img alt="Javascript" src="img/tools/js.png"></a>-->
-            <!--                    <a href="#tech_ejs" title="EJS"><img alt="EJS" src="img/tools/ejs.png"></a>-->
-            <!--                </div>-->
-            <!--            </div>-->
-        </div>
+        <div id="projects_list"></div>
     </article>
 
     <article id="toolbox">
@@ -476,19 +485,10 @@
             <hr class="hr2">
         </div>
 
-        <div id="contact_container">
-            <img alt="undraw_contact" src="img/contact/undraw_contact_us_re_4qqt.svg">
-
-            <div id="contact_list">
-                <a class="contact" href="mailto:contact@linv.dev">
-                    <!--                    <div class="contact_logo">-->
-                    <!--                        <img alt="mail" class="contact_img" src="img/contact/envelope-solid.svg" style="fill: white">-->
-                    <!--                    </div>-->
-                    <!--                    <div class="contact_info">-->
-                    <!--                        <p>Send me an email</p>-->
-                    <!--                    </div>-->
-                </a>
-            </div>
+        <div id="thanks">
+            <p>Thank you for visiting my portfolio.</p>
+            <p>Feel free to contact me on any of the following platforms :</p>
+            <div class="social-links"></div>
         </div>
     </article>
 </main>
@@ -500,6 +500,8 @@
 </footer>
 
 <script>
+    document.getElementById('fqdn').innerText = window.location.hostname
+
     const name = document.getElementById('name')
     const names = [
         'Grégoire Launay--Bécue',
@@ -582,12 +584,12 @@
             cat: 'IDE',
             level: 'Advanced'
         },
-        {
-            name: 'CLion',
-            img: 'img/tools/clion.png',
-            cat: 'IDE',
-            level: 'Intermediate'
-        },
+        // {
+        //     name: 'CLion',
+        //     img: 'img/tools/clion.png',
+        //     cat: 'IDE',
+        //     level: 'Intermediate'
+        // },
         {
             name: 'Windows',
             img: 'img/tools/windows.png',
@@ -618,12 +620,12 @@
             cat: 'Hosting',
             level: 'Advanced'
         },
-        {
-            name: 'Kali',
-            img: 'img/tools/kali.png',
-            cat: 'OS',
-            level: 'Intermediate'
-        },
+        // {
+        //     name: 'Kali',
+        //     img: 'img/tools/kali.png',
+        //     cat: 'OS',
+        //     level: 'Intermediate'
+        // },
         {
             name: 'NodeJS',
             img: 'img/tools/nodejs.png',
@@ -646,19 +648,19 @@
             name: 'EJS',
             img: 'img/tools/ejs.png',
             cat: 'Frameworks',
-            level: 'Intermediate'
+            level: 'Advanced'
         },
-        {
-            name: 'VueJS',
-            img: 'img/tools/vue.png',
-            cat: 'Frameworks',
-            level: 'Beginner'
-        },
+        // {
+        //     name: 'VueJS',
+        //     img: 'img/tools/vue.png',
+        //     cat: 'Frameworks',
+        //     level: 'Beginner'
+        // },
         {
             name: 'Java',
             img: 'img/tools/java.png',
             cat: 'Languages',
-            level: 'Intermediate'
+            level: 'Advanced'
         },
         {
             name: 'HTML',
@@ -678,36 +680,36 @@
             cat: 'Languages',
             level: 'Advanced'
         },
-        {
-            name: 'C',
-            img: 'img/tools/c.png',
-            cat: 'Languages',
-            level: 'Intermediate'
-        },
-        {
-            name: 'C++',
-            img: 'img/tools/c++.png',
-            cat: 'Languages',
-            level: 'Beginner'
-        },
-        {
-            name: 'Lua',
-            img: 'img/tools/lua.png',
-            cat: 'Languages',
-            level: 'Intermediate'
-        },
+        // {
+        //     name: 'C',
+        //     img: 'img/tools/c.png',
+        //     cat: 'Languages',
+        //     level: 'Intermediate'
+        // },
+        // {
+        //     name: 'C++',
+        //     img: 'img/tools/c++.png',
+        //     cat: 'Languages',
+        //     level: 'Beginner'
+        // },
+        // {
+        //     name: 'Lua',
+        //     img: 'img/tools/lua.png',
+        //     cat: 'Languages',
+        //     level: 'Intermediate'
+        // },
         {
             name: 'GLua',
             img: 'img/tools/glua.png',
             cat: 'Languages',
             level: 'Advanced'
         },
-        {
-            name: 'Python',
-            img: 'img/tools/python.png',
-            cat: 'Languages',
-            level: 'Beginner'
-        },
+        // {
+        //     name: 'Python',
+        //     img: 'img/tools/python.png',
+        //     cat: 'Languages',
+        //     level: 'Beginner'
+        // },
         {
             name: 'MySQL',
             img: 'img/tools/mysql.png',
@@ -720,17 +722,17 @@
             cat: 'Databases',
             level: 'Advanced'
         },
-        {
-            name: 'Redis',
-            img: 'img/tools/redis.png',
-            cat: 'Databases',
-            level: 'Beginner'
-        },
+        // {
+        //     name: 'Redis',
+        //     img: 'img/tools/redis.png',
+        //     cat: 'Databases',
+        //     level: 'Beginner'
+        // },
         {
             name: 'PostgreSQL',
             img: 'img/tools/postgresql.png',
             cat: 'Databases',
-            level: 'Intermediate'
+            level: 'Advanced'
         },
         {
             name: 'Git',
@@ -742,7 +744,7 @@
             name: 'GitHub',
             img: 'img/tools/github.png',
             cat: 'Versioning',
-            level: 'Intermediate'
+            level: 'Advanced'
         },
         {
             name: 'GitLab',
@@ -772,19 +774,19 @@
             name: 'PayPal',
             img: 'img/tools/paypal.png',
             cat: 'Payment',
-            level: 'Beginner'
+            level: 'Intermediate'
         },
         {
             name: 'Stripe',
             img: 'img/tools/stripe.png',
             cat: 'Payment',
-            level: 'Beginner'
+            level: 'Intermediate'
         },
         {
             name: 'Docker',
             img: 'img/tools/docker.png',
             cat: 'Deployment',
-            level: 'Beginner'
+            level: 'Intermediate'
         },
         {
             name: 'Nginx',
@@ -807,6 +809,12 @@
         {
             name: 'Postman',
             img: 'img/tools/postman.png',
+            cat: 'Others',
+            level: 'Advanced'
+        },
+        {
+            name: 'Bruno',
+            img: 'img/tools/bruno.png',
             cat: 'Others',
             level: 'Advanced'
         },
@@ -834,36 +842,36 @@
             cat: 'Languages',
             level: 'Advanced'
         },
-        {
-            name: 'WireShark',
-            img: 'img/tools/wireshark.png',
-            cat: 'Others',
-            level: 'Beginner'
-        },
-        {
-            name: 'VirtualBox',
-            img: 'img/tools/virtualbox.png',
-            cat: 'Others',
-            level: 'Beginner'
-        },
-        {
-            name: 'VmWare',
-            img: 'img/tools/vmware.png',
-            cat: 'Others',
-            level: 'Beginner'
-        },
-        {
-            name: 'IJava',
-            img: 'img/tools/ijava.png',
-            cat: 'Languages',
-            level: 'Intermediate'
-        },
-        {
-            name: 'WordPress',
-            img: 'img/tools/wordpress.png',
-            cat: 'Frameworks',
-            level: 'Beginner'
-        }
+        // {
+        //     name: 'WireShark',
+        //     img: 'img/tools/wireshark.png',
+        //     cat: 'Others',
+        //     level: 'Beginner'
+        // },
+        // {
+        //     name: 'VirtualBox',
+        //     img: 'img/tools/virtualbox.png',
+        //     cat: 'Others',
+        //     level: 'Beginner'
+        // },
+        // {
+        //     name: 'VmWare',
+        //     img: 'img/tools/vmware.png',
+        //     cat: 'Others',
+        //     level: 'Beginner'
+        // },
+        // {
+        //     name: 'IJava',
+        //     img: 'img/tools/ijava.png',
+        //     cat: 'Languages',
+        //     level: 'Intermediate'
+        // },
+        // {
+        //     name: 'WordPress',
+        //     img: 'img/tools/wordpress.png',
+        //     cat: 'Frameworks',
+        //     level: 'Beginner'
+        // }
     ]
 
     const toolsCatDiv = document.getElementById('tools_cat')
@@ -889,70 +897,6 @@
         document.getElementById(`tools_${tool.cat.toLowerCase()}`).appendChild(toolDiv)
     })
 
-    const educations = [
-        {
-            name: 'Université de Lille',
-            formation: 'BUT Informatique',
-            date: '2022 - Current',
-            location: 'Lille, France',
-            img: 'img/education/univ_lille.png',
-            link: 'https://www.univ-lille.fr/'
-        },
-        {
-            name: 'Lycée César Baggio',
-            formation: 'Baccalauréat Technologique STI2D',
-            date: '2019 - 2022',
-            location: 'Lille, France',
-            mention: 'Assez Bien',
-            img: 'img/education/cesar_baggio.png',
-            link: 'https://cesarbaggio.fr'
-        }
-    ]
-
-    const educationList = document.getElementById('education_list')
-
-    educations.forEach(education => {
-        const educationDiv = document.createElement('div')
-        educationDiv.classList.add('education')
-
-        const educationTimeline = document.createElement('div')
-        educationTimeline.classList.add('timeline-container')
-
-        const educationTimelineBar = document.createElement('div')
-        educationTimelineBar.classList.add('timeline-bar')
-
-        const educationTimelineBall = document.createElement('div')
-        educationTimelineBall.classList.add('timeline-ball')
-
-        educationTimeline.appendChild(educationTimelineBall)
-        educationTimeline.appendChild(educationTimelineBar)
-        educationDiv.appendChild(educationTimeline)
-
-        const educationConent = document.createElement('div')
-        educationConent.classList.add('education-content')
-        educationConent.innerHTML = `
-            <h4>${education.name}</h4>
-            <p>Fomation: ${education.formation}</p>
-            <p>Date: ${education.date}</p>
-            <p>Location: ${education.location}</p>
-            ${education.mention ? `<p>Mention: ${education.mention}</p>` : ''}
-<!--            <a href="${education.link}" target="_blank"><img alt="${education.name}" src="${education.img}"></a>-->
-
-        `
-        educationDiv.appendChild(educationConent)
-        educationList.appendChild(educationDiv)
-    })
-
-    /*
-    Créateur de Gmod Integration, une plateforme innovante conçue pour créer de
-l'interaction entre les serveurs Garry's Mod et leurs communautés Discord. Ce service
-tout-en-un offre des fonctionnalités avancées comme la synchronisation de chat, les
-statistiques des joueurs et un système trust factor, le tout avec une mise en place rapide
-et facile. Plébiscité par plus de 50 serveurs pour un total de 6,150 utilisateurs, Gmod
-Integration est la solution de choix pour enrichir les interactions communautaires. Nous
-adoptons un modèle économique freemium, proposant des services de base gratuits ainsi
-que des solutions sur-mesure et des abonnements premium.
-     */
     const projects = [
         {
             name: 'Gmod Integration',
@@ -972,17 +916,17 @@ que des solutions sur-mesure et des abonnements premium.
             languages: ['English', 'French', 'German'],
             education: 'Self-Taught'
         },
-        // {
-        //     name: 'Portfolio',
-        //     description: 'This is my portfolio, it\'s a simple website to present myself and my projects.',
-        //     link: 'https://linv.dev',
-        //     img: ['img/projects/gmod_integration.png'],
-        //     technologies: ['HTML', 'CSS', 'JS', 'Cloudflare', 'Git', 'GitHub', 'Ubuntu', 'Nginx', 'Figma'],
-        //     status: 'Finished',
-        //     date: '2023',
-        //     languages: ['English', 'French'],
-        //     education: 'University of Lille'
-        // },
+        {
+            name: 'Portfolio',
+            description: 'This is my portfolio, it\'s a simple website to present myself and my projects.',
+            link: 'https://linv.dev',
+            img: ['img/projects/gmod_integration.png'],
+            technologies: ['HTML', 'CSS', 'JS'],
+            status: 'Finished',
+            date: '2023',
+            languages: ['English', 'French'],
+            education: 'University of Lille'
+        },
         {
             name: 'SAE 1.5 - 1.6',
             description: `
@@ -1057,39 +1001,49 @@ que des solutions sur-mesure et des abonnements premium.
 
     const contact = [
         {
-            name: 'Mail',
+            name: 'Email',
             description: 'Send me an email',
             link: 'mailto:contact@linv.dev',
-            img: 'img/contact/mail.png'
+            img: './img/contact/envelope-solid.svg',
+            icon: 'fas fa-envelope'
         },
         {
             name: 'Discord',
             description: 'Join my Discord server',
             link: 'https://linv.dev/discord',
-            img: 'img/contact/discord.png'
+            img: 'img/contact/discord.png',
+            icon: 'fab fa-discord'
+        },
+        {
+            name: 'Github',
+            description: 'Check my Github',
+            link: 'https://linv.dev/github',
+            img: 'img/contact/github.png',
+            icon: 'fab fa-github'
         },
         {
             name: 'Linkedin',
             description: 'Connect with me on Linkedin',
             link: 'https://linv.dev/linkedin',
+            img: 'img/contact/linkedin.png',
+            icon: 'fab fa-linkedin'
         }
     ]
 
-    const contactList = document.getElementById('contact_list')
-
-    contact.forEach(contact => {
-        const contactDiv = document.createElement('div')
-        contactDiv.classList.add('contact')
-        contactDiv.innerHTML = `
-            <a href="${contact.link}" target="_blank">
-                <div class="contact_info">
-                    <p>${contact.description}</p>
-                </div>
-            </a>
-        `
-        contactList.appendChild(contactDiv)
+    const socialLinks = document.querySelectorAll('.social-links')
+    socialLinks.forEach(socialLink => {
+        contact.forEach(contact => {
+            const contactDiv = document.createElement('a')
+            contactDiv.classList.add('social-link')
+            contactDiv.href = contact.link
+            contactDiv.target = '_blank'
+            contactDiv.innerHTML = `
+                <i class="${contact.icon}"></i>
+                <p>${contact.name}</p>
+            `
+            socialLink.appendChild(contactDiv)
+        })
     })
-
 
     // wait dom load
     document.addEventListener('DOMContentLoaded', () => {
