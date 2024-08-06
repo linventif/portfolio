@@ -27,6 +27,7 @@
     "@solidjs/router": "^0.13.2",
     "emoji-picker-element": "^1.21.3",
     "prettier": "^3.2.5",
-    "solid-js": "^1.8.11"
+    "solid-js": "^1.8.11",
+    "solid-typer": "^0.0.3"
   }
 }

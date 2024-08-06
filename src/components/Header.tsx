@@ -3,27 +3,25 @@ import { Component, For } from "solid-js";
 
 const navLinks = [
   {
-    title: "Documentation",
-    fontAwesomeIcon: "fas fa-book",
-    href: "/docs"
+    title: "Home",
+    href: "/",
+    fontAwesomeIcon: "fas fa-home",
   },
   {
-    title: "Add Bot",
-    fontAwesomeIcon: "fas fa-robot",
-    href: "/invite"
+    title: "Projects",
+    href: "#projects",
+    fontAwesomeIcon: "fas fa-project-diagram",
   },
   {
-    title: "Support",
-    fontAwesomeIcon: "fab fa-discord",
-    href: "/discord"
+    title: "Tools Box",
+    href: "#tools",
+    fontAwesomeIcon: "fas fa-toolbox",
   },
   {
-    title: "Premium",
-    fontAwesomeIcon: "fas fa-crown",
-    href: "/premium",
-    color: "text-amber-400",
-    hoverColor: "hover:text-amber-300"
-  }
+    title: "Contact",
+    href: "#contact",
+    fontAwesomeIcon: "fas fa-envelope",
+  },
 ];
 
 export const Header: Component = () => {
@@ -34,10 +32,11 @@ export const Header: Component = () => {
           <A href="/" class="text-2xl font-bold ml-4 text-font whitespace-nowrap">
           {window.location.hostname}
           </A>
+          <div class="flex w-full"/>
           <For each={navLinks}>
-            {({ title, fontAwesomeIcon, href, color, hoverColor }) => (
+            {({ title, fontAwesomeIcon, href }) => (
               <A href={href}
-                 class={"ml-6 whitespace-nowrap " + (color ? color : "text-base-content") + " " + (hoverColor ? hoverColor : "hover:text-zinc-300")}>
+                 class={"ml-6 whitespace-nowrap text-base-content hover:text-zinc-300"}>
                 <i class={fontAwesomeIcon + " mr-1"}></i> {title}
               </A>
             )}
