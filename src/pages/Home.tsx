@@ -52,6 +52,7 @@ const socialLinks = [
 
 interface Category {
   name: string;
+  icon: string;
 }
 
 interface Tool {
@@ -72,15 +73,19 @@ interface Project {
 
 const categories: Category[] = [
   {
+    icon: "fa-solid fa-graduation-cap",
     name: "University of Lille",
   },
   {
+    icon: "fa-solid fa-gamepad",
     name: "Garry's Mod",
   },
   {
+    icon: "fa-solid fa-cube",
     name: "3D Printing",
   },
   {
+    icon: "fa-solid fa-code",
     name: "Web Development",
   },
 ];
@@ -92,8 +97,9 @@ const SocialLink: Component = () => {
     <div class="flex flex-raw items-center justify-center gap-6 w-full p-4">
       <For each={socialLinks}>
         {({ title, fontAwesomeIcon, href }) => (
-          <A href={href} class="btn btn-primary ">
-            <i class={fontAwesomeIcon + " text-blue mr-2"}></i> {title}
+          <A href={href} class="btn btn-primary btn-outline">
+            <i class={fontAwesomeIcon + " text-blue mr-2 text-lg"}/>
+              <span class="text-zinc-300 hover:text-white">{title}</span>
           </A>
         )}
       </For>
@@ -159,8 +165,8 @@ const Home: Component = () => {
         </Article>
         <Article id="about-me" name="About Me"></Article>
         <Article id="projects" name="Projects">
-          <div class="flex flex-row justify-center gap-4">
-            <For each={categories}>{(category) => <button class="btn btn-primary">{category.name}</button>}</For>
+          <div class="flex flex-row gap-4 py-4">
+              <For each={categories}>{(category) => <button class="btn btn-primary btn-outline"><i class={`${category.icon} mr-2 text-blue`}></i><span class="text-zinc-300 hover:text-white">{category.name}</span></button>}</For>
           </div>
         </Article>
         <Article id="tools" name="Tools Box"></Article>

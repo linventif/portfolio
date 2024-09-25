@@ -69,7 +69,7 @@ const App: Component = () => {
               <h2 class="card-title">{link.label}</h2>
               <p>{link.description}</p>
               <div class="card-actions justify-end">
-                <a href={link.href} class="btn btn-primary">Visit</a>
+                <a href={link.href} class="btn btn-primary btn-outline">Visit</a>
               </div>
             </div>
           </div>
