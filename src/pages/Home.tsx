@@ -1,6 +1,4 @@
-import { Component, createSignal, For, Show } from "solid-js";
-import { A } from "@solidjs/router";
-import { SolidTyper } from "solid-typer";
+import { Component } from "solid-js";
 import { Social } from "../components/Social";
 import { Projects } from "../components/Projects";
 import { Tools } from "../components/Tools";

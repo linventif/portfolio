@@ -1,5 +1,4 @@
 import { Component } from "solid-js";
-import { A } from "@solidjs/router";
 import { SolidTyper } from "solid-typer";
 
 export const Hero: Component = () => {

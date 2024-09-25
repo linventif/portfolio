@@ -1,5 +1,4 @@
 import { Component } from "solid-js";
-import { A } from "@solidjs/router";
 
 export const AboutMe: Component = () => {
   return (
