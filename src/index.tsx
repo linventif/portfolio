@@ -2,7 +2,6 @@
 import { render } from "solid-js/web";
 
 import "./index.css";
-import "./sentry";
 import { Route, Router } from "@solidjs/router";
 import RedirectMiddleware from "./middleware/redirection";
 import Home from "./pages/Home";
@@ -20,7 +19,9 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 const App = (props: any) => (
   <>
     <RedirectMiddleware />
-    <div class="flex flex-col px-4 w-screen max-w-screen-2xl mx-auto">{props.children}</div>
+    <div class="flex flex-col px-4 w-screen max-w-screen-2xl mx-auto">
+      {props.children}
+    </div>
   </>
 );
 
