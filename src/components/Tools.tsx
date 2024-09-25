@@ -70,7 +70,7 @@ const toolsList: Tool[] = [
     name: "TypeScript",
     description:
       "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
-    image: "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/typescript.svg",
+    image: "/tools/typescript.png",
     url: "https://typescriptlang.org",
     category: getCategoryFromID("languages"),
   },
@@ -78,7 +78,7 @@ const toolsList: Tool[] = [
     name: "SolidJS",
     description:
       "SolidJS is a declarative JavaScript library for building user interfaces.",
-    image: "https://solidjs.com/logo.svg",
+    image: "/tools/solidjs.png",
     url: "https://solidjs.com",
     category: getCategoryFromID("frameworks"),
   },
