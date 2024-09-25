@@ -74,12 +74,22 @@ const toolsList: Tool[] = [
     url: "https://typescriptlang.org",
     category: getCategoryFromID("languages"),
   },
+  {
+    name: "SolidJS",
+    description:
+      "SolidJS is a declarative JavaScript library for building user interfaces.",
+    image: "https://solidjs.com/logo.svg",
+    url: "https://solidjs.com",
+    category: getCategoryFromID("frameworks"),
+  },
 ];
+
+const [activeTools, setActiveTools] = createSignal(toolsList as Tool[]);
 
 export const Tools: Component = () => {
   return (
     <>
-      <div class="flex flex-row gap-4 py-4">
+      <div class="flex flex-wrap gap-4 py-4">
         <For each={toolsCategories}>
           {(category) => (
             <button
@@ -95,6 +105,17 @@ export const Tools: Component = () => {
                 } else {
                   setActiveToolsCategory([...activeToolsCategory(), category]);
                 }
+
+                const activeCategories = activeToolsCategory();
+                if (activeCategories.length === 0) {
+                  setActiveTools(toolsList);
+                } else {
+                  setActiveTools(
+                    toolsList.filter((tool) =>
+                      activeCategories.includes(tool.category),
+                    ),
+                  );
+                }
               }}
             >
               <i class={`${category.icon} mr-2 text-blue`}></i>
@@ -105,6 +126,29 @@ export const Tools: Component = () => {
           )}
         </For>
       </div>
+
+      <For each={activeTools()}>
+        {(tool) => (
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-row gap-4">
+              <img
+                src={tool.image}
+                alt={tool.name}
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex flex-col">
+                <a
+                  href={tool.url}
+                  class="text-lg font-bold text-blue hover:text-blue-500"
+                >
+                  {tool.name}
+                </a>
+                <p>{tool.description}</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </For>
     </>
   );
 };
