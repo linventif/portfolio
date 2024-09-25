@@ -143,7 +143,7 @@ const Home: Component = () => {
 
       <section class="gap-10 text-center">
         <Article id="hero" class="h-[800px]">
-          <h2 class="text-2xl font-bold text-blue">Hello there, I'm</h2>
+          <h2 class="text-3xl font-bold text-blue">Hello there, I'm</h2>
           <SolidTyper
             text={pseudoList}
             backspaceSpeed={100}
@@ -181,7 +181,7 @@ const Home: Component = () => {
             <p>
               Created with ❤️ by{" "}
               <A href="https://github.com/linventif" class="link">
-                Linventif (Gregoire)
+                Linventif (Grégoire)
               </A>
             </p>
           </div>
