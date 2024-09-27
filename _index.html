@@ -1331,7 +1331,7 @@
             </div>
             <p>${project.description}</p>
             <div class="technologies">
-                ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="img/tools/${tech.toLowerCase().replace(' ', '-')}.png"></a>`).join('')}
+                ${project.technologies.map(tech => `<a href="#tech_${tech.toLowerCase()}" title="${tech}"><img alt="${tech}" src="/tools/${tech.toLowerCase().replace(' ', '-')}.png"></a>`).join('')}
             </div>
         `
         // on click open link
