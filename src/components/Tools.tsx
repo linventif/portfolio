@@ -583,6 +583,10 @@ const toolsList: Tool[] = [
   },
 ];
 
+export function getToolsByNames(...names: string[]): Tool[] {
+  return toolsList.filter((tool) => names.includes(tool.name));
+}
+
 const [activeTools, setActiveTools] = createSignal(toolsList as Tool[]);
 
 export const Tools: Component = () => {
@@ -611,11 +615,12 @@ export const Tools: Component = () => {
                 } else {
                   //     set active tools to the tools that have at least one of the active categories
                   setActiveTools(
-                    toolsList.filter((tool) =>
-                      tool.categories.some((cat) =>
+                    toolsList.filter((tool) => {
+                      if (!tool.categories) return false;
+                      return tool.categories.some((cat) =>
                         activeCategories.includes(cat),
-                      ),
-                    ),
+                      );
+                    }),
                   );
                 }
               }}
