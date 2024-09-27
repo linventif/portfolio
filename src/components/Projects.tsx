@@ -5,7 +5,7 @@ import { Tool } from "./Tools";
 interface Project {
   name: string;
   description: string;
-  category: Category;
+  categories: Category;
   url: string;
   tools: Tool[];
   image: string;

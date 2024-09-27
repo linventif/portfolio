@@ -46,41 +46,540 @@ const toolsCategories: Category[] = [
     id: "apis",
   },
   {
+    name: "AI",
+    icon: "fa-solid fa-brain",
+    description: "AI tools are used to create intelligent systems.",
+    id: "ai",
+  },
+  {
+    name: "IDE",
+    icon: "fa-solid fa-laptop-code",
+    description: "IDEs are used to write and debug code.",
+    id: "ide",
+  },
+  {
+    name: "OS",
+    icon: "fa-solid fa-desktop",
+    description:
+      "Operating Systems are the software that manages computer hardware.",
+    id: "os",
+  },
+  {
+    name: "3D / Game Development",
+    icon: "fa-solid fa-gamepad",
+    description: "Game engines are used to create video games.",
+    id: "game-engines",
+  },
+  {
     name: "Miscellaneous",
     icon: "fa-solid fa-toolbox",
     description: "Miscellaneous tools are used for various purposes.",
-    id: "misc",
+    id: "miscellaneous",
   },
 ];
 
-function getCategoryFromID(id: string): Category {
-  return toolsCategories.find((category) => category.id === id) as Category;
+function getCategoriesFromID(...ids: string[]): Category[] {
+  return toolsCategories.filter((cat) => ids.includes(cat.id));
 }
 
 export interface Tool {
   name: string;
-  description: string;
   image: string;
   url: string;
-  category: Category;
+  categories: Category[];
 }
 
 const toolsList: Tool[] = [
+  // Languages
   {
     name: "TypeScript",
-    description:
-      "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
     image: "/tools/typescript.png",
     url: "https://typescriptlang.org",
-    category: getCategoryFromID("languages"),
+    categories: getCategoriesFromID("languages"),
   },
   {
+    name: "Go",
+    image: "/tools/go.png",
+    url: "https://golang.org",
+    categories: getCategoriesFromID("languages"),
+  },
+  // Frameworks
+  {
     name: "SolidJS",
-    description:
-      "SolidJS is a declarative JavaScript library for building user interfaces.",
     image: "/tools/solidjs.png",
     url: "https://solidjs.com",
-    category: getCategoryFromID("frameworks"),
+    categories: getCategoriesFromID("frameworks"),
+  },
+  // Database
+  {
+    name: "Visual Studio Code",
+    image: "/tools/vscode.png",
+    categories: getCategoriesFromID("ide"),
+    level: "Advanced",
+    url: "https://code.visualstudio.com/",
+  },
+  {
+    name: "DataGrip",
+    image: "/tools/datagrip.png",
+    categories: getCategoriesFromID("ide"),
+    level: "Advanced",
+    url: "https://www.jetbrains.com/datagrip/",
+  },
+  {
+    name: "IntelliJ IDEA",
+    image: "/tools/intellij.png",
+    categories: getCategoriesFromID("ide"),
+    level: "Advanced",
+    url: "https://www.jetbrains.com/idea/",
+  },
+  {
+    name: "WebStorm",
+    image: "/tools/webstorm.png",
+    categories: getCategoriesFromID("ide"),
+    level: "Advanced",
+    url: "https://www.jetbrains.com/webstorm/",
+  },
+  {
+    name: "CLion",
+    image: "/tools/clion.png",
+    categories: getCategoriesFromID("ide"),
+    level: "Beginner",
+    url: "https://www.jetbrains.com/clion/",
+  },
+  {
+    name: "Java",
+    image: "/tools/java.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Advanced",
+    url: "https://www.java.com/",
+  },
+  {
+    name: "HTML",
+    image: "/tools/html.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Advanced",
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    image: "/tools/css.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Advanced",
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "Javascript",
+    image: "/tools/js.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Advanced",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "C",
+    image: "/tools/c.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Intermediate",
+    url: "https://en.wikipedia.org/wiki/C_(programming_language)",
+  },
+  {
+    name: "C++",
+    image: "/tools/c++.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Beginner",
+    url: "https://www.cplusplus.com/",
+  },
+  {
+    name: "Lua",
+    image: "/tools/lua.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Intermediate",
+    url: "https://www.lua.org/",
+  },
+  {
+    name: "Python",
+    image: "/tools/python.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Intermediate",
+    url: "https://www.python.org/",
+  },
+  {
+    name: "NodeJS",
+    image: "/tools/nodejs.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Advanced",
+    url: "https://nodejs.org/",
+  },
+  {
+    name: "DiscordJS",
+    image: "/tools/djs.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Advanced",
+    url: "https://discord.js.org/",
+  },
+  {
+    name: "Express",
+    image: "/tools/express.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Advanced",
+    url: "https://expressjs.com/",
+  },
+  {
+    name: "EJS",
+    image: "/tools/ejs.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Advanced",
+    url: "https://ejs.co/",
+  },
+  {
+    name: "Windows",
+    image: "/tools/windows.png",
+    categories: getCategoriesFromID("os"),
+    level: "Advanced",
+    url: "https://www.microsoft.com/en-us/windows",
+  },
+  {
+    name: "Ubuntu",
+    image: "/tools/ubuntu.png",
+    categories: getCategoriesFromID("os"),
+    level: "Daily",
+    url: "https://ubuntu.com/",
+  },
+  {
+    name: "Debian",
+    image: "/tools/debian.png",
+    categories: getCategoriesFromID("os"),
+    level: "Advanced",
+    url: "https://www.debian.org/",
+  },
+  {
+    name: "Nginx",
+    image: "/tools/nginx.png",
+    cat: "Hosting",
+    level: "Advanced",
+    url: "https://www.nginx.com/",
+  },
+  {
+    name: "Apache",
+    image: "/tools/apache.png",
+    cat: "Hosting",
+    level: "Intermediate",
+    url: "https://httpd.apache.org/",
+  },
+  {
+    name: "Tomcat",
+    image: "/tools/tomcat.png",
+    cat: "Hosting",
+    level: "Intermediate",
+    url: "http://tomcat.apache.org/",
+  },
+  {
+    name: "MySQL",
+    image: "/tools/mysql.png",
+    categories: getCategoriesFromID("databases"),
+    level: "Advanced",
+    url: "https://www.mysql.com/",
+  },
+  {
+    name: "MariaDB",
+    image: "/tools/mariadb.png",
+    categories: getCategoriesFromID("databases"),
+    level: "Advanced",
+    url: "https://mariadb.org/",
+  },
+  {
+    name: "Redis",
+    image: "/tools/redis.png",
+    categories: getCategoriesFromID("databases"),
+    level: "Beginner",
+    url: "https://redis.io/",
+  },
+  {
+    name: "PostgresSQL",
+    image: "/tools/postgres-sql.png",
+    categories: getCategoriesFromID("databases"),
+    level: "Advanced",
+    url: "https://www.postgresql.org/",
+  },
+  {
+    name: "Unreal Engine",
+    image: "/tools/unreal.png",
+    cat: "Game Engines",
+    level: "Intermediate",
+    url: "https://www.unrealengine.com/",
+  },
+  {
+    name: "Source Engine",
+    image: "/tools/source.png",
+    cat: "Game Engines",
+    level: "Daily",
+    url: "https://partner.steamgames.com/doc/sdk",
+  },
+  {
+    name: "Blender",
+    image: "/tools/blender.png",
+    cat: "3D Software",
+    level: "Beginner",
+    url: "https://www.blender.org/",
+  },
+  {
+    name: "Fusion 360",
+    image: "/tools/fusion.png",
+    cat: "3D Software",
+    level: "Advanced",
+    url: "https://www.autodesk.com/products/fusion-360/",
+  },
+  {
+    name: "Sketchup",
+    image: "/tools/sketchup.png",
+    cat: "3D Software",
+    level: "Advanced",
+    url: "https://www.sketchup.com/",
+  },
+  {
+    name: "Midjourney",
+    image: "/tools/midjourney.png",
+    categories: getCategoriesFromID("ai"),
+    level: "Intermediate",
+    url: "https://www.midjourney.com/",
+  },
+  {
+    name: "Copilot",
+    image: "/tools/copilot.png",
+    categories: getCategoriesFromID("ai"),
+    level: "Advanced",
+    url: "https://copilot.github.com/",
+  },
+  {
+    name: "Chat GPT",
+    image: "/tools/chatgpt.png",
+    categories: getCategoriesFromID("ai"),
+    level: "Advanced",
+    url: "https://openai.com/chatgpt",
+  },
+  {
+    name: "Git",
+    image: "/tools/git.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Advanced",
+    url: "https://git-scm.com/",
+  },
+  {
+    name: "GitHub",
+    image: "/tools/github.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Advanced",
+    url: "https://github.com/",
+  },
+  {
+    name: "GitLab",
+    image: "/tools/gitlab.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Intermediate",
+    url: "https://gitlab.com/",
+  },
+  {
+    name: "Cloudflare",
+    image: "/tools/cloudflare.png",
+    cat: "Networking",
+    level: "Intermediate",
+    url: "https://www.cloudflare.com/",
+  },
+  {
+    name: "SQL",
+    image: "/tools/sql.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Advanced",
+    url: "https://en.wikipedia.org/wiki/SQL",
+  },
+  {
+    name: "WireShark",
+    image: "/tools/wireshark.png",
+    cat: "Networking",
+    level: "Beginner",
+    url: "https://www.wireshark.org/",
+  },
+  {
+    name: "VirtualBox",
+    image: "/tools/virtualbox.png",
+    cat: "Virtualization",
+    level: "Beginner",
+    url: "https://www.virtualbox.org/",
+  },
+  {
+    name: "IJava",
+    image: "/tools/ijava.png",
+    categories: getCategoriesFromID("languages"),
+    level: "Intermediate",
+    url: "https://github.com/SpencerPark/IJava",
+  },
+  {
+    name: "WordPress",
+    image: "/tools/wordpress.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Beginner",
+    url: "https://wordpress.org/",
+  },
+  {
+    name: "Java EE",
+    image: "/tools/java.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Intermediate",
+    url: "https://www.oracle.com/java/technologies/java-ee-glance.html",
+  },
+  {
+    name: "Java FX",
+    image: "/tools/javafx.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Intermediate",
+    url: "https://openjfx.io/",
+  },
+  {
+    name: "JQuery",
+    image: "/tools/jquery.png",
+    categories: getCategoriesFromID("frameworks"),
+    level: "Intermediate",
+    url: "https://jquery.com/",
+  },
+  {
+    name: "SQLite",
+    image: "/tools/sqlite.png",
+    categories: getCategoriesFromID("databases"),
+    level: "Intermediate",
+    url: "https://www.sqlite.org/",
+  },
+  {
+    name: "Android Studio",
+    image: "/tools/android-studio.png",
+    categories: getCategoriesFromID("ide"),
+    level: "Intermediate",
+    url: "https://developer.android.com/studio",
+  },
+  {
+    name: "GNS3",
+    image: "/tools/gns3.png",
+    cat: "Networking",
+    level: "Intermediate",
+    url: "https://www.gns3.com/",
+  },
+  {
+    name: "SolidWorks",
+    image: "/tools/solidworks.png",
+    cat: "3D Software",
+    level: "Intermediate",
+    url: "https://www.solidworks.com/",
+  },
+  {
+    name: "Scrum",
+    image: "/tools/scrum.png",
+    cat: "Methodologies",
+    level: "Intermediate",
+    url: "https://www.scrum.org/",
+  },
+  {
+    name: "Kanban",
+    image: "/tools/kanban.png",
+    cat: "Methodologies",
+    level: "Intermediate",
+    url: "https://www.atlassian.com/agile/kanban",
+  },
+  {
+    name: "TDD",
+    image: "/tools/tdd.png",
+    cat: "Methodologies",
+    level: "Intermediate",
+    url: "https://en.wikipedia.org/wiki/Test-driven_development",
+  },
+  {
+    name: "JUnit",
+    image: "/tools/junit.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Intermediate",
+    url: "https://junit.org/junit5/",
+  },
+  {
+    name: "Gherkin",
+    image: "/tools/gherkin.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Intermediate",
+    url: "https://cucumber.io/docs/gherkin/",
+  },
+
+  {
+    name: "PayPal",
+    image: "/tools/paypal.png",
+    categories: getCategoriesFromID("apis"),
+    level: "Intermediate",
+    url: "https://www.paypal.com/",
+  },
+  {
+    name: "Stripe",
+    image: "/tools/stripe.png",
+    categories: getCategoriesFromID("apis"),
+    level: "Intermediate",
+    url: "https://stripe.com/",
+  },
+  {
+    name: "Docker",
+    image: "/tools/docker.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Intermediate",
+    url: "https://www.docker.com/",
+  },
+  {
+    name: "Postman",
+    image: "/tools/postman.png",
+    categories: getCategoriesFromID("apis"),
+    level: "Advanced",
+    url: "https://www.postman.com/",
+  },
+  {
+    name: "Bruno",
+    image: "/tools/bruno.png",
+    categories: getCategoriesFromID("apis"),
+    level: "Advanced",
+    url: "https://www.bruno.com/",
+  },
+  {
+    name: "Kubernetes",
+    image: "/tools/kubernetes.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Beginner",
+    url: "https://kubernetes.io/",
+  },
+  {
+    name: "GitKraken",
+    image: "/tools/gitkraken.png",
+    categories: getCategoriesFromID("devops"),
+    level: "Intermediate",
+    url: "https://www.gitkraken.com/",
+  },
+  {
+    name: "Figma",
+    image: "/tools/figma.png",
+    categories: getCategoriesFromID("miscellaneous"),
+    level: "Advanced",
+    url: "https://www.figma.com/",
+  },
+  {
+    name: "Discord",
+    image: "/tools/discord.png",
+    categories: getCategoriesFromID("miscellaneous"),
+    level: "Daily",
+    url: "https://discord.com/",
+  },
+  {
+    name: "Trello",
+    image: "/tools/trello.png",
+    categories: getCategoriesFromID("miscellaneous"),
+    level: "Intermediate",
+    url: "https://trello.com/",
+  },
+  {
+    name: "Genially",
+    image: "/tools/genially.png",
+    categories: getCategoriesFromID("miscellaneous"),
+    level: "Intermediate",
+    url: "https://www.genial.ly/",
   },
 ];
 
@@ -110,9 +609,12 @@ export const Tools: Component = () => {
                 if (activeCategories.length === 0) {
                   setActiveTools(toolsList);
                 } else {
+                  //     set active tools to the tools that have at least one of the active categories
                   setActiveTools(
                     toolsList.filter((tool) =>
-                      activeCategories.includes(tool.category),
+                      tool.categories.some((cat) =>
+                        activeCategories.includes(cat),
+                      ),
                     ),
                   );
                 }
@@ -127,28 +629,21 @@ export const Tools: Component = () => {
         </For>
       </div>
 
-      <For each={activeTools()}>
-        {(tool) => (
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-row gap-4">
-              <img
-                src={tool.image}
-                alt={tool.name}
-                class="w-12 h-12 rounded-full"
-              />
-              <div class="flex flex-col">
-                <a
-                  href={tool.url}
-                  class="text-lg font-bold text-blue hover:text-blue-500"
-                >
-                  {tool.name}
-                </a>
-                <p>{tool.description}</p>
-              </div>
+      <div class="flex flex-wrap gap-4">
+        <For each={activeTools()}>
+          {(tool) => (
+            <div class="flex flex-col items-center gap-2 w-32 h-32">
+              <img src={tool.image} alt={tool.name} class="max-h-12 max-w-12" />
+              <a
+                href={tool.url}
+                class="text-lg font-bold text-blue hover:text-blue-500"
+              >
+                {tool.name}
+              </a>
             </div>
-          </div>
-        )}
-      </For>
+          )}
+        </For>
+      </div>
     </>
   );
 };
