@@ -1,5 +1,10 @@
-import { Component, createSignal, For } from "solid-js";
-import { Category, ExperienceLevel } from "../utils";
+import { Component, createSignal, For, Show } from "solid-js";
+import {
+  Category,
+  ExperienceLevel,
+  ExperienceLevelDescription,
+} from "../utils";
+import { A } from "@solidjs/router";
 
 let [activeToolsCategory, setActiveToolsCategory] = createSignal(
   [] as Category[],
@@ -259,7 +264,7 @@ const toolsList: Tool[] = [
     name: "Debian",
     image: "/tools/debian.png",
     categories: getCategoriesFromID("os"),
-    experienceLevel: ExperienceLevel.InterestedLearning,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.debian.org/",
   },
   {
@@ -661,75 +666,49 @@ export const Tools: Component = () => {
         </For>
       </div>
 
-      {/*  show tools, group by experiance level*/}
       <For each={levelArray}>
         {(level) => (
           <>
-            <span>{`Experience Level: ${level}`}</span>
-            <div class="flex flex-wrap gap-4">
-              <For
-                each={activeTools().filter(
-                  (tool) => tool.experienceLevel === level,
-                )}
-              >
-                {(tool) => (
-                  <div class="flex flex-col items-center gap-2 w-32 h-32">
-                    <img
-                      src={tool.image}
-                      alt={tool.name}
-                      class="max-h-12 max-w-12"
-                    />
-                    <a
+            <Show
+              when={
+                activeTools().filter((tool) => tool.experienceLevel === level)
+                  .length > 0
+              }
+            >
+              <div class="text-left p-4">
+                {/*  title: level */}
+                <h2 class="text-2xl font-bold text-blue">{level}</h2>
+                {/*  descripton: ExperienceLevelDescription[level].tools*/}
+                <p class="text-zinc-300">
+                  {ExperienceLevelDescription[level].tools}
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <For
+                  each={activeTools().filter(
+                    (tool) => tool.experienceLevel === level,
+                  )}
+                >
+                  {(tool) => (
+                    <A
                       href={tool.url}
-                      class="text-lg font-bold text-blue hover:text-blue-500"
+                      class="flex flex-col items-center gap-2 w-32 h-32"
                     >
-                      {tool.name}
-                    </a>
-                  </div>
-                )}
-              </For>
-            </div>
+                      <img
+                        src={tool.image}
+                        alt={tool.name}
+                        class="max-h-12 max-w-12"
+                      />
+                      <span class="text-zinc-300">{tool.name}</span>
+                    </A>
+                  )}
+                </For>
+              </div>
+            </Show>
           </>
         )}
       </For>
-
-      {/*<For each={activeTools()}>*/}
-      {/*  {(tool) => (*/}
-      {/*    <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
-      {/*      <img src={tool.image} alt={tool.name} class="max-h-12 max-w-12" />*/}
-      {/*      <a*/}
-      {/*        href={tool.url}*/}
-      {/*        class="text-lg font-bold text-blue hover:text-blue-500"*/}
-      {/*      >*/}
-      {/*        {tool.name}*/}
-      {/*      </a>*/}
-      {/*    </div>*/}
-      {/*  )}*/}
-      {/*</For>*/}
-      {/*<For each={experienceLevel}>*/}
-      {/*  {(level) => (*/}
-      {/*    <div class="flex flex-col gap-4">*/}
-      {/*      <h2 class="text-2xl font-bold text-zinc-300">{level}</h2>*/}
-      {/*      <For each={ToolexperienceLevel[level]}>*/}
-      {/*        {(tool) => (*/}
-      {/*          <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
-      {/*            <img*/}
-      {/*              src={tool.image}*/}
-      {/*              alt={tool.name}*/}
-      {/*              class="max-h-12 max-w-12"*/}
-      {/*            />*/}
-      {/*            <a*/}
-      {/*              href={tool.url}*/}
-      {/*              class="text-lg font-bold text-blue hover:text-blue-500"*/}
-      {/*            >*/}
-      {/*              {tool.name}*/}
-      {/*            </a>*/}
-      {/*          </div>*/}
-      {/*        )}*/}
-      {/*      </For>*/}
-      {/*    </div>*/}
-      {/*  )}*/}
-      {/*</For>*/}
     </>
   );
 };
