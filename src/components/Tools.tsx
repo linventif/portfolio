@@ -625,6 +625,16 @@ export const Tools: Component = () => {
   return (
     <>
       <div class="flex flex-wrap gap-4 py-4">
+        <button
+          class="btn btn-primary btn-outline"
+          onClick={() => {
+            setActiveTools(toolsList);
+            setActiveToolsCategory([]);
+          }}
+        >
+          <i class="fa-solid fa-sync mr-2 text-blue"></i>
+          <span class="text-zinc-300 hover:text-white">Reset Filters</span>
+        </button>
         <For each={toolsCategories}>
           {(category) => (
             <button
