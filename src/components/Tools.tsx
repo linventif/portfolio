@@ -591,6 +591,15 @@ export function getToolsByNames(...names: string[]): Tool[] {
   return toolsList.filter((tool) => names.includes(tool.name));
 }
 
+// for each enum of ExperienceLevel
+let ToolExperienceLevel: Record<ExperienceLevel, Tool[]> = {} as any;
+for (const level in ExperienceLevel) {
+  ToolExperienceLevel[level as ExperienceLevel] = toolsList.filter(
+    (tool) => tool.experienceLevel === level,
+  );
+}
+console.log(ToolExperienceLevel);
+
 const [activeTools, setActiveTools] = createSignal(toolsList as Tool[]);
 
 export const Tools: Component = () => {
@@ -639,19 +648,43 @@ export const Tools: Component = () => {
       </div>
 
       <div class="flex flex-wrap gap-4">
-        <For each={activeTools()}>
-          {(tool) => (
-            <div class="flex flex-col items-center gap-2 w-32 h-32">
-              <img src={tool.image} alt={tool.name} class="max-h-12 max-w-12" />
-              <a
-                href={tool.url}
-                class="text-lg font-bold text-blue hover:text-blue-500"
-              >
-                {tool.name}
-              </a>
-            </div>
-          )}
-        </For>
+        {/*<For each={activeTools()}>*/}
+        {/*  {(tool) => (*/}
+        {/*    <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
+        {/*      <img src={tool.image} alt={tool.name} class="max-h-12 max-w-12" />*/}
+        {/*      <a*/}
+        {/*        href={tool.url}*/}
+        {/*        class="text-lg font-bold text-blue hover:text-blue-500"*/}
+        {/*      >*/}
+        {/*        {tool.name}*/}
+        {/*      </a>*/}
+        {/*    </div>*/}
+        {/*  )}*/}
+        {/*</For>*/}
+        {/*<For each={ExperienceLevel}>*/}
+        {/*  {(level) => (*/}
+        {/*    <div class="flex flex-col gap-4">*/}
+        {/*      <h2 class="text-2xl font-bold text-zinc-300">{level}</h2>*/}
+        {/*      <For each={ToolExperienceLevel[level]}>*/}
+        {/*        {(tool) => (*/}
+        {/*          <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
+        {/*            <img*/}
+        {/*              src={tool.image}*/}
+        {/*              alt={tool.name}*/}
+        {/*              class="max-h-12 max-w-12"*/}
+        {/*            />*/}
+        {/*            <a*/}
+        {/*              href={tool.url}*/}
+        {/*              class="text-lg font-bold text-blue hover:text-blue-500"*/}
+        {/*            >*/}
+        {/*              {tool.name}*/}
+        {/*            </a>*/}
+        {/*          </div>*/}
+        {/*        )}*/}
+        {/*      </For>*/}
+        {/*    </div>*/}
+        {/*  )}*/}
+        {/*</For>*/}
       </div>
     </>
   );
