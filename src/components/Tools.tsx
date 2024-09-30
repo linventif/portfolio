@@ -96,14 +96,14 @@ const toolsList: Tool[] = [
     name: "TypeScript",
     image: "/tools/typescript.png",
     url: "https://typescriptlang.org",
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     categories: getCategoriesFromID("languages"),
   },
   {
     name: "Go",
     image: "/tools/go.png",
     url: "https://golang.org",
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("languages"),
   },
   // Frameworks
@@ -111,7 +111,7 @@ const toolsList: Tool[] = [
     name: "SolidJS",
     image: "/tools/solidjs.png",
     url: "https://solidjs.com",
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     categories: getCategoriesFromID("frameworks"),
   },
   // Database
@@ -119,392 +119,413 @@ const toolsList: Tool[] = [
     name: "Visual Studio Code",
     image: "/tools/vscode.png",
     categories: getCategoriesFromID("ide"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://code.visualstudio.com/",
   },
   {
     name: "DataGrip",
     image: "/tools/datagrip.png",
     categories: getCategoriesFromID("ide"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.jetbrains.com/datagrip/",
   },
   {
     name: "IntelliJ IDEA",
     image: "/tools/intellij.png",
     categories: getCategoriesFromID("ide"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.jetbrains.com/idea/",
   },
   {
     name: "WebStorm",
     image: "/tools/webstorm.png",
     categories: getCategoriesFromID("ide"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.jetbrains.com/webstorm/",
   },
   {
     name: "CLion",
     image: "/tools/clion.png",
     categories: getCategoriesFromID("ide"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.jetbrains.com/clion/",
   },
   {
     name: "Java",
     image: "/tools/java.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.java.com/",
   },
   {
     name: "HTML",
     image: "/tools/html.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
     name: "CSS",
     image: "/tools/css.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     name: "Javascript",
     image: "/tools/js.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "C",
     image: "/tools/c.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://en.wikipedia.org/wiki/C_(programming_language)",
   },
   {
     name: "C++",
     image: "/tools/c++.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.cplusplus.com/",
   },
   {
     name: "Lua",
     image: "/tools/lua.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.lua.org/",
   },
   {
     name: "Python",
     image: "/tools/python.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.python.org/",
   },
   {
     name: "NodeJS",
     image: "/tools/nodejs.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://nodejs.org/",
+  },
+  {
+    name: "PM2",
+    image: "/tools/pm2.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.Professional,
+    url: "https://pm2.keymetrics.io/",
   },
   {
     name: "DiscordJS",
     image: "/tools/djs.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://discord.js.org/",
   },
   {
     name: "Express",
     image: "/tools/express.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://expressjs.com/",
   },
   {
     name: "EJS",
     image: "/tools/ejs.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://ejs.co/",
   },
   {
     name: "Windows",
     image: "/tools/windows.png",
     categories: getCategoriesFromID("os"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.microsoft.com/en-us/windows",
   },
   {
     name: "Ubuntu",
     image: "/tools/ubuntu.png",
     categories: getCategoriesFromID("os"),
-    experienceLevel: ExperienceLevel.Daily,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://ubuntu.com/",
   },
   {
     name: "Debian",
     image: "/tools/debian.png",
     categories: getCategoriesFromID("os"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.InterestedLearning,
     url: "https://www.debian.org/",
   },
   {
     name: "Nginx",
     image: "/tools/nginx.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.nginx.com/",
   },
   {
     name: "Apache",
     image: "/tools/apache.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://httpd.apache.org/",
   },
   {
     name: "Tomcat",
     image: "/tools/tomcat.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "http://tomcat.apache.org/",
   },
   {
     name: "MySQL",
     image: "/tools/mysql.png",
     categories: getCategoriesFromID("databases"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.mysql.com/",
   },
   {
     name: "MariaDB",
     image: "/tools/mariadb.png",
     categories: getCategoriesFromID("databases"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://mariadb.org/",
   },
   {
     name: "Redis",
     image: "/tools/redis.png",
     categories: getCategoriesFromID("databases"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://redis.io/",
   },
   {
     name: "PostgresSQL",
     image: "/tools/postgres-sql.png",
     categories: getCategoriesFromID("databases"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.postgresql.org/",
   },
   {
     name: "Unreal Engine",
     image: "/tools/unreal.png",
     categories: getCategoriesFromID("3d-game-engines"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.unrealengine.com/",
   },
   {
     name: "Source Engine",
     image: "/tools/source.png",
     categories: getCategoriesFromID("3d-game-engines"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://partner.steamgames.com/doc/sdk",
   },
   {
     name: "Blender",
     image: "/tools/blender.png",
     categories: getCategoriesFromID("3d-game-engines"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.blender.org/",
   },
   {
     name: "Fusion 360",
     image: "/tools/fusion.png",
     categories: getCategoriesFromID("3d-game-engines"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.autodesk.com/products/fusion-360/",
   },
   {
     name: "Sketchup",
     image: "/tools/sketchup.png",
     categories: getCategoriesFromID("3d-game-engines"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.sketchup.com/",
   },
   {
     name: "Midjourney",
     image: "/tools/midjourney.png",
     categories: getCategoriesFromID("ai"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.midjourney.com/",
   },
   {
     name: "Copilot",
     image: "/tools/copilot.png",
     categories: getCategoriesFromID("ai"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://copilot.github.com/",
   },
   {
     name: "Chat GPT",
     image: "/tools/chatgpt.png",
-    categories: getCategoriesFromID("ai"),
-    experienceLevel: ExperienceLevel.Advanced,
+    categories: getCategoriesFromID("ai", "apis"),
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://openai.com/chatgpt",
   },
   {
     name: "Git",
     image: "/tools/git.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://git-scm.com/",
   },
   {
     name: "GitHub",
     image: "/tools/github.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://github.com/",
   },
   {
     name: "GitLab",
     image: "/tools/gitlab.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://gitlab.com/",
   },
   {
     name: "Cloudflare",
     image: "/tools/cloudflare.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.cloudflare.com/",
   },
   {
     name: "SQL",
     image: "/tools/sql.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://en.wikipedia.org/wiki/SQL",
   },
   {
     name: "WireShark",
     image: "/tools/wireshark.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.wireshark.org/",
   },
   {
     name: "VirtualBox",
     image: "/tools/virtualbox.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.virtualbox.org/",
+  },
+  {
+    name: "Jupyter Notebook",
+    image: "/tools/jupyter.png",
+    categories: getCategoriesFromID("ide"),
+    experienceLevel: ExperienceLevel.SchoolProject,
+    url: "https://jupyter.org/",
+  },
+  {
+    name: "Proxmox",
+    image: "/tools/proxmox.png",
+    categories: getCategoriesFromID("miscellaneous"),
+    experienceLevel: ExperienceLevel.Professional,
+    url: "https://www.proxmox.com/",
   },
   {
     name: "IJava",
     image: "/tools/ijava.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://github.com/SpencerPark/IJava",
   },
   {
     name: "WordPress",
     image: "/tools/wordpress.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://wordpress.org/",
   },
   {
     name: "Java EE",
     image: "/tools/java.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.oracle.com/java/technologies/java-ee-glance.html",
   },
   {
     name: "Java FX",
     image: "/tools/javafx.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://openjfx.io/",
   },
   {
     name: "JQuery",
     image: "/tools/jquery.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://jquery.com/",
   },
   {
     name: "SQLite",
     image: "/tools/sqlite.png",
     categories: getCategoriesFromID("databases"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.sqlite.org/",
   },
   {
     name: "Android Studio",
     image: "/tools/android-studio.png",
     categories: getCategoriesFromID("ide"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://developer.android.com/studio",
   },
   {
     name: "GNS3",
     image: "/tools/gns3.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.gns3.com/",
   },
   {
     name: "SolidWorks",
     image: "/tools/solidworks.png",
     categories: getCategoriesFromID("3d-game-engines"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.solidworks.com/",
   },
   {
     name: "Scrum",
     image: "/tools/scrum.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.scrum.org/",
   },
   {
     name: "Kanban",
     image: "/tools/kanban.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.atlassian.com/agile/kanban",
   },
   {
     name: "TDD",
     image: "/tools/tdd.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://en.wikipedia.org/wiki/Test-driven_development",
   },
   {
     name: "JUnit",
     image: "/tools/junit.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://junit.org/junit5/",
   },
   {
     name: "Gherkin",
     image: "/tools/gherkin.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://cucumber.io/docs/gherkin/",
   },
 
@@ -512,77 +533,77 @@ const toolsList: Tool[] = [
     name: "PayPal",
     image: "/tools/paypal.png",
     categories: getCategoriesFromID("apis"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.paypal.com/",
   },
   {
     name: "Stripe",
     image: "/tools/stripe.png",
     categories: getCategoriesFromID("apis"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://stripe.com/",
   },
   {
     name: "Docker",
     image: "/tools/docker.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.docker.com/",
   },
   {
     name: "Postman",
     image: "/tools/postman.png",
     categories: getCategoriesFromID("apis"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.postman.com/",
   },
   {
     name: "Bruno",
     image: "/tools/bruno.png",
     categories: getCategoriesFromID("apis"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.bruno.com/",
   },
   {
     name: "Kubernetes",
     image: "/tools/kubernetes.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Beginner,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://kubernetes.io/",
   },
   {
     name: "GitKraken",
     image: "/tools/gitkraken.png",
     categories: getCategoriesFromID("devops"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.gitkraken.com/",
   },
   {
     name: "Figma",
     image: "/tools/figma.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Advanced,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://www.figma.com/",
   },
   {
     name: "Discord",
     image: "/tools/discord.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Daily,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://discord.com/",
   },
   {
     name: "Trello",
     image: "/tools/trello.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://trello.com/",
   },
   {
     name: "Genially",
     image: "/tools/genially.png",
     categories: getCategoriesFromID("miscellaneous"),
-    experienceLevel: ExperienceLevel.Intermediate,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.genial.ly/",
   },
 ];
@@ -591,14 +612,7 @@ export function getToolsByNames(...names: string[]): Tool[] {
   return toolsList.filter((tool) => names.includes(tool.name));
 }
 
-// for each enum of ExperienceLevel
-let ToolExperienceLevel: Record<ExperienceLevel, Tool[]> = {} as any;
-for (const level in ExperienceLevel) {
-  ToolExperienceLevel[level as ExperienceLevel] = toolsList.filter(
-    (tool) => tool.experienceLevel === level,
-  );
-}
-console.log(ToolExperienceLevel);
+const levelArray = Object.values(ExperienceLevel);
 
 const [activeTools, setActiveTools] = createSignal(toolsList as Tool[]);
 
@@ -647,45 +661,75 @@ export const Tools: Component = () => {
         </For>
       </div>
 
-      <div class="flex flex-wrap gap-4">
-        {/*<For each={activeTools()}>*/}
-        {/*  {(tool) => (*/}
-        {/*    <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
-        {/*      <img src={tool.image} alt={tool.name} class="max-h-12 max-w-12" />*/}
-        {/*      <a*/}
-        {/*        href={tool.url}*/}
-        {/*        class="text-lg font-bold text-blue hover:text-blue-500"*/}
-        {/*      >*/}
-        {/*        {tool.name}*/}
-        {/*      </a>*/}
-        {/*    </div>*/}
-        {/*  )}*/}
-        {/*</For>*/}
-        {/*<For each={ExperienceLevel}>*/}
-        {/*  {(level) => (*/}
-        {/*    <div class="flex flex-col gap-4">*/}
-        {/*      <h2 class="text-2xl font-bold text-zinc-300">{level}</h2>*/}
-        {/*      <For each={ToolExperienceLevel[level]}>*/}
-        {/*        {(tool) => (*/}
-        {/*          <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
-        {/*            <img*/}
-        {/*              src={tool.image}*/}
-        {/*              alt={tool.name}*/}
-        {/*              class="max-h-12 max-w-12"*/}
-        {/*            />*/}
-        {/*            <a*/}
-        {/*              href={tool.url}*/}
-        {/*              class="text-lg font-bold text-blue hover:text-blue-500"*/}
-        {/*            >*/}
-        {/*              {tool.name}*/}
-        {/*            </a>*/}
-        {/*          </div>*/}
-        {/*        )}*/}
-        {/*      </For>*/}
-        {/*    </div>*/}
-        {/*  )}*/}
-        {/*</For>*/}
-      </div>
+      {/*  show tools, group by experiance level*/}
+      <For each={levelArray}>
+        {(level) => (
+          <>
+            <span>{`Experience Level: ${level}`}</span>
+            <div class="flex flex-wrap gap-4">
+              <For
+                each={activeTools().filter(
+                  (tool) => tool.experienceLevel === level,
+                )}
+              >
+                {(tool) => (
+                  <div class="flex flex-col items-center gap-2 w-32 h-32">
+                    <img
+                      src={tool.image}
+                      alt={tool.name}
+                      class="max-h-12 max-w-12"
+                    />
+                    <a
+                      href={tool.url}
+                      class="text-lg font-bold text-blue hover:text-blue-500"
+                    >
+                      {tool.name}
+                    </a>
+                  </div>
+                )}
+              </For>
+            </div>
+          </>
+        )}
+      </For>
+
+      {/*<For each={activeTools()}>*/}
+      {/*  {(tool) => (*/}
+      {/*    <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
+      {/*      <img src={tool.image} alt={tool.name} class="max-h-12 max-w-12" />*/}
+      {/*      <a*/}
+      {/*        href={tool.url}*/}
+      {/*        class="text-lg font-bold text-blue hover:text-blue-500"*/}
+      {/*      >*/}
+      {/*        {tool.name}*/}
+      {/*      </a>*/}
+      {/*    </div>*/}
+      {/*  )}*/}
+      {/*</For>*/}
+      {/*<For each={experienceLevel}>*/}
+      {/*  {(level) => (*/}
+      {/*    <div class="flex flex-col gap-4">*/}
+      {/*      <h2 class="text-2xl font-bold text-zinc-300">{level}</h2>*/}
+      {/*      <For each={ToolexperienceLevel[level]}>*/}
+      {/*        {(tool) => (*/}
+      {/*          <div class="flex flex-col items-center gap-2 w-32 h-32">*/}
+      {/*            <img*/}
+      {/*              src={tool.image}*/}
+      {/*              alt={tool.name}*/}
+      {/*              class="max-h-12 max-w-12"*/}
+      {/*            />*/}
+      {/*            <a*/}
+      {/*              href={tool.url}*/}
+      {/*              class="text-lg font-bold text-blue hover:text-blue-500"*/}
+      {/*            >*/}
+      {/*              {tool.name}*/}
+      {/*            </a>*/}
+      {/*          </div>*/}
+      {/*        )}*/}
+      {/*      </For>*/}
+      {/*    </div>*/}
+      {/*  )}*/}
+      {/*</For>*/}
     </>
   );
 };
