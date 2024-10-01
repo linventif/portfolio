@@ -1,14 +1,21 @@
-import { Component, createSignal, For } from "solid-js";
-import { Category } from "../utils";
-import { Tool } from "./Tools";
+import { Component, createSignal, For, Show } from "solid-js";
+import {
+  Category,
+  ExperienceLevel,
+  ExperienceLevelDescription,
+} from "../utils";
+import { getToolsByNames, Tool } from "./Tools";
 
 interface Project {
   name: string;
   description: string;
-  categories: Category;
+  categories: Category[];
+  experienceLevel: ExperienceLevel;
   url: string;
   tools: Tool[];
-  image: string;
+  date: string;
+  images: string[];
+  languages: string[];
 }
 
 let [activeProjectsCategory, setActiveProjectsCategory] = createSignal(
@@ -38,17 +45,21 @@ const projectsCategories: Category[] = [
   },
 ];
 
-const projects = [
+function getCategoriesFromID(...ids: string[]): Category[] {
+  return projectsCategories.filter((cat) => ids.includes(cat.id));
+}
+
+const projectsList: Project[] = [
   {
-    name: "Gmod Integration - SaaS",
+    name: "Gmod Integration",
     description: `
                 Gmod Integration is an innovative platform designed to create interaction between Garry\'s Mod servers and their Discord communities.
                 This all-in-one service offers advanced features such as chat synchronization, player statistics and a trust factor system, all with quick and easy setup.
-                Praised by more than +200 servers for a total of +24,000 users, Gmod Integration is the solution of choice to enrich community interactions.
+                Praised by more than +400 servers for a total of +65,000 users, Gmod Integration is the solution of choice to enrich community interactions.
                 We adopt a freemium business model, offering free basic services as well as tailor-made solutions and premium subscriptions.
             `,
-    link: "https://gmod-integration.com",
-    img: [
+    url: "https://gmod-integration.com",
+    images: [
       "/projects/gmod_integration_main.png",
       "/projects/gmod_integration_bot.png",
       "/projects/gmod_integration_link.png",
@@ -56,7 +67,8 @@ const projects = [
       "/projects/gmod_integration_verif.png",
       "/projects/gmod_integration_panel.png",
     ],
-    technologies: [
+    experienceLevel: ExperienceLevel.Professional,
+    tools: getToolsByNames(
       "HTML",
       "CSS",
       "JS",
@@ -76,19 +88,10 @@ const projects = [
       "DJS",
       "SQL",
       "Figma",
-    ],
-    status: "In Development",
+    ),
     date: "2023 - Current",
-    languages: [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Russian",
-      "Turkish",
-    ],
-    education: "Self-Taught",
+    languages: ["fr", "en", "tr", "en", "es", "de", "ru"],
+    categories: getCategoriesFromID("gmod", "web"),
   },
   {
     name: "SAE 3.03 (Application Deployment)",
@@ -99,17 +102,23 @@ const projects = [
                 The main challenge was configuring Nginx to proxy requests to the Matrix server, requiring extensive research.
                 This project deepened my understanding of secure application deployment and network security, preparing me for future projects involving secure communication systems.
             `,
-    link: "https://gitlab.univ-lille.fr/etu/2023-2024/s303/i-launaybecue-collin",
-    img: [
-      "./img/projects/sae-3-03/element_1.png",
-      "./img/projects/sae-3-03/element_2.png",
-      "./img/projects/sae-3-03/architecture.png",
+    url: "https://gitlab.univ-lille.fr/etu/2023-2024/s303/i-launaybecue-collin",
+    images: [
+      "/projects/sae-3-03/element_1.png",
+      "/projects/sae-3-03/element_2.png",
+      "/projects/sae-3-03/architecture.png",
     ],
-    technologies: ["Debian", "Nginx", "Cloudflare", "Matrix", "Element Web"],
-    status: "Finished",
+    experienceLevel: ExperienceLevel.SchoolProject,
+    tools: getToolsByNames(
+      "Debian",
+      "Nginx",
+      "Cloudflare",
+      "Matrix",
+      "Element Web",
+    ),
+    categories: getCategoriesFromID("university"),
     date: "2023-2024",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
   },
   {
     name: "SAE 3.02 (Game Development - Monster Hunter)",
@@ -120,132 +129,230 @@ const projects = [
                 The main challenge was the pathfinding of the hunter, but I managed to make it work.
                 This project deepened my understanding of game development and pathfinding, preparing me for future projects involving game development.
             `,
-    link: "https://gitlab.univ-lille.fr/sae302/2023/I3_SAE3A",
-    img: [
-      "./img/projects/sae-3-02/cas-utilisation.png",
-      "./img/projects/sae-3-02/diagrame_uml.png",
+    url: "https://gitlab.univ-lille.fr/sae302/2023/I3_SAE3A",
+    images: [
+      "/projects/sae-3-02/cas-utilisation.png",
+      "/projects/sae-3-02/diagrame_uml.png",
     ],
-    technologies: ["Java", "JavaFX"],
-    status: "Finished",
+    tools: getToolsByNames("Java", "JavaFX", "Dijkstra's algorithm"),
+    experienceLevel: ExperienceLevel.SchoolProject,
     date: "2023-2024",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "Back to School Project (Ascii Invaders)",
     description: `
-                AsciiInvader is a Space Invaders in command prompt, made in a group of 5 in a Scrum framework.
-                The goal of this project was to get us back into programming after the summer break and to train us in the Scrum framework.
-                Time being precious, we settled for 5 sprints of 3 hours spread over 4 days before presenting the final result to the first-year students.
-            `,
-    link: "https://gitlab.univ-lille.fr/2023-projet-agile-de-rentree/groupe-7",
-    img: ["./img/projects/back-to-school/ascii_invader.png"],
-    technologies: ["Java", "Scrum"],
-    status: "Finished",
+              AsciiInvader is a Space Invaders in command prompt, made in a group of 5 in a Scrum framework.
+              The goal of this project was to get us back into programming after the summer break and to train us in the Scrum framework.
+              Time being precious, we settled for 5 sprints of 3 hours spread over 4 days before presenting the final result to the first-year students.
+          `,
+    url: "https://gitlab.univ-lille.fr/2023-projet-agile-de-rentree/groupe-7",
+    images: ["/projects/back-to-school/ascii_invader.png"],
+    tools: getToolsByNames("Java", "Scrum"),
     date: "2023",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "SAE 2.05 - 2.06 (Project Management / Teamwork)",
     description: `
-                In projects SAÉ 2.05 and 2.06, our goal was to enhance project management and teamwork skills through creating an escape game and managing its promotion.
-                We designed captivating puzzles and an engaging storyline for the game, utilizing tools like Trello and Asana for project coordination.
-                My creativity played a significant role, guiding the team from concept to execution seamlessly.
-                Communication proved challenging due to frequent illnesses among team members.
-                Nevertheless, these projects provided valuable experience in planning, coordinating, and collaborating within a team.
-                They equipped us with essential skills for future careers requiring effective project management and teamwork.
-            `,
-    link: "https://app.genial.ly/editor/642150f644300e001276ed76",
-    img: [
-      "./img/projects/sae-2-05/affiche.png",
-      "./img/projects/sae-2-05/img_3.png",
-      "./img/projects/sae-2-05/img.png",
-      "./img/projects/sae-2-05/img_1.png",
-      "./img/projects/sae-2-05/img_2.png",
+              In projects SAÉ 2.05 and 2.06, our goal was to enhance project management and teamwork skills through creating an escape game and managing its promotion.
+              We designed captivating puzzles and an engaging storyline for the game, utilizing tools like Trello and Asana for project coordination.
+              My creativity played a significant role, guiding the team from concept to execution seamlessly.
+              Communication proved challenging due to frequent illnesses among team members.
+              Nevertheless, these projects provided valuable experience in planning, coordinating, and collaborating within a team.
+              They equipped us with essential skills for future careers requiring effective project management and teamwork.
+          `,
+    url: "https://app.genial.ly/editor/642150f644300e001276ed76",
+    images: [
+      "/projects/sae-2-05/affiche.png",
+      "/projects/sae-2-05/img_3.png",
+      "/projects/sae-2-05/img.png",
+      "/projects/sae-2-05/img_1.png",
+      "/projects/sae-2-05/img_2.png",
     ],
-    technologies: ["Genially"],
-    status: "Finished",
+    tools: getToolsByNames("Genially"),
     date: "2022-2023",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "SAE 1.04 - 2.04 (Introduction and Exploitation of BDD)",
     description: `
-                In project SAÉ 1.04, I developed a simple student management system using Microsoft Access forms to grasp database fundamentals.
-                Project SAÉ 2.04 focused on a more intricate database using Olympic Games data, requiring advanced data manipulation skills.
-                My strengths lay in prior knowledge of tools like Data Grip and SQL proficiency from extracurricular projects.
-                The main challenge was the solo execution, yet I managed to master necessary skills.
-                Database proficiency is crucial in computing, shaping my future goal of mastering various database systems like MySQL or PostgreSQL.
-            `,
-    link: "https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266882",
-    img: ["./img/projects/sae-2-04/img.png"],
-    technologies: ["SQL", "Postgres SQL", "DataGrip", "Access"],
-    status: "Finished",
+              In project SAÉ 1.04, I developed a simple student management system using Microsoft Access forms to grasp database fundamentals.
+              Project SAÉ 2.04 focused on a more intricate database using Olympic Games data, requiring advanced data manipulation skills.
+              My strengths lay in prior knowledge of tools like Data Grip and SQL proficiency from extracurricular projects.
+              The main challenge was the solo execution, yet I managed to master necessary skills.
+              Database proficiency is crucial in computing, shaping my future goal of mastering various database systems like MySQL or PostgreSQL.
+          `,
+    url: "https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266882",
+    images: ["/projects/sae-2-04/img.png"],
+    tools: getToolsByNames("SQL", "Postgres SQL", "DataGrip", "Access"),
     date: "2022-2023",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "SAE 1.03 - 2.03 (Installation of a Workstation and it's Network Services)",
     description: `
-                In project SAÉ 1.03, I installed a Debian Mate workstation and virtualized a network system to enhance my networking and IP address management skills.
-                Project SAÉ 2.03 focused on installing network services and configuring a virtualized system, allowing practical application of my system administration and network management knowledge.
-                The overarching goal was to produce comprehensive documentation on Debian Mate workstation installation and configuration, with minimal challenges due to prior coursework coverage.
-                My strength lay in virtualization and network configuration, stemming from personal experience managing home network infrastructures.
-                These projects deepened my networking administration skills, IP address management, and technical documentation writing, preparing me for future IT projects involving network system installation and configuration.
-            `,
-    link: "https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266881",
-    img: [
-      "./img/projects/sae-1-03/sae_1.3_1.png",
-      "./img/projects/sae-1-03/sae_1.3_2.png",
+              In project SAÉ 1.03, I installed a Debian Mate workstation and virtualized a network system to enhance my networking and IP address management skills.
+              Project SAÉ 2.03 focused on installing network services and configuring a virtualized system, allowing practical application of my system administration and network management knowledge.
+              The overarching goal was to produce comprehensive documentation on Debian Mate workstation installation and configuration, with minimal challenges due to prior coursework coverage.
+              My strength lay in virtualization and network configuration, stemming from personal experience managing home network infrastructures.
+              These projects deepened my networking administration skills, IP address management, and technical documentation writing, preparing me for future IT projects involving network system installation and configuration.
+          `,
+    url: "https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266881",
+    images: [
+      "/projects/sae-1-03/sae_1.3_1.png",
+      "/projects/sae-1-03/sae_1.3_2.png",
     ],
-    technologies: ["Debian", "VirtualBox", "GNS3"],
-    status: "Finished",
+    tools: getToolsByNames("Debian", "VirtualBox", "GNS3"),
     date: "2022-2023",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "SAE 1.05 - 1.06 (Collection of Needs / Discovery of the Economic Environment)",
     description: `
-                In projects SAÉ 1.05 and 1.06, we collaborated on a WordPress website promoting eco-friendly transportation modes. We conducted an economic analysis, advocating cost-sharing between employees and employers to encourage adoption.
-                Developing informative pages and vehicle reservation forms were crucial tasks, adhering to Rockstar's graphic standards for design consistency.
-                While leveraging team expertise was beneficial, I found WordPress limiting compared to direct HTML and CSS control.
-                Despite challenges, we successfully completed the project, accessible here.
-                These projects enhanced my teamwork skills and deepened my understanding of eco-friendly transportation and its economic implications.
-                For future projects, I aim to apply these skills, favoring HTML and CSS for more control over web development.
-            `,
-    link: "https://moodle.univ-lille.fr/course/view.php?id=30388&sectionid=262716",
-    img: ["/projects/sae_1.5_1.png", "/projects/sae_1.5_2.png"],
-    technologies: ["WordPress"],
-    status: "Finished",
+              In projects SAÉ 1.05 and 1.06, we collaborated on a WordPress website promoting eco-friendly transportation modes. We conducted an economic analysis, advocating cost-sharing between employees and employers to encourage adoption.
+              Developing informative pages and vehicle reservation forms were crucial tasks, adhering to Rockstar's graphic standards for design consistency.
+              While leveraging team expertise was beneficial, I found WordPress limiting compared to direct HTML and CSS control.
+              Despite challenges, we successfully completed the project, accessible here.
+              These projects enhanced my teamwork skills and deepened my understanding of eco-friendly transportation and its economic implications.
+              For future projects, I aim to apply these skills, favoring HTML and CSS for more control over web development.
+          `,
+    url: "https://moodle.univ-lille.fr/course/view.php?id=30388&sectionid=262716",
+    images: ["/projects/sae_1.5_1.png", "/projects/sae_1.5_2.png"],
+    tools: getToolsByNames("WordPress"),
     date: "2022-2023",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "SAE 1.02 (Algorithm Comparisons)",
     description: `
-                In project SAÉ 1.02, our aim was to refine our algorithm analysis skills by implementing and comparing various algorithms. We utilized resources like algorithmic books and programming tools such as IJava for implementation and data collection.
-                Soft skills like creativity and brainstorming were crucial in devising the game structure during team meetings. Despite facing the challenge of working solo due to my partner's withdrawal, I achieved a commendable score of 16/20.
-                Through this project, I honed my abilities in Bash scripting, ASCII art, and game design, particularly improving my understanding of terminal operations. Moving forward, I'll be more discerning in selecting team members to enhance collaboration in future projects.
-            `,
-    link: "https://moodle.univ-lille.fr/mod/assign/view.php?id=985841",
-    img: ["/projects/sae_1.2.png"],
-    technologies: ["IJava"],
-    status: "Finished",
+              In project SAÉ 1.02, our aim was to refine our algorithm analysis skills by implementing and comparing various algorithms. We utilized resources like algorithmic books and programming tools such as IJava for implementation and data collection.
+              Soft skills like creativity and brainstorming were crucial in devising the game structure during team meetings. Despite facing the challenge of working solo due to my partner's withdrawal, I achieved a commendable score of 16/20.
+              Through this project, I honed my abilities in Bash scripting, ASCII art, and game design, particularly improving my understanding of terminal operations. Moving forward, I'll be more discerning in selecting team members to enhance collaboration in future projects.
+          `,
+    url: "https://moodle.univ-lille.fr/mod/assign/view.php?id=985841",
+    images: ["/projects/sae_1.2.png"],
+    tools: getToolsByNames("IJava"),
     date: "2022-2023",
-    languages: ["French"],
-    education: "University of Lille",
+    languages: ["fr"],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("university"),
   },
 ];
+
+const levelArray = Object.values(ExperienceLevel);
+const [activeProjects, setActiveProjects] = createSignal(
+  projectsList as Project[],
+);
+
+const [loadAll, setLoadAll] = createSignal(false);
+const [placeProjects, setPlaceProjects] = createSignal(0);
+const maxProjects = 4;
+
+const Carousel = (props) => {
+  const [currentImage, setCurrentImage] = createSignal(0);
+  const [isSliding, setIsSliding] = createSignal(false);
+
+  const handleImageChange = (index) => {
+    if (currentImage() !== index) {
+      setIsSliding(true);
+      setTimeout(() => {
+        setCurrentImage(index);
+        setIsSliding(false);
+      }, 100);
+    }
+  };
+
+  return (
+    <div class="w-full md:w-1/2 lg:w-1/3 border border-primary rounded-lg p-4">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title text-blue">{props.project.name}</h3>
+          <p class="text-zinc-300">{props.project.date}</p>
+        </div>
+        <figure class="flex flex-col">
+          <div class="carousel w-full relative overflow-hidden">
+            <div
+              class={`flex transition-transform duration-500 ease-in-out ${
+                isSliding() ? "transform" : ""
+              }`}
+              style={{
+                transform: `translateX(-${currentImage() * 100}%)`,
+              }}
+            >
+              <For each={props.project.images}>
+                {(image) => (
+                  <div class="carousel-item w-full flex-shrink-0">
+                    <img src={image} class="w-full" />
+                  </div>
+                )}
+              </For>
+            </div>
+          </div>
+          <div class="flex w-full justify-center gap-2 py-2">
+            <For each={props.project.images}>
+              {(_, index) => (
+                <button
+                  class={`text-zinc-600 text-xs ${
+                    currentImage() === index() ? "text-zinc-200" : ""
+                  }`}
+                  onClick={() => handleImageChange(index())}
+                >
+                  <i class="fa-solid fa-circle"></i>
+                </button>
+              )}
+            </For>
+          </div>
+        </figure>
+        <div class="card-body p-0">
+          <p class="text-zinc-300 text-justify">{props.project.description}</p>
+        </div>
+        <div class="card-footer">
+          <h4 class="text-blue">Tools</h4>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <For each={props.project.tools}>
+              {(tool) => (
+                <div class="max-h-6 max-w-6 flex items-center justify-center w-6 h-6">
+                  <img
+                    src={tool.image}
+                    alt={tool.name}
+                    class="max-h-6 max-w-6"
+                  />
+                </div>
+              )}
+            </For>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export const Projects: Component = () => {
   return (
     <>
-      <div class="flex flex-row gap-4 py-4">
+      <div class="flex flex-wrap gap-4 py-4">
+        <button
+          class="btn btn-primary btn-outline"
+          onClick={() => {
+            setActiveProjects(projectsList);
+            setActiveProjectsCategory([]);
+          }}
+        >
+          <i class="fa-solid fa-sync mr-2 text-blue"></i>
+          <span class="text-zinc-300 hover:text-white">Reset Filters</span>
+        </button>
         <For each={projectsCategories}>
           {(category) => (
             <button
@@ -264,6 +371,20 @@ export const Projects: Component = () => {
                     category,
                   ]);
                 }
+
+                const activeCategories = activeProjectsCategory();
+                if (activeCategories.length === 0) {
+                  setActiveProjects(projectsList);
+                } else {
+                  setActiveProjects(
+                    projectsList.filter((project) => {
+                      if (!project.categories) return false;
+                      return project.categories.some((cat) =>
+                        activeCategories.includes(cat),
+                      );
+                    }),
+                  );
+                }
               }}
             >
               <i class={`${category.icon} mr-2 text-blue`}></i>
@@ -274,6 +395,42 @@ export const Projects: Component = () => {
           )}
         </For>
       </div>
+
+      <For each={levelArray}>
+        {(level) => (
+          <>
+            <Show
+              when={
+                activeProjects().filter(
+                  (tool) => tool.experienceLevel === level,
+                ).length > 0
+              }
+            >
+              <div class="p-4">
+                <h2 class="text-2xl font-bold text-blue">{level}</h2>
+                <p class="text-zinc-300">
+                  {ExperienceLevelDescription[level].projects}
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <For
+                  each={activeProjects().filter(
+                    (project) => project.experienceLevel === level,
+                  )}
+                >
+                  {(project) => {
+                    return (
+                      <>
+                        <Carousel project={project} />
+                      </>
+                    );
+                  }}
+                </For>
+              </div>
+            </Show>
+          </>
+        )}
+      </For>
     </>
   );
 };

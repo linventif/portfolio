@@ -13,7 +13,7 @@ const Home: Component = () => {
     <>
       <Header />
 
-      <section class="gap-10 text-center">
+      <section class="gap-10">
         <Article id="hero" class="h-[800px]">
           <Hero />
           <Social />
@@ -28,7 +28,9 @@ const Home: Component = () => {
           <Tools />
         </Article>
         <Article id="contact" name="Contact">
-          <p>Feel free to contact me through the following links:</p>
+          <p class="text-center">
+            Feel free to contact me through the following links:
+          </p>
           <Social />
         </Article>
       </section>

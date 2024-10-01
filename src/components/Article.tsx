@@ -5,9 +5,7 @@ export const Article: Component = (props: any) => {
     <>
       <article
         id={props.id}
-        class={
-          "gap-4 p-4 text-center flex flex-col justify-center " + props.class
-        }
+        class={"gap-4 p-4 flex flex-col justify-center " + props.class}
       >
         <Show when={props.name}>
           <div class="flex flex-row justify-center">

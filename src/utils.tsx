@@ -4,6 +4,7 @@ export interface Category {
   id: string;
   description?: string;
 }
+
 export enum ExperienceLevel {
   Professional = "Professional",
   SchoolProject = "School Project",

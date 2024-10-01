@@ -190,7 +190,7 @@ const toolsList: Tool[] = [
     name: "Python",
     image: "/tools/python.png",
     categories: getCategoriesFromID("languages"),
-    experienceLevel: ExperienceLevel.Professional,
+    experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.python.org/",
   },
   {
@@ -615,9 +615,7 @@ export function getToolsByNames(...names: string[]): Tool[] {
 }
 
 const levelArray = Object.values(ExperienceLevel);
-
 const [activeTools, setActiveTools] = createSignal(toolsList as Tool[]);
-console.log(activeTools());
 
 export const Tools: Component = () => {
   return (
@@ -653,7 +651,6 @@ export const Tools: Component = () => {
                 if (activeCategories.length === 0) {
                   setActiveTools(toolsList);
                 } else {
-                  //     set active tools to the tools that have at least one of the active categories
                   setActiveTools(
                     toolsList.filter((tool) => {
                       if (!tool.categories) return false;
@@ -683,7 +680,7 @@ export const Tools: Component = () => {
                   .length > 0
               }
             >
-              <div class="text-left p-4">
+              <div class="p-4">
                 {/*  title: level */}
                 <h2 class="text-2xl font-bold text-blue">{level}</h2>
                 {/*  descripton: ExperienceLevelDescription[level].tools*/}
