@@ -72,7 +72,7 @@ export const ScholarTimeline: Component = () => {
                 </svg>
               </div>
               <div
-                class={`timeline-${index() % 2 === 0 ? "start" : "end"} mb-10 ${index() % 2 === 0 ? "md:text-end" : ""}`}
+                class={`mx-2 timeline-${index() % 2 === 0 ? "start" : "end"} mb-10 ${index() % 2 === 0 ? "md:text-end" : ""}`}
               >
                 <time class="font-mono italic">{date}</time>
                 <div class="text-lg font-black">
