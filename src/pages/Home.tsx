@@ -22,7 +22,7 @@ const Home: Component = () => {
         <Article id="about-me" name="About Me">
           <AboutMe />
         </Article>
-        <Article id="about-me" name="Scholar Timeline">
+        <Article id="scholar-timeline" name="Scholar Timeline">
           <ScholarTimeline />
         </Article>
         <Article id="projects" name="Projects">

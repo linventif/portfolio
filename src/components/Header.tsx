@@ -13,6 +13,11 @@ const navLinks = [
     fontAwesomeIcon: "fas fa-info-circle",
   },
   {
+    title: "Scholar Timeline",
+    href: "#scholar-timeline",
+    fontAwesomeIcon: "fas fa-graduation-cap",
+  },
+  {
     title: "Projects",
     href: "#projects",
     fontAwesomeIcon: "fas fa-project-diagram",
