@@ -4,7 +4,7 @@ import { A } from "@solidjs/router";
 export const Footer: Component = () => {
   return (
     <>
-      <div class="flex flex-shrink-0 flex-col">
+      <div class="flex flex-shrink-0 flex-col ">
         <hr class="border-[1px] border-primary" />
         <footer class="footer py-4 bg-background text-base-content">
           <div class="flex flex-col">

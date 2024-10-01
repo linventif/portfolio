@@ -15,7 +15,7 @@ const Home: Component = () => {
       <Header />
 
       <section class="gap-10">
-        <Article id="hero" class="h-[800px]">
+        <Article id="hero" class="mt-44 h-[500px]">
           <Hero />
           <Social />
         </Article>
