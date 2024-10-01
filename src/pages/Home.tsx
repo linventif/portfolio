@@ -7,6 +7,7 @@ import { Article } from "../components/Article";
 import { Hero } from "../components/Hero";
 import { AboutMe } from "../components/AboutMe";
 import { Footer } from "../components/Footer";
+import { ScholarTimeline } from "../components/TimeLine";
 
 const Home: Component = () => {
   return (
@@ -20,6 +21,9 @@ const Home: Component = () => {
         </Article>
         <Article id="about-me" name="About Me">
           <AboutMe />
+        </Article>
+        <Article id="about-me" name="Scholar Timeline">
+          <ScholarTimeline />
         </Article>
         <Article id="projects" name="Projects">
           <Projects />
