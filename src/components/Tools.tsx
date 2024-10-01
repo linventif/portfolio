@@ -596,10 +596,18 @@ const toolsList: Tool[] = [
 ];
 
 // sort by categories position ex(first programming languages, then frameworks, etc)
+// then by experience level in the same category
 toolsList.sort((a, b) => {
-  const aIndex = toolsCategories.findIndex((cat) => a.categories.includes(cat));
-  const bIndex = toolsCategories.findIndex((cat) => b.categories.includes(cat));
-  return aIndex - bIndex;
+  if (a.categories[0].id === b.categories[0].id) {
+    return (
+      Object.values(ExperienceLevel).indexOf(a.experienceLevel) -
+      Object.values(ExperienceLevel).indexOf(b.experienceLevel)
+    );
+  }
+  return (
+    toolsCategories.findIndex((cat) => cat.id === a.categories[0].id) -
+    toolsCategories.findIndex((cat) => cat.id === b.categories[0].id)
+  );
 });
 
 export function getToolsByNames(...names: string[]): Tool[] {
@@ -609,6 +617,7 @@ export function getToolsByNames(...names: string[]): Tool[] {
 const levelArray = Object.values(ExperienceLevel);
 
 const [activeTools, setActiveTools] = createSignal(toolsList as Tool[]);
+console.log(activeTools());
 
 export const Tools: Component = () => {
   return (
@@ -683,7 +692,7 @@ export const Tools: Component = () => {
                 </p>
               </div>
 
-              <div class="flex flex-wrap gap-4">
+              <div class="flex flex-wrap gap-2">
                 <For
                   each={activeTools().filter(
                     (tool) => tool.experienceLevel === level,
@@ -692,14 +701,16 @@ export const Tools: Component = () => {
                   {(tool) => (
                     <A
                       href={tool.url}
-                      class="flex flex-col items-center gap-2 w-32 h-32"
+                      class="flex flex-col items-center gap-4 w-32 h-32 justify-center p-4"
                     >
-                      <img
-                        src={tool.image}
-                        alt={tool.name}
-                        class="max-h-12 max-w-12"
-                      />
-                      <span class="text-zinc-300">{tool.name}</span>
+                      <div class="max-h-12 max-w-12 flex items-center justify-center w-12 h-12">
+                        <img
+                          src={tool.image}
+                          alt={tool.name}
+                          class="max-h-12 max-w-12"
+                        />
+                      </div>
+                      <span class="text-zinc-300 text-nowrap">{tool.name}</span>
                     </A>
                   )}
                 </For>
