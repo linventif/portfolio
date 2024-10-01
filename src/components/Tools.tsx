@@ -75,6 +75,7 @@ export interface Tool {
   url: string;
   categories: Category[];
   experienceLevel: ExperienceLevel;
+  description: string;
 }
 
 const toolsList: Tool[] = [
@@ -85,6 +86,8 @@ const toolsList: Tool[] = [
     url: "https://typescriptlang.org",
     experienceLevel: ExperienceLevel.Professional,
     categories: getCategoriesFromID("languages"),
+    description:
+      "TypeScript is a superset of JavaScript that adds static typing to the language.",
   },
   {
     name: "Go",
@@ -92,6 +95,17 @@ const toolsList: Tool[] = [
     url: "https://golang.org",
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("languages"),
+    description:
+      "Go is a statically typed, compiled programming language designed at Google.",
+  },
+  {
+    name: "Sentry",
+    image: "/tools/sentry.png",
+    url: "https://sentry.io",
+    experienceLevel: ExperienceLevel.Professional,
+    categories: getCategoriesFromID("apis"),
+    description:
+      "Sentry is an open-source error tracking system that helps developers monitor and fix crashes in real-time.",
   },
   // Frameworks
   {
@@ -100,6 +114,8 @@ const toolsList: Tool[] = [
     url: "https://solidjs.com",
     experienceLevel: ExperienceLevel.Professional,
     categories: getCategoriesFromID("frameworks"),
+    description:
+      "SolidJS is a declarative JavaScript library for building user interfaces.",
   },
   // Database
   {
@@ -108,6 +124,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://code.visualstudio.com/",
+    description:
+      "Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux, and macOS.",
   },
   {
     name: "DataGrip",
@@ -115,6 +133,9 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.jetbrains.com/datagrip/",
+    description:
+      "DataGrip is a database IDE that is tailored to suit the specific needs of professional SQL" +
+      " developers and Database administrators.",
   },
   {
     name: "IntelliJ IDEA",
@@ -122,6 +143,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.jetbrains.com/idea/",
+    description:
+      "IntelliJ IDEA is a Java integrated development environment for developing computer software.",
   },
   {
     name: "WebStorm",
@@ -129,6 +152,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.jetbrains.com/webstorm/",
+    description:
+      "WebStorm is a JavaScript IDE that is built on JetBrains' IntelliJ IDEA platform.",
   },
   {
     name: "CLion",
@@ -136,6 +161,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.jetbrains.com/clion/",
+    description: "CLion is a cross-platform IDE for C and C++ development.",
   },
   {
     name: "Java",
@@ -143,6 +169,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.java.com/",
+    description:
+      "Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
   },
   {
     name: "HTML",
@@ -150,6 +178,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    description:
+      "HTML is the standard markup language for documents designed to be displayed in a web browser.",
   },
   {
     name: "CSS",
@@ -157,13 +187,35 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    description:
+      "CSS is a style sheet language used for describing the presentation of a document written in HTML.",
   },
   {
-    name: "Javascript",
+    name: "JavaScript",
     image: "/tools/js.png",
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    description:
+      "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.",
+  },
+  {
+    name: "Matrix",
+    image: "/tools/matrix.png",
+    categories: getCategoriesFromID("languages"),
+    experienceLevel: ExperienceLevel.SchoolProject,
+    url: "https://matrix.org/",
+    description:
+      "Matrix is an open standard and lightweight protocol for real-time communication.",
+  },
+  {
+    name: "Daisy UI",
+    image: "/tools/daisy.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.Professional,
+    url: "https://daisyui.com/",
+    description:
+      "Daisy UI is a CSS framework that is designed to be simple and lightweight.",
   },
   {
     name: "C",
@@ -171,6 +223,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://en.wikipedia.org/wiki/C_(programming_language)",
+    description:
+      "C is a general-purpose, procedural computer programming language supporting structured programming.",
   },
   {
     name: "C++",
@@ -178,6 +232,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.cplusplus.com/",
+    description:
+      "C++ is a general-purpose programming language created as an extension of the C programming language.",
   },
   {
     name: "Lua",
@@ -185,6 +241,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.lua.org/",
+    description:
+      "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.",
   },
   {
     name: "Python",
@@ -192,6 +250,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.python.org/",
+    description:
+      "Python is an interpreted, high-level, general-purpose programming language.",
   },
   {
     name: "NodeJS",
@@ -199,6 +259,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://nodejs.org/",
+    description:
+      "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
   },
   {
     name: "PM2",
@@ -206,6 +268,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://pm2.keymetrics.io/",
+    description:
+      "PM2 is a production process manager for Node.js applications with a built-in load balancer.",
   },
   {
     name: "DiscordJS",
@@ -213,6 +277,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://discord.js.org/",
+    description:
+      "Discord.js is a powerful JavaScript library for interacting with the Discord API.",
   },
   {
     name: "Express",
@@ -220,6 +286,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://expressjs.com/",
+    description:
+      "Express.js is a web application framework for Node.js, designed for building web applications and APIs.",
   },
   {
     name: "EJS",
@@ -227,6 +295,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://ejs.co/",
+    description:
+      "EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.",
   },
   {
     name: "Windows",
@@ -234,6 +304,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.microsoft.com/en-us/windows",
+    description:
+      "Windows is a series of operating systems developed by Microsoft.",
   },
   {
     name: "Ubuntu",
@@ -241,6 +313,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://ubuntu.com/",
+    description:
+      "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software.",
   },
   {
     name: "Debian",
@@ -248,6 +322,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.debian.org/",
+    description:
+      "Debian is a Unix-like operating system consisting entirely of free software.",
   },
   {
     name: "Nginx",
@@ -255,6 +331,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.nginx.com/",
+    description:
+      "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy, and HTTP cache.",
   },
   {
     name: "Apache",
@@ -262,6 +340,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://httpd.apache.org/",
+    description:
+      "Apache HTTP Server is a free and open-source cross-platform web server software.",
   },
   {
     name: "Tomcat",
@@ -269,6 +349,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "http://tomcat.apache.org/",
+    description:
+      "Apache Tomcat is an open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language, and WebSocket technologies.",
   },
   {
     name: "MySQL",
@@ -276,6 +358,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("databases"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.mysql.com/",
+    description:
+      "MySQL is an open-source relational database management system.",
   },
   {
     name: "MariaDB",
@@ -283,6 +367,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("databases"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://mariadb.org/",
+    description:
+      "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system.",
   },
   {
     name: "Redis",
@@ -290,6 +376,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("databases"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://redis.io/",
+    description:
+      "Redis is an open-source, in-memory data structure store, used as a database, cache, and message broker.",
   },
   {
     name: "PostgresSQL",
@@ -297,6 +385,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("databases"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.postgresql.org/",
+    description:
+      "PostgreSQL is a powerful, open-source object-relational database system.",
   },
   {
     name: "Unreal Engine",
@@ -304,6 +394,16 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("3d"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.unrealengine.com/",
+    description: "Unreal Engine is a game engine developed by Epic Games.",
+  },
+  {
+    name: "Tailwind CSS",
+    image: "/tools/tailwind.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.Professional,
+    url: "https://tailwindcss.com/",
+    description:
+      "Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.",
   },
   {
     name: "Source Engine",
@@ -311,6 +411,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("3d"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://partner.steamgames.com/doc/sdk",
+    description: "Source is a 3D game engine developed by Valve Corporation.",
   },
   {
     name: "Blender",
@@ -318,6 +419,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("3d"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.blender.org/",
+    description: "Blender is a free and open-source 3D creation suite.",
   },
   {
     name: "Fusion 360",
@@ -325,6 +427,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("3d"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.autodesk.com/products/fusion-360/",
+    description:
+      "Fusion 360 is a cloud-based 3D CAD, CAM, and CAE platform for product development.",
   },
   {
     name: "Sketchup",
@@ -332,6 +436,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("3d"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.sketchup.com/",
+    description:
+      "SketchUp is a 3D modeling computer program for a wide range of drawing applications such as architectural, interior design, landscape architecture, civil and mechanical engineering, film and video game design.",
   },
   {
     name: "Midjourney",
@@ -339,6 +445,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.midjourney.com/",
+    description:
+      "Midjourney is a platform that helps you to create and share your journey.",
   },
   {
     name: "Copilot",
@@ -346,6 +454,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://copilot.github.com/",
+    description:
+      "GitHub Copilot is an AI pair programmer that helps you write code faster.",
   },
   {
     name: "Chat GPT",
@@ -353,6 +463,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous", "apis"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://openai.com/chatgpt",
+    description:
+      "ChatGPT is a large language model trained to generate human-like responses to given prompts.",
   },
   {
     name: "Git",
@@ -360,6 +472,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://git-scm.com/",
+    description:
+      "Git is a distributed version control system for tracking changes in source code during software development.",
   },
   {
     name: "GitHub",
@@ -367,6 +481,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://github.com/",
+    description:
+      "GitHub is a web-based platform for version control using Git.",
   },
   {
     name: "GitLab",
@@ -374,6 +490,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://gitlab.com/",
+    description:
+      "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager providing wiki, issue-tracking, and CI/CD pipeline features.",
   },
   {
     name: "Cloudflare",
@@ -381,6 +499,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.cloudflare.com/",
+    description:
+      "Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.",
   },
   {
     name: "SQL",
@@ -388,6 +508,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://en.wikipedia.org/wiki/SQL",
+    description:
+      "SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system.",
   },
   {
     name: "WireShark",
@@ -395,6 +517,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.wireshark.org/",
+    description: "Wireshark is a free and open-source packet analyzer.",
   },
   {
     name: "VirtualBox",
@@ -402,6 +525,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.virtualbox.org/",
+    description:
+      "VirtualBox is a free and open-source hosted hypervisor for x86 virtualization.",
   },
   {
     name: "Jupyter Notebook",
@@ -409,6 +534,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://jupyter.org/",
+    description:
+      "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
   },
   {
     name: "Proxmox",
@@ -416,6 +543,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.proxmox.com/",
+    description:
+      "Proxmox Virtual Environment is an open-source server virtualization management platform.",
   },
   {
     name: "IJava",
@@ -423,6 +552,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("languages"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://github.com/SpencerPark/IJava",
+    description:
+      "IJava is a custom language created to introduce Java to Computer Science students.",
   },
   {
     name: "WordPress",
@@ -430,6 +561,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://wordpress.org/",
+    description:
+      "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database.",
   },
   {
     name: "Java EE",
@@ -437,6 +570,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.oracle.com/java/technologies/java-ee-glance.html",
+    description:
+      "Java Platform, Enterprise Edition (Java EE) is a collection of Java APIs owned by Oracle that software developers can use to write server-side applications.",
   },
   {
     name: "Java FX",
@@ -444,6 +579,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://openjfx.io/",
+    description:
+      "JavaFX is a software platform for creating and delivering desktop applications, as well as rich internet applications that can run across a wide variety of devices.",
   },
   {
     name: "JQuery",
@@ -451,6 +588,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("frameworks"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://jquery.com/",
+    description:
+      "jQuery is a fast, small, and feature-rich JavaScript library.",
   },
   {
     name: "SQLite",
@@ -458,6 +597,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("databases"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.sqlite.org/",
+    description:
+      "SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.",
   },
   {
     name: "Android Studio",
@@ -465,6 +606,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("ide"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://developer.android.com/studio",
+    description:
+      "Android Studio is the official integrated development environment for Google's Android operating system.",
   },
   {
     name: "GNS3",
@@ -472,6 +615,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.gns3.com/",
+    description:
+      "GNS3 is a graphical network simulator that allows simulation of complex networks.",
   },
   {
     name: "SolidWorks",
@@ -479,6 +624,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("3d"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.solidworks.com/",
+    description:
+      "SolidWorks is a solid modeling computer-aided design and computer-aided engineering computer program.",
   },
   {
     name: "Scrum",
@@ -486,6 +633,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.scrum.org/",
+    description:
+      "Scrum is a framework within which people can address complex adaptive problems, while productively and creatively delivering high-value products.",
   },
   {
     name: "Kanban",
@@ -493,6 +642,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.atlassian.com/agile/kanban",
+    description:
+      "Kanban is a method for managing knowledge work with an emphasis on just-in-time delivery while not overloading the team members.",
   },
   {
     name: "TDD",
@@ -500,6 +651,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://en.wikipedia.org/wiki/Test-driven_development",
+    description:
+      "Test-driven development is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the software is improved to pass the new tests.",
   },
   {
     name: "JUnit",
@@ -507,6 +660,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://junit.org/junit5/",
+    description:
+      "JUnit is a unit testing framework for the Java programming language.",
   },
   {
     name: "Gherkin",
@@ -514,6 +669,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://cucumber.io/docs/gherkin/",
+    description:
+      "Gherkin is a domain-specific language for describing formalized executable test cases.",
   },
 
   {
@@ -522,6 +679,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("apis"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.paypal.com/",
+    description:
+      "PayPal is an American company operating an online payments system in the majority of countries that support online money transfers.",
   },
   {
     name: "Stripe",
@@ -529,6 +688,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("apis"),
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://stripe.com/",
+    description:
+      "Stripe is an American financial services and software as a service company.",
   },
   {
     name: "Docker",
@@ -536,6 +697,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.docker.com/",
+    description:
+      "Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
   },
   {
     name: "Postman",
@@ -543,6 +706,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("apis"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.postman.com/",
+    description: "Postman is a collaboration platform for API development.",
   },
   {
     name: "Bruno",
@@ -550,6 +714,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("apis"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.bruno.com/",
+    description: "Bruno is file based API for developers.",
   },
   {
     name: "Kubernetes",
@@ -557,6 +722,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://kubernetes.io/",
+    description:
+      "Kubernetes is an open-source container-orchestration system for automating computer application deployment, scaling, and management.",
   },
   {
     name: "GitKraken",
@@ -564,6 +731,7 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("devops"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.gitkraken.com/",
+    description: "GitKraken is a Git client that helps make sense of Git.",
   },
   {
     name: "Figma",
@@ -571,6 +739,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://www.figma.com/",
+    description:
+      "Figma is a cloud-based design tool that is similar to Sketch in functionality and features, but with big differences that make Figma better for team collaboration.",
   },
   {
     name: "Discord",
@@ -578,6 +748,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://discord.com/",
+    description:
+      "Discord is a proprietary freeware VoIP application and digital distribution platform designed for creating communities ranging from gamers to education and businesses.",
   },
   {
     name: "Trello",
@@ -585,6 +757,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://trello.com/",
+    description:
+      "Trello is a web-based list-making application for task management.",
   },
   {
     name: "Genially",
@@ -592,6 +766,8 @@ const toolsList: Tool[] = [
     categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.SchoolProject,
     url: "https://www.genial.ly/",
+    description:
+      "Genially is a web-based tool that allows you to create interactive and animated content.",
   },
 ];
 
@@ -698,7 +874,8 @@ export const Tools: Component = () => {
                   {(tool) => (
                     <A
                       href={tool.url}
-                      class="flex flex-col items-center gap-4 w-32 h-32 justify-center p-4"
+                      class="flex flex-col items-center gap-4 w-32 h-32 justify-center p-4 tooltip"
+                      data-tip={tool.description}
                     >
                       <div class="max-h-12 max-w-12 flex items-center justify-center w-12 h-12">
                         <img

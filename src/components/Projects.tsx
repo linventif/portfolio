@@ -71,16 +71,15 @@ const projectsList: Project[] = [
     tools: getToolsByNames(
       "HTML",
       "CSS",
-      "JS",
-      "EJS",
+      "JavaScript",
       "NodeJS",
       "Express",
       "MariaDB",
       "Redis",
       "Nginx",
       "Cloudflare",
-      "PayPal",
-      "Stripe",
+      "TypeScript",
+      "Bruno",
       "Git",
       "GitHub",
       "Kubernetes",
@@ -88,10 +87,119 @@ const projectsList: Project[] = [
       "DJS",
       "SQL",
       "Figma",
+      "Tailwind CSS",
+      "Daisy UI",
+      "PM2",
+      "Sentry",
     ),
     date: "2023 - Current",
     languages: ["fr", "en", "tr", "en", "es", "de", "ru"],
     categories: getCategoriesFromID("gmod", "web"),
+  },
+  {
+    name: "Internship - Web Development",
+    description: `
+                I am excited to share my progress on a significant project during my internship, which involved developing an intuitive web-based editor for 3D scene configuration.
+                This project entailed creating a user-friendly interface that allows users to select predefined scenes, place and configure objects (such as assigning a PDF to a TV screen), and perform scene "baking" for realistic rendering of lights and shadows.
+                Leveraging advanced technologies like Aframe, Three.js, and SolidJS coupled with Tailwind for UI design, this role has enhanced my skills in 3D manipulation and front-end programming, optimizing user experiences in virtual reality settings.
+            `,
+    url: "https://allocola.com",
+    images: [
+      "/projects/internship/allocola_1.png",
+      "/projects/internship/allocola_2.png",
+      "/projects/internship/allocola_3.png",
+      "/projects/internship/allocola_4.png",
+      "/projects/internship/allocola_5.png",
+    ],
+    experienceLevel: ExperienceLevel.Professional,
+    tools: getToolsByNames(
+      "Aframe",
+      "Three.js",
+      "SolidJS",
+      "Tailwind CSS",
+      "Blender",
+      "Unreal Engine",
+      "Python",
+      "TypeScript",
+      "Daisy UI",
+      "NodeJS",
+      "PM2",
+      "Sentry",
+    ),
+    date: "2024/S2",
+    languages: ["en"],
+    categories: getCategoriesFromID("web"),
+  },
+  {
+    name: "SAE 5.01 (Emulation of a RISC-V processor)",
+    description: `
+                In project SAÉ 5.01, I developed a RISC-V emulator using GO, focusing on instruction and memory management.
+                The project required advanced knowledge of RISC-V architecture and GO programming.
+                My strengths in GO programming and system architecture were crucial for successful emulator development.
+                The main challenge was implementing memory management, requiring extensive research.
+                This project deepened my understanding of system architecture and RISC-V, preparing me for future projects involving system emulation.
+            `,
+    url: "https://gitlab.univ-lille.fr/etu/2023-2024/s501/i-launaybecue-collin",
+    images: [
+      "/projects/sae-5-01/accueil.png",
+      "/projects/sae-5-01/emulateur.png",
+      "/projects/sae-5-01/emulateur_2.png",
+      "/projects/sae-5-01/emulateur_3.png",
+    ],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    tools: getToolsByNames("Go"),
+    date: "2024/S2",
+    languages: ["fr"],
+    categories: getCategoriesFromID("university"),
+  },
+  {
+    name: "SAE 4.02 (Web Development - Beat'em Up)",
+    description: `
+                In project SAÉ 4.02, I developed a 2D Beat'em Up game using HTML, CSS, and JavaScript, focusing on game mechanics and user experience.
+                The game features a player and enemies, with the goal of defeating all enemies to progress to the next level.
+                A significant challenge was implementing enemy AI and player health management, requiring extensive research.
+                This project deepened my understanding of game development and user experience, preparing me for future projects involving game development.
+            `,
+    url: "https://gitlab.univ-lille.fr/etu/2023-2024/s402/i-launaybecue-collin",
+    images: [
+      "/projects/sae-4-02/accueil.png",
+      "/projects/sae-4-02/jeu.png",
+      "/projects/sae-4-02/jeu_2.png",
+      "/projects/sae-4-02/jeu_3.png",
+    ],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    tools: getToolsByNames("HTML", "CSS", "JavaScript"),
+    date: "2024/S1",
+    languages: ["fr"],
+    categories: getCategoriesFromID("university"),
+  },
+  {
+    name: "SAE 4.01 (REST API)",
+    description: `
+                In project SAÉ 4.01, I developed a REST API for a fictional pizza delivery service, focusing on user authentication and order management.
+                The project required advanced knowledge of Tomcat WebServlets, Java, and MySQL database management.
+                My strengths in Java programming and database management were crucial for successful API development.
+                The main challenge was implementing user authentication and order management, requiring extensive research.
+                This project deepened my understanding of REST API development and database management, preparing me for future projects involving API development.
+            `,
+    url: "https://gitlab.univ-lille.fr/etu/2023-2024/s401/i-launaybecue-collin",
+    images: [
+      "/projects/sae-4-01/uml.png",
+      "/projects/sae-4-01/postman.png",
+      "/projects/sae-4-01/swagger.png",
+    ],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    tools: getToolsByNames(
+      "Java",
+      "Tomcat",
+      "MySQL",
+      "Bruno",
+      "Swagger",
+      "PostgresSQL",
+    ),
+    date: "2024/S1",
+    languages: ["fr"],
+    categories: getCategoriesFromID("university"),
   },
   {
     name: "SAE 3.03 (Application Deployment)",
@@ -112,12 +220,12 @@ const projectsList: Project[] = [
     tools: getToolsByNames(
       "Debian",
       "Nginx",
-      "Cloudflare",
       "Matrix",
-      "Element Web",
+      "Element",
+      "VirtualBox",
     ),
     categories: getCategoriesFromID("university"),
-    date: "2023-2024",
+    date: "2023/S2",
     languages: ["fr"],
   },
   {
@@ -136,7 +244,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Java", "JavaFX", "Dijkstra's algorithm"),
     experienceLevel: ExperienceLevel.SchoolProject,
-    date: "2023-2024",
+    date: "2023/S2",
     languages: ["fr"],
     categories: getCategoriesFromID("university"),
   },
@@ -150,7 +258,7 @@ const projectsList: Project[] = [
     url: "https://gitlab.univ-lille.fr/2023-projet-agile-de-rentree/groupe-7",
     images: ["/projects/back-to-school/ascii_invader.png"],
     tools: getToolsByNames("Java", "Scrum"),
-    date: "2023",
+    date: "2023/S2",
     languages: ["fr"],
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
@@ -174,7 +282,7 @@ const projectsList: Project[] = [
       "/projects/sae-2-05/img_2.png",
     ],
     tools: getToolsByNames("Genially"),
-    date: "2022-2023",
+    date: "2023/S1",
     languages: ["fr"],
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
@@ -190,8 +298,8 @@ const projectsList: Project[] = [
           `,
     url: "https://moodle.univ-lille.fr/course/view.php?id=30827&sectionid=266882",
     images: ["/projects/sae-2-04/img.png"],
-    tools: getToolsByNames("SQL", "Postgres SQL", "DataGrip", "Access"),
-    date: "2022-2023",
+    tools: getToolsByNames("SQL", "PostgresSQL", "DataGrip", "Access"),
+    date: "2022/S2",
     languages: ["fr"],
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
@@ -211,7 +319,7 @@ const projectsList: Project[] = [
       "/projects/sae-1-03/sae_1.3_2.png",
     ],
     tools: getToolsByNames("Debian", "VirtualBox", "GNS3"),
-    date: "2022-2023",
+    date: "2022/S2",
     languages: ["fr"],
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
@@ -229,7 +337,7 @@ const projectsList: Project[] = [
     url: "https://moodle.univ-lille.fr/course/view.php?id=30388&sectionid=262716",
     images: ["/projects/sae_1.5_1.png", "/projects/sae_1.5_2.png"],
     tools: getToolsByNames("WordPress"),
-    date: "2022-2023",
+    date: "2022/S2",
     languages: ["fr"],
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
@@ -244,7 +352,7 @@ const projectsList: Project[] = [
     url: "https://moodle.univ-lille.fr/mod/assign/view.php?id=985841",
     images: ["/projects/sae_1.2.png"],
     tools: getToolsByNames("IJava"),
-    date: "2022-2023",
+    date: "2022/S2",
     languages: ["fr"],
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
@@ -260,11 +368,11 @@ const [loadAll, setLoadAll] = createSignal(false);
 const [placeProjects, setPlaceProjects] = createSignal(0);
 const maxProjects = 4;
 
-const Carousel = (props) => {
+const Carousel = (props: { project: Project }) => {
   const [currentImage, setCurrentImage] = createSignal(0);
   const [isSliding, setIsSliding] = createSignal(false);
 
-  const handleImageChange = (index) => {
+  const handleImageChange = (index: number) => {
     if (currentImage() !== index) {
       setIsSliding(true);
       setTimeout(() => {
@@ -275,7 +383,7 @@ const Carousel = (props) => {
   };
 
   return (
-    <div class="w-full md:w-1/2 lg:w-1/3 border border-primary rounded-lg p-4">
+    <div class="w-[calc(33.333%-1rem)] border border-primary rounded-lg p-4 min-h-[45rem]">
       <div class="card">
         <div class="card-header">
           <h3 class="card-title text-blue">{props.project.name}</h3>
@@ -293,8 +401,11 @@ const Carousel = (props) => {
             >
               <For each={props.project.images}>
                 {(image) => (
-                  <div class="carousel-item w-full flex-shrink-0">
-                    <img src={image} class="w-full" />
+                  <div class="carousel-item w-full flex-shrink-0 relative">
+                    <img
+                      src={image}
+                      class="w-full h-full aspect-video relative z-10"
+                    />
                   </div>
                 )}
               </For>
@@ -318,12 +429,16 @@ const Carousel = (props) => {
         <div class="card-body p-0">
           <p class="text-zinc-300 text-justify">{props.project.description}</p>
         </div>
+        <div class="flex h-full" />
         <div class="card-footer">
           <h4 class="text-blue">Tools</h4>
           <div class="flex flex-wrap gap-2 mt-4">
             <For each={props.project.tools}>
               {(tool) => (
-                <div class="max-h-6 max-w-6 flex items-center justify-center w-6 h-6">
+                <div
+                  class="max-h-6 max-w-6 flex tooltip items-center justify-center w-6 h-6"
+                  data-tip={tool.description}
+                >
                   <img
                     src={tool.image}
                     alt={tool.name}
