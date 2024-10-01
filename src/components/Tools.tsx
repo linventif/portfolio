@@ -203,7 +203,7 @@ const toolsList: Tool[] = [
   {
     name: "PM2",
     image: "/tools/pm2.png",
-    categories: getCategoriesFromID("frameworks"),
+    categories: getCategoriesFromID("miscellaneous"),
     experienceLevel: ExperienceLevel.Professional,
     url: "https://pm2.keymetrics.io/",
   },
@@ -594,6 +594,13 @@ const toolsList: Tool[] = [
     url: "https://www.genial.ly/",
   },
 ];
+
+// sort by categories position ex(first programming languages, then frameworks, etc)
+toolsList.sort((a, b) => {
+  const aIndex = toolsCategories.findIndex((cat) => a.categories.includes(cat));
+  const bIndex = toolsCategories.findIndex((cat) => b.categories.includes(cat));
+  return aIndex - bIndex;
+});
 
 export function getToolsByNames(...names: string[]): Tool[] {
   return toolsList.filter((tool) => names.includes(tool.name));
