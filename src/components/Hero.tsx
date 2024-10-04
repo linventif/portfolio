@@ -13,7 +13,7 @@ export const Hero: Component = () => {
           className="text-6xl p-10 font-bold"
           loop
           cursor
-          cursorClassName="cursor"
+          cursorClassName="cursor text-nowrap"
         />
         <h2 class="text-xl">
           <span class="font-bold">Fullstack Developer</span> who passionate in

@@ -27,7 +27,7 @@ const socialLinks = [
 export const Social: Component = () => {
   return (
     <>
-      <div class="flex flex-raw items-center justify-center gap-6 w-full p-4">
+      <div class="flex flex-wrap items-center justify-center gap-6 w-full p-4">
         <For each={socialLinks}>
           {({ title, fontAwesomeIcon, href }) => (
             <A href={href} class="btn btn-primary btn-outline">

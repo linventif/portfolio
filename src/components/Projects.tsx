@@ -507,7 +507,7 @@ const Carousel = (props: { project: Project }) => {
   };
 
   return (
-    <div class="card w-[calc(33.333%-1rem)] border border-primary rounded-lg gap-4 p-4 min-h-[45rem]">
+    <div class="card w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] border border-primary rounded-lg gap-4 p-4 min-h-[45rem]">
       <div class="card-header">
         <h3 class="card-title text-blue">{props.project.name}</h3>
         <div class="flex flex-row gap-2">
