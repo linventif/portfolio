@@ -31,7 +31,7 @@ const timeline = [
   },
   {
     date: "2016 - 2019",
-    title: "Middle School Diploma",
+    title: "Middle School Diploma with Honors",
     establishment: "Collège François Rabelais",
     description:
       "In the continuation of my elementary school, I continued my education in a Freinet pedagogy school, in it I" +
@@ -40,7 +40,7 @@ const timeline = [
   },
   {
     date: "2013 - 2016",
-    title: "Elementary School Diploma",
+    title: "School Diploma",
     establishment: "École Primaire Prévert",
     description:
       "I started my education in a Freinet pedagogy school with a focus on autonomy, creativity, and" +
