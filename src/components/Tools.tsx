@@ -209,6 +209,15 @@ const toolsList: Tool[] = [
       "Matrix is an open standard and lightweight protocol for real-time communication.",
   },
   {
+    name: "Bootstrap",
+    image: "/tools/bootstrap.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.SchoolProject,
+    url: "https://getbootstrap.com/",
+    description:
+      "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
+  },
+  {
     name: "Daisy UI",
     image: "/tools/daisy.png",
     categories: getCategoriesFromID("frameworks"),
@@ -284,7 +293,7 @@ const toolsList: Tool[] = [
     name: "Express",
     image: "/tools/express.png",
     categories: getCategoriesFromID("frameworks"),
-    experienceLevel: ExperienceLevel.SchoolProject,
+    experienceLevel: ExperienceLevel.Professional,
     url: "https://expressjs.com/",
     description:
       "Express.js is a web application framework for Node.js, designed for building web applications and APIs.",
