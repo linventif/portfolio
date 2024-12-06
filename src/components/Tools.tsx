@@ -90,6 +90,41 @@ const toolsList: Tool[] = [
       "TypeScript is a superset of JavaScript that adds static typing to the language.",
   },
   {
+    name: "Maven",
+    image: "/tools/maven.png",
+    url: "https://maven.apache.org/",
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("frameworks"),
+    description:
+      "Maven is a build automation tool used primarily for Java projects.",
+  },
+  {
+    name: "Prisma",
+    image: "/tools/prisma.png",
+    url: "https://prisma.io/",
+    experienceLevel: ExperienceLevel.Professional,
+    categories: getCategoriesFromID("frameworks"),
+    description:
+      "Prisma is a modern database toolkit that makes working with databases easy.",
+  },
+  {
+    name: "Sequelize",
+    image: "/tools/sequelize.png",
+    url: "https://sequelize.org/",
+    experienceLevel: ExperienceLevel.Professional,
+    categories: getCategoriesFromID("frameworks"),
+    description:
+      "Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server.",
+  },
+  {
+    name: "React",
+    image: "/tools/react.png",
+    url: "https://reactjs.org",
+    experienceLevel: ExperienceLevel.SchoolProject,
+    categories: getCategoriesFromID("frameworks"),
+    description: "React is a JavaScript library for building user interfaces.",
+  },
+  {
     name: "Go",
     image: "/tools/go.png",
     url: "https://golang.org",
@@ -216,6 +251,42 @@ const toolsList: Tool[] = [
     url: "https://getbootstrap.com/",
     description:
       "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
+  },
+  {
+    name: "H2",
+    image: "/tools/h2.png",
+    categories: getCategoriesFromID("databases"),
+    experienceLevel: ExperienceLevel.SchoolProject,
+    url: "https://www.h2database.com/",
+    description:
+      "H2 is a relational database management system written in Java.",
+  },
+  {
+    name: "MongoDB",
+    image: "/tools/mongodb.png",
+    categories: getCategoriesFromID("databases"),
+    experienceLevel: ExperienceLevel.Professional,
+    url: "https://www.mongodb.com/",
+    description:
+      "MongoDB is a source-available cross-platform document-oriented database program.",
+  },
+  {
+    name: "Lombok",
+    image: "/tools/lombok.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.SchoolProject,
+    url: "https://projectlombok.org/",
+    description:
+      "Lombok is a Java library that automatically plugs into your editor and build tools, spicing up your java.",
+  },
+  {
+    name: "Spring",
+    image: "/tools/spring.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.SchoolProject,
+    url: "https://spring.io/",
+    description:
+      "Spring is a lightweight framework that provides comprehensive infrastructure support for developing Java applications.",
   },
   {
     name: "Daisy UI",
@@ -429,6 +500,15 @@ const toolsList: Tool[] = [
     experienceLevel: ExperienceLevel.HobbyProject,
     url: "https://www.blender.org/",
     description: "Blender is a free and open-source 3D creation suite.",
+  },
+  {
+    name: "D3",
+    image: "/tools/d3.png",
+    categories: getCategoriesFromID("frameworks"),
+    experienceLevel: ExperienceLevel.Professional,
+    url: "https://d3js.org/",
+    description:
+      "D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers.",
   },
   {
     name: "Fusion 360",

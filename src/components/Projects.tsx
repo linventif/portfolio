@@ -12,6 +12,8 @@ enum LinkType {
   GitHub = "GitHub",
   GitLab = "GitLab",
   YouTube = "YouTube",
+  Cults3D = "Cults3D",
+  Steam = "Steam",
 }
 
 interface Link {
@@ -25,6 +27,8 @@ const LinkIcon = {
   [LinkType.GitHub]: "fa-brands fa-github",
   [LinkType.GitLab]: "fa-brands fa-gitlab",
   [LinkType.YouTube]: "fa-brands fa-youtube",
+  [LinkType.Cults3D]: "fa-solid fa-mug-hot",
+  [LinkType.Steam]: "fa-brands fa-steam-symbol",
 };
 
 interface Project {
@@ -34,9 +38,10 @@ interface Project {
   experienceLevel: ExperienceLevel;
   tools: Tool[];
   date: string;
-  images: string[];
-  languages: string[];
+  images?: string[];
+  languages?: string[];
   links?: Link[];
+  folder?: string;
 }
 
 let [activeProjectsCategory, setActiveProjectsCategory] = createSignal(
@@ -108,7 +113,6 @@ const projectsList: Project[] = [
     tools: getToolsByNames(
       "HTML",
       "CSS",
-      "JavaScript",
       "NodeJS",
       "Express",
       "MariaDB",
@@ -128,9 +132,14 @@ const projectsList: Project[] = [
       "Daisy UI",
       "PM2",
       "Sentry",
+      "MongoDB",
+      "Prisma",
+      "Sequelize",
+      "SolidJS",
+      "D3",
     ),
     date: "2023 - Current",
-    languages: ["fr", "en", "tr", "en", "es", "de", "ru"],
+    languages: ["fr", "en", "tr", "en", "es", "de", "ru", "pl"],
     categories: getCategoriesFromID("gmod", "web"),
   },
   {
@@ -179,7 +188,43 @@ const projectsList: Project[] = [
     categories: getCategoriesFromID("web"),
   },
   {
-    name: "SAE 5.01 (Emulation of a RISC-V processor)",
+    name: "SAE 5.09 - Doctolib Clone",
+    description: `
+                In project SAÉ 5.01, I developed a RISC-V emulator using GO, focusing on instruction and memory management.
+                The project required advanced knowledge of RISC-V architecture and GO programming.
+                My strengths in GO programming and system architecture were crucial for successful emulator development.
+                The main challenge was implementing memory management, requiring extensive research.
+                This project deepened my understanding of system architecture and RISC-V, preparing me for future projects involving system emulation.
+            `,
+    images: [
+      "/projects/sae-5-01/accueil.png",
+      "/projects/sae-5-01/emulateur.png",
+      "/projects/sae-5-01/emulateur_2.png",
+      "/projects/sae-5-01/emulateur_3.png",
+    ],
+    links: [
+      {
+        name: "GitHub",
+        url: "https://github.com/linventif/sae-spring",
+        type: LinkType.GitHub,
+      },
+    ],
+    experienceLevel: ExperienceLevel.SchoolProject,
+    tools: getToolsByNames(
+      "Spring",
+      "React",
+      "H2",
+      "Lombok",
+      "Maven",
+      "React",
+      "Bruno",
+    ),
+    date: "2024/S2",
+    languages: ["fr"],
+    categories: getCategoriesFromID("other"),
+  },
+  {
+    name: "SAE 5.01 - Risk-V Emulator",
     description: `
                 In project SAÉ 5.01, I developed a RISC-V emulator using GO, focusing on instruction and memory management.
                 The project required advanced knowledge of RISC-V architecture and GO programming.
@@ -472,6 +517,390 @@ const projectsList: Project[] = [
     experienceLevel: ExperienceLevel.SchoolProject,
     categories: getCategoriesFromID("university"),
   },
+  {
+    name: "Arduino Nano support and relay",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-arduino-nano-et-relais",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019-07-09",
+    images: [
+      "/projects/support-arduino-nano-et-relais/P1120477.JPG",
+      "/projects/support-arduino-nano-et-relais/P1120478.JPG",
+      "/projects/support-arduino-nano-et-relais/P1120479.JPG",
+      "/projects/support-arduino-nano-et-relais/P1120480.JPG",
+      "/projects/support-arduino-nano-et-relais/P1120482.JPG",
+      "/projects/support-arduino-nano-et-relais/P1120483.JPG",
+      "/projects/support-arduino-nano-et-relais/P1120486.JPG",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "Support for Arduino Relay",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019-07-28",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "Arduino Sound Sensor Bracket",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-capteur-son-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019-09-02",
+    images: [
+      "/projects/support-pour-capteur-son-arduino/P1120673.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120674.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120676.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120677.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120690.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120691.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120692.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120693.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120697.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1120698.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1140339.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1140342.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1140350.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1140353.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1140355.JPG",
+      "/projects/support-pour-capteur-son-arduino/P1140356.JPG",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "Arduino Humidity Sensor Holder",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-capteur-humidite-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019-09-03",
+    images: [
+      "/projects/support-pour-capteur-humidite-arduino/P1120678.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120679.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120680.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120681.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120682.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120684.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120685.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120686.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120687.JPG",
+      "/projects/support-pour-capteur-humidite-arduino/P1120689.JPG",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "Support for Arduino Obstacle Sensor",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-capteur-d-obstacle-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019-09-04",
+    images: [
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120661.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120662.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120663.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120664.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120665.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120667.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120668.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120669.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120670.JPG",
+      "/projects/support-pour-capteur-d-obstacle-arduino/P1120671.JPG",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
+  {
+    name: "",
+    links: [
+      {
+        name: "Cults3D",
+        url: "https://cults3d.com/en/3d-model/tool/support-pour-relais-arduino",
+        type: LinkType.Cults3D,
+      },
+    ],
+    description: ``,
+    date: "2019",
+    images: [
+      "/projects/support-pour-relais-arduino/P1140118.png",
+      "/projects/support-pour-relais-arduino/P1140123.png",
+      "/projects/support-pour-relais-arduino/P1140138.png",
+      "/projects/support-pour-relais-arduino/P1140139.png",
+    ],
+    tools: getToolsByNames("Fusion 360"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("3d"),
+  },
 ];
 
 const levelArray = Object.values(ExperienceLevel);
@@ -490,6 +919,7 @@ const isoToFlag = {
   es: "🇪🇸",
   de: "🇩🇪",
   ru: "🇷🇺",
+  pl: "🇵🇱",
 } as const;
 
 const Carousel = (props: { project: Project }) => {
