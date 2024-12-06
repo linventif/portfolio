@@ -27,7 +27,7 @@ const LinkIcon = {
   [LinkType.GitHub]: "fa-brands fa-github",
   [LinkType.GitLab]: "fa-brands fa-gitlab",
   [LinkType.YouTube]: "fa-brands fa-youtube",
-  [LinkType.Cults3D]: "fa-solid fa-mug-hot",
+  [LinkType.Cults3D]: "fa-solid fa-cube",
   [LinkType.Steam]: "fa-brands fa-steam-symbol",
 };
 
@@ -55,14 +55,29 @@ const projectsCategories: Category[] = [
     id: "university",
   },
   {
-    name: "Garry's Mod",
-    icon: "fa-solid fa-gamepad",
-    id: "gmod",
+    name: "Portal 2 Mapping",
+    icon: "fa-solid fa-map",
+    id: "portal-2-mapping",
+  },
+  {
+    name: "Garry's Mod Mapping",
+    icon: "fa-solid fa-map",
+    id: "gmod-mapping",
+  },
+  {
+    name: "Garry's Mod Addon",
+    icon: "fa-solid fa-cogs",
+    id: "gmod-addon",
+  },
+  {
+    name: "3D Model",
+    icon: "fa-solid fa-cube",
+    id: "3d-model",
   },
   {
     name: "3D Printing",
-    icon: "fa-solid fa-cube",
-    id: "3d",
+    icon: "fa-solid fa-puzzle-piece",
+    id: "3d-printing",
   },
   {
     name: "Web Development",
@@ -539,7 +554,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Support for Arduino Relay",
@@ -560,7 +575,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Arduino Sound Sensor Bracket",
@@ -593,7 +608,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Arduino Humidity Sensor Holder",
@@ -620,7 +635,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Support for Arduino Obstacle Sensor",
@@ -647,7 +662,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "bubble safety",
@@ -670,7 +685,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Bicycle Hanger",
@@ -693,7 +708,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Support for Arduino Potentiometer",
@@ -720,7 +735,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Box A Usb Adapter Type C",
@@ -743,7 +758,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "USB Protector Male",
@@ -766,7 +781,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Arduino Relay Current Safety Box",
@@ -801,7 +816,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Housing for an insulating arduino relay",
@@ -822,7 +837,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "Realistic 3D model mini breadboard",
@@ -838,7 +853,7 @@ const projectsList: Project[] = [
     images: ["/projects/mini-breadboard/Breadboard_mini_white.jpg"],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-model"),
   },
   {
     name: "9, 11 and 14mm male triangle wrench",
@@ -868,7 +883,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "realistic model of a diode ± 0,01mm",
@@ -887,7 +902,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-model"),
   },
   {
     name: "mini box for screwdriver of presision is stored in the tip holder",
@@ -908,7 +923,7 @@ const projectsList: Project[] = [
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-printing"),
   },
   {
     name: "22LR",
@@ -924,7 +939,7 @@ const projectsList: Project[] = [
     images: ["/projects/22lr-linventif/22lr.png"],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
-    categories: getCategoriesFromID("3d"),
+    categories: getCategoriesFromID("3d-model"),
   },
 ];
 
@@ -1005,9 +1020,11 @@ const Carousel = (props: { project: Project }) => {
           <For each={props.project.images}>
             {(_, index) => (
               <button
-                class={`text-zinc-600 text-xs ${
-                  currentImage() === index() ? "text-zinc-200" : ""
-                }`}
+                class="text-xs"
+                classList={{
+                  "text-zinc-600": currentImage() !== index(),
+                  "text-zinc-200": currentImage() === index(),
+                }}
                 onClick={() => handleImageChange(index())}
               >
                 <i class="fa-solid fa-circle"></i>
