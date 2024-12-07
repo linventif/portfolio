@@ -1071,6 +1071,11 @@ const projectsList: Project[] = [
   },
 ];
 
+// sort by date
+projectsList.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
+
 const levelArray = Object.values(ExperienceLevel);
 const [activeProjects, setActiveProjects] = createSignal(
   projectsList as Project[],
