@@ -999,7 +999,7 @@ const projectsList: Project[] = [
       },
     ],
     description: ``,
-    date: "2017-03-05",
+    date: "2017-02-17",
     images: ["/projects/867777503/icon.jpeg"],
     tools: getToolsByNames("Source Engine"),
     experienceLevel: ExperienceLevel.HobbyProject,
