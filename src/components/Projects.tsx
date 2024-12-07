@@ -941,6 +941,134 @@ const projectsList: Project[] = [
     experienceLevel: ExperienceLevel.HobbyProject,
     categories: getCategoriesFromID("3d-model"),
   },
+  {
+    name: "il faut etre malin",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=841239285",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-01-13",
+    images: ["/projects/841239285/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "LE PROBLEME DE LAZERR",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=846839477",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-03-19",
+    images: ["/projects/846839477/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "petit joueur 0.1.5 Mise a jour",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=934104479",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-09-17",
+    images: ["/projects/934104479/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "1erreur est set fini*",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=867777503",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-03-05",
+    images: ["/projects/867777503/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "PROBLEME DE CUBE",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=949518834",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-05-18",
+    images: ["/projects/949518834/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "30s pou apuille sur l'aure bouton",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=952044245",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-06-21",
+    images: ["/projects/952044245/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "CODE",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=1131230490",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2017-09-09",
+    images: ["/projects/1131230490/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
+  {
+    name: "Casse Tete niveau 4/5",
+    links: [
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=1322084030",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2018-01-13",
+    images: ["/projects/1322084030/icon.jpeg"],
+    tools: getToolsByNames("Source Engine"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("portal-2-mapping"),
+  },
 ];
 
 const levelArray = Object.values(ExperienceLevel);
