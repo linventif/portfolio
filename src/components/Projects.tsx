@@ -176,13 +176,7 @@ const projectsList: Project[] = [
         type: LinkType.GitHub,
       },
     ],
-    images: [
-      "/projects/internship/allocola_1.png",
-      "/projects/internship/allocola_2.png",
-      "/projects/internship/allocola_3.png",
-      "/projects/internship/allocola_4.png",
-      "/projects/internship/allocola_5.png",
-    ],
+    images: ["/projects/img_default.jpg"],
     experienceLevel: ExperienceLevel.Professional,
     tools: getToolsByNames(
       "Aframe",
@@ -211,12 +205,7 @@ const projectsList: Project[] = [
                 The main challenge was implementing memory management, requiring extensive research.
                 This project deepened my understanding of system architecture and RISC-V, preparing me for future projects involving system emulation.
             `,
-    images: [
-      "/projects/sae-5-01/accueil.png",
-      "/projects/sae-5-01/emulateur.png",
-      "/projects/sae-5-01/emulateur_2.png",
-      "/projects/sae-5-01/emulateur_3.png",
-    ],
+    images: ["/projects/img_default.jpg"],
     links: [
       {
         name: "GitHub",
@@ -247,12 +236,7 @@ const projectsList: Project[] = [
                 The main challenge was implementing memory management, requiring extensive research.
                 This project deepened my understanding of system architecture and RISC-V, preparing me for future projects involving system emulation.
             `,
-    images: [
-      "/projects/sae-5-01/accueil.png",
-      "/projects/sae-5-01/emulateur.png",
-      "/projects/sae-5-01/emulateur_2.png",
-      "/projects/sae-5-01/emulateur_3.png",
-    ],
+    images: ["/projects/img_default.jpg"],
     links: [
       {
         name: "GitHub",
@@ -281,12 +265,7 @@ const projectsList: Project[] = [
         type: LinkType.GitLab,
       },
     ],
-    images: [
-      "/projects/sae-4-02/accueil.png",
-      "/projects/sae-4-02/jeu.png",
-      "/projects/sae-4-02/jeu_2.png",
-      "/projects/sae-4-02/jeu_3.png",
-    ],
+    images: ["/projects/img_default.jpg"],
     experienceLevel: ExperienceLevel.SchoolProject,
     tools: getToolsByNames("HTML", "CSS", "JavaScript"),
     date: "2024/S1",
@@ -309,11 +288,7 @@ const projectsList: Project[] = [
         type: LinkType.GitLab,
       },
     ],
-    images: [
-      "/projects/sae-4-01/uml.png",
-      "/projects/sae-4-01/postman.png",
-      "/projects/sae-4-01/swagger.png",
-    ],
+    images: ["/projects/img_default.jpg"],
     experienceLevel: ExperienceLevel.SchoolProject,
     tools: getToolsByNames(
       "Java",
@@ -1330,6 +1305,121 @@ const projectsList: Project[] = [
     tools: getToolsByNames("Scratch"),
     experienceLevel: ExperienceLevel.HobbyProject,
     categories: getCategoriesFromID("game"),
+  },
+  {
+    name: "Say my Weapon",
+    links: [
+      {
+        name: "Aide Serveur",
+        url: "https://aide-serveur.fr/ressources/unsupported-say-my-weapon.3418/",
+        type: LinkType.Website,
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/linventif/addons",
+        type: LinkType.GitHub,
+      },
+    ],
+    description: ``,
+    date: "2022-06-21",
+    images: ["/projects/say-my-weapon/1.png"],
+    tools: getToolsByNames("Lua"),
+    languages: ["en", "fr"],
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("gmod-addon"),
+  },
+  {
+    name: "Gmod Py Fast DL",
+    links: [
+      {
+        name: "Aide Serveur",
+        url: "https://aide-serveur.fr/ressources/unsupported-gmod-py-fast-dl.3245/",
+        type: LinkType.Website,
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/linventif/Gmod-Py-Fast-DL",
+        type: LinkType.GitHub,
+      },
+    ],
+    description: ``,
+    date: "2021-12-18",
+    images: ["/projects/img_default.jpg"],
+    languages: ["en", "fr"],
+    tools: getToolsByNames("Python"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("gmod-addon"),
+  },
+  {
+    name: "ULX Food",
+    links: [
+      {
+        name: "Aide Serveur",
+        url: "https://aide-serveur.fr/ressources/unsupported-ulx-food.3423/",
+        type: LinkType.Website,
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/linventif/gmod-addons",
+        type: LinkType.GitHub,
+      },
+      {
+        name: "Steam Workshop",
+        url: "https://steamcommunity.com/sharedfiles/filedetails/?id=2825467376",
+        type: LinkType.Steam,
+      },
+    ],
+    description: ``,
+    date: "2022-06-25",
+    images: ["/projects/ulx-food/icon.jpg", "/projects/ulx-food/1.jpeg"],
+    tools: getToolsByNames("Lua"),
+    languages: ["en", "fr"],
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("gmod-addon"),
+  },
+  {
+    name: "Ember Boost Module",
+    links: [
+      {
+        name: "Aide Serveur",
+        url: "https://aide-serveur.fr/ressources/unsupported-ember-boost-module.3424/",
+        type: LinkType.Website,
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/linventif/ember",
+        type: LinkType.GitHub,
+      },
+    ],
+    description: ``,
+    date: "2022-06-25",
+    images: ["/projects/img_default.jpg"],
+    tools: getToolsByNames("PHP"),
+    languages: ["en"],
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("gmod-addon"),
+  },
+  {
+    name: "Cosmo Boost Module",
+    links: [
+      {
+        name: "Aide Serveur",
+        url: "https://aide-serveur.fr/ressources/unsupported-cosmo-boost-module.3425/",
+        type: LinkType.Website,
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/linventif/cosmo",
+        type: LinkType.GitHub,
+      },
+    ],
+    description: ``,
+    date: "2022-06-25",
+    images: ["/projects/img_default.jpg"],
+    tools: getToolsByNames("Lua"),
+    languages: ["en"],
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("gmod-addon"),
   },
 ];
 

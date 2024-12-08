@@ -627,6 +627,15 @@ const toolsList: Tool[] = [
       "VirtualBox is a free and open-source hosted hypervisor for x86 virtualization.",
   },
   {
+    name: "PHP",
+    image: "/tools/php.png",
+    categories: getCategoriesFromID("languages"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    url: "https://www.php.net/",
+    description:
+      "PHP is a general-purpose scripting language especially suited to web development.",
+  },
+  {
     name: "Jupyter Notebook",
     image: "/tools/jupyter.png",
     categories: getCategoriesFromID("ide"),
