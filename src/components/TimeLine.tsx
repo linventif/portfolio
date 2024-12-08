@@ -54,7 +54,7 @@ const timeline = [
     description: "",
   },
 ];
-
+// TODO
 export const ScholarTimeline: Component = () => {
   return (
     <>
