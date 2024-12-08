@@ -897,8 +897,8 @@ const projectsList: Project[] = [
     description: ``,
     date: "2020-05-07",
     images: [
-      "/projects/model-realiste-d-une-diode-0-01mm/del v2.png",
-      "/projects/model-realiste-d-une-diode-0-01mm/del v3.png",
+      "/projects/model-realiste-d-une-diode-0-01mm/2.png",
+      "/projects/model-realiste-d-une-diode-0-01mm/1.png",
     ],
     tools: getToolsByNames("Fusion 360"),
     experienceLevel: ExperienceLevel.HobbyProject,
@@ -1282,6 +1282,55 @@ const projectsList: Project[] = [
     experienceLevel: ExperienceLevel.HobbyProject,
     categories: getCategoriesFromID("gmod-mapping"),
   },
+  {
+    name: "Parkour Rage 1",
+    links: [
+      {
+        name: "Scratch",
+        url: "https://scratch.mit.edu/projects/228722122/",
+        type: LinkType.Website,
+      },
+    ],
+    description: ``,
+    date: "2018-12-17",
+    images: [
+      "/projects/parkour-rage/0.png",
+      "/projects/parkour-rage/2.png",
+      "/projects/parkour-rage/3.png",
+      "/projects/parkour-rage/4.png",
+      "/projects/parkour-rage/5.png",
+      "/projects/parkour-rage/6.png",
+    ],
+    tools: getToolsByNames("Scratch"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("game"),
+  },
+  {
+    name: "Parkour Rage 2",
+    links: [
+      {
+        name: "Scratch",
+        url: "https://scratch.mit.edu/projects/228722122/",
+        type: LinkType.Website,
+      },
+    ],
+    description: ``,
+    date: "2019-01-08",
+    images: [
+      "/projects/parkour-rage-2/1.png",
+      "/projects/parkour-rage-2/2.png",
+      "/projects/parkour-rage-2/3.png",
+      "/projects/parkour-rage-2/4.png",
+      "/projects/parkour-rage-2/5.png",
+      "/projects/parkour-rage-2/6.png",
+      "/projects/parkour-rage-2/7.png",
+      "/projects/parkour-rage-2/8.png",
+      "/projects/parkour-rage-2/9.png",
+    ],
+    tools: getToolsByNames("Scratch"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    categories: getCategoriesFromID("game"),
+  },
 ];
 
 // sort by date
@@ -1341,9 +1390,9 @@ const Carousel = (props: { project: Project }) => {
         </div>
       </div>
       <figure class="flex flex-col">
-        <div class="carousel w-full relative overflow-hidden">
+        <div class="carousel w-full relative overflow-hidden rounded-lg">
           <div
-            class={`flex transition-transform duration-500 ease-in-out ${
+            class={`flex flex-grow transition-transform duration-500 ease-in-out ${
               isSliding() ? "transform" : ""
             }`}
             style={{
@@ -1351,11 +1400,15 @@ const Carousel = (props: { project: Project }) => {
             }}
           >
             <For each={props.project.images}>
-              {(image) => (
+              {(image, index) => (
                 <div class="carousel-item w-full flex-shrink-0 relative">
+                  <div
+                    class="absolute inset-0 w-full bg-cover bg-center blur-2xl brightness-75"
+                    style={{ "background-image": `url(${image})` }}
+                  />
                   <img
                     src={image}
-                    class="w-full h-full aspect-video relative z-10"
+                    class="w-full h-64 object-contain rounded-lg relative z-10"
                   />
                 </div>
               )}

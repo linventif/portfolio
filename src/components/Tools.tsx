@@ -511,6 +511,15 @@ const toolsList: Tool[] = [
       "D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers.",
   },
   {
+    name: "Scratch",
+    image: "/tools/scratch.png",
+    categories: getCategoriesFromID("3d"),
+    experienceLevel: ExperienceLevel.HobbyProject,
+    url: "https://scratch.mit.edu/",
+    description:
+      "Scratch is a block-based visual programming language and online community.",
+  },
+  {
     name: "Fusion 360",
     image: "/tools/fusion.png",
     categories: getCategoriesFromID("3d"),
