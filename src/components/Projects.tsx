@@ -1310,7 +1310,7 @@ const projectsList: Project[] = [
     links: [
       {
         name: "Scratch",
-        url: "https://scratch.mit.edu/projects/228722122/",
+        url: "https://scratch.mit.edu/projects/270980103/",
         type: LinkType.Website,
       },
     ],
