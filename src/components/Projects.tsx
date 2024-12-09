@@ -2027,7 +2027,7 @@ const Carousel = (props: { project: Project }) => {
                   />
                   <img
                     src={image}
-                    class="w-full h-64 object-contain rounded-lg relative z-10"
+                    class="w-full h-[15.5em] object-contain rounded-lg relative z-10"
                   />
                 </div>
               )}
