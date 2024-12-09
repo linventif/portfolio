@@ -1949,6 +1949,8 @@ const projectsList: Project[] = [
   },
 ];
 
+console.log(projectsList.length);
+
 // sort by date
 projectsList.sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
