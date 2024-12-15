@@ -6,16 +6,18 @@ export const Hero: Component = () => {
   return (
     <>
       <div class="flex flex-col justify-center items-center">
-        <h2 class="text-3xl font-bold text-blue">Hello there, I'm</h2>
+        <h2 class="text-2xl md-text-3xl font-bold text-blue">
+          Hello there, I'm
+        </h2>
         <SolidTyper
           text={pseudoList}
           backspaceSpeed={100}
-          className="text-6xl py-10 font-bold text-nowrap"
+          className="text-4xl md-text-6xl py-10 font-bold text-nowrap"
           loop
           cursor
           cursorClassName="cursor text-nowrap"
         />
-        <h2 class="text-xl">
+        <h2 class="text-lg md-text-xl">
           <span class="font-bold">Fullstack Developer</span> and{" "}
           <span class="font-bold">3D Artist</span> who's passionate about
           creating awesome projects.

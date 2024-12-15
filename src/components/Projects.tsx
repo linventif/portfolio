@@ -1997,8 +1997,8 @@ const Carousel = (props: { project: Project }) => {
             {(tool) => (
               <A
                 href={tool.url}
-                class="max-h-6 max-w-6 flex tooltip items-center justify-center w-6 h-6"
-                data-tip={tool.name}
+                class="max-h-6 max-w-6 flex items-center justify-center w-6 h-6 md-tooltip"
+                data-tip={tool.description}
               >
                 <img src={tool.image} alt={tool.name} class="max-h-6 max-w-6" />
               </A>

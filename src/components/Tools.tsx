@@ -981,7 +981,7 @@ export const Tools: Component = () => {
                   {(tool) => (
                     <A
                       href={tool.url}
-                      class="flex flex-col items-center gap-4 w-32 h-32 justify-center p-4 tooltip"
+                      class="flex flex-col items-center gap-4 w-32 h-32 justify-center p-4 md-tooltip"
                       data-tip={tool.description}
                     >
                       <div class="max-h-12 max-w-12 flex items-center justify-center w-12 h-12">
