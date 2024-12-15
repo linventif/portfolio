@@ -10,7 +10,7 @@ export const Hero: Component = () => {
         <SolidTyper
           text={pseudoList}
           backspaceSpeed={100}
-          className="text-6xl p-10 font-bold"
+          className="text-6xl py-10 font-bold text-nowrap"
           loop
           cursor
           cursorClassName="cursor text-nowrap"
