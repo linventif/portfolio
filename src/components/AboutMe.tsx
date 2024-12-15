@@ -4,8 +4,8 @@ import { A } from "@solidjs/router";
 export const AboutMe: Component = () => {
   return (
     <>
-      <div class="flex flex-row gap-4">
-        <div class="w-5/6 text-justify">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="w-full md:w-5/6 text-justify">
           <p>
             Hey! I'm Grégoire Launay--Bécue. I'm a passionate developer who
             loves creating new things and learning new technologies. I'm always
@@ -97,11 +97,11 @@ export const AboutMe: Component = () => {
           </p>
         </div>
 
-        <div class="flex justify-center items-center w-2/4">
+        <div class="flex justify-center items-center w-full md:w-2/4">
           <img
             alt="picture_of_me"
             src="/gregoire_2024.png"
-            class="w-3/6 rounded-[25%] shadow-lg"
+            class="w-1/2 md:w-2/3 rounded-[10%] shadow-lg mt-32 md:mt-0"
           />
         </div>
       </div>

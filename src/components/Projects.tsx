@@ -1931,8 +1931,8 @@ const Carousel = (props: { project: Project }) => {
         <h3 class="card-title text-blue">{props.project.name}</h3>
         <div class="flex flex-row gap-2">
           <p class="text-zinc-300 text-nowrap">{props.project.date}</p>
-          <div class="flex w-full" />
-          <div class="flex gap-2">
+          <div class="flex flex-grow" />
+          <div class="flex gap-2 w-full justify-end flex-wrap">
             <For each={props.project.languages}>
               {(lang) => (
                 <div class="flex items-center justify-center">
@@ -1995,12 +1995,13 @@ const Carousel = (props: { project: Project }) => {
         <div class="flex flex-wrap gap-2 mt-2">
           <For each={props.project.tools}>
             {(tool) => (
-              <div
+              <A
+                href={tool.url}
                 class="max-h-6 max-w-6 flex tooltip items-center justify-center w-6 h-6"
-                data-tip={tool.description}
+                data-tip={tool.name}
               >
                 <img src={tool.image} alt={tool.name} class="max-h-6 max-w-6" />
-              </div>
+              </A>
             )}
           </For>
         </div>
@@ -2092,9 +2093,9 @@ export const Projects: Component = () => {
                 ).length > 0
               }
             >
-              <div class="p-4">
-                <h2 class="text-2xl font-bold text-blue">{level}</h2>
-                <p class="text-zinc-300">
+              <div class="py-4">
+                <h2 class="text-2xl font-bold  text-blue">{level}</h2>
+                <p class="text-zinc-300 text-justify">
                   {ExperienceLevelDescription[level].projects}
                 </p>
               </div>

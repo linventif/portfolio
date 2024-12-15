@@ -16,8 +16,9 @@ export const Hero: Component = () => {
           cursorClassName="cursor text-nowrap"
         />
         <h2 class="text-xl">
-          <span class="font-bold">Fullstack Developer</span> who's passionate
-          about creating awesome projects.
+          <span class="font-bold">Fullstack Developer</span> and{" "}
+          <span class="font-bold">3D Artist</span> who's passionate about
+          creating awesome projects.
         </h2>
       </div>
     </>
