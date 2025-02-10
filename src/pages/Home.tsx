@@ -8,6 +8,7 @@ import { Hero } from "../components/Hero";
 import { AboutMe } from "../components/AboutMe";
 import { Footer } from "../components/Footer";
 import { ScholarTimeline } from "../components/TimeLine";
+import {Stat} from "../components/Stat";
 
 const Home: Component = () => {
   return (
@@ -15,9 +16,10 @@ const Home: Component = () => {
       <Header />
 
       <section class="gap-10">
-        <Article id="hero" class="mt-44 h-[500px]">
+        <Article id="hero" class="mt-44 h-[600px]">
           <Hero />
           <Social />
+          <Stat />
         </Article>
         <Article id="about-me" name="About Me">
           <AboutMe />
